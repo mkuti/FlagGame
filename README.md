@@ -4,28 +4,55 @@
 
 <div align="center">
 
-# FLAG THE COUNTRY
+# MATCH THE FLAG
 </div>
 <div align="center">
 
 [Website is deployed via GitHub pages here]()
 </div>
 
-A natural and minimalist website for an alternative medicine practitioner based in County Clare, Ireland.
-This practitioner is a therapist and teacher in Qigong and Amatsu but is also a qualified chef and a home gardener all related by his passion about living better, happier and in a more natural way. He knows how important it is to keep the body, mind and soul in balance which makes him very passionate to share and teach with others.
+For the second milestone project, I decided to make an interactive and educational game, so I could use Javascript functional programming which I have just learnt.
 
-Because of the absence of knowledge and interest in these types of practices coupled with the very amateurish existing websites for those types of practices, the main goal of the website is to give a basic intro while not overloading with too much content, having a modern designed, minimalist and relaxed website for both already convinced or new clients and to guide everyone towards useful knowledge to apply or contact directly the practitioner for more.
+I like games as I believe anything can be learnt while having fun. Although I have not been playing a lot of online games or game apps myself, I am now a mum and often look for interesting, educative and well designed numeric games for my children.
+Unfortunately, a lot of educative games do not have a great design and are not user friendly, especially when it comes to desktop or browser games.
 
-During strategy plane of UX and while consulting the practitioner, I have come up with the main business needs for this website, as listed below:
-- BUILD ONLINE PRESENCE
-- INCREASE AWARENESS ABOUT BOTH PRACTICES
-- INCREASE POTENTIAL CLIENTS
+My oldest son loves the planet, its continents, countries, and its flags, while he dreams of travelling when he stares at his globe :) He is also in the middle of learning to read and has fun with it.
 
-Other needs came up during discussion with client but could not be implemented during this project as lack of time, readiness and programming languages for now.
+I, myself, am passionate about discovering other cultures, learning and understanding languages and travelling generally in various countries while getting to know its people.
+I remember as a child, one of the online game I played over and over again was a plane flying over the world map. The plane had a label behind with a country name written. The game was to click on the country on the map shown by the plane.
+I learnt so many countries on all continents thanks to that game, which is still sometimes useful in my job up till now.
+
+Finally, I want to become a software developer and web designer, partly because I want to use this new skill to help improving our world via contributing to great causes, which is another passion of mine.
+Generally within my friend, family or colleagues circles, I noticed that many people have little clue about geography and cultures of other countries. They know little of flags although they get interested if you present it to them.
+Also, there is a general ignorance of other's origins and cultural identities as well as an increasing behaviour of people forgetting or putting away where they come from because they want to blend in.
+I believe in the richness of diversity so would love to bring more awareness about cultures, languages, and other labels which builds identity, while remind everybody that they should be proud of their origins.
+
+In brief, I needed to make a game which could please my sons, uses a thematic which strongly interests me and finally to make a better world. Difficult task!
+
+I made a final decision on making a game where the player would have to recognise a flag and match it to a country while random information would be showing about the country as a learning gift to the user.
+For this, I would need to use two main APIs, one to display the flag and one to display random facts about the country once the match is successful.
+
+The design of the game should be simple enough for a child to use it and attractive for an adult to play without much distractions and making them want to play more, to learn more...
+
+Now more details about the design and structure of the game:
+1. common mode, find the flag: display a flag and match it to a country among 4 options
+2. reversed mode: display a country and match it to a flag among 4 options
+3.
+
+API I can use for the project:
+https://restcountries.eu/
+https://www.countryflags.io/
+Google map JavaScript API
+
+
+Resources:
+https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg
+https://stackoverflow.com/questions/3186635/disable-double-left-click-on-google-map
+
 
 # UX
-__Primary target audience?__
-- *Strategy* >
+__Primary target audience?__ From 6years old kids and adults who are interested by other countries or want to test or deepen their knowledge of flags while learning a little about the world
+- *Strategy* > make the game interactive, fun and educative
 
 __What is the website for?__
 1.
