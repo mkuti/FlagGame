@@ -34,49 +34,47 @@ For this, I would need to use two main APIs, one to display the flag and one to 
 
 The design of the game should be simple enough for a child to use it and attractive for an adult to play without much distractions and making them want to play more, to learn more...
 
-Now more details about the design and structure of the game:
-1. common mode, find the flag: display a flag and match it to a country among 4 options
-2. reversed mode: display a country and match it to a flag among 4 options
-3.
-
-API I can use for the project:
-https://restcountries.eu/
-https://www.countryflags.io/
-Google map JavaScript API
-
-
-Resources:
-https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg
-https://stackoverflow.com/questions/3186635/disable-double-left-click-on-google-map
-
+More details about the design and structure of the game:
+1. common mode, by flag (easy level): display a flag and match it to a country among 4 options
+2. reversed mode, by country (easy level): display a country and match it to a flag among 4 options
+3. Matching mode (medium level): display 3 very similar flags and 3 countries and ask player to match flag with correct country (ex: Ireland, India, Ivory Coast flags or Indonesia and Poland)
+4. Map mode (difficult level): display Google Map in background, flag displayed, player has to click on map to show correct matching country
 
 # UX
-__Primary target audience?__ From 6years old kids and adults who are interested by other countries or want to test or deepen their knowledge of flags while learning a little about the world
-- *Strategy* > make the game interactive, fun and educative
+__Primary target audience?__ For anyone from 6years old interested by geography or want to learn for specific purpose
+- *Strategy* > make the game interactive, fun and educative with a very simple design --- catchy and compelling
+Minimal content and large images with minimal number of steps to start playing, match the flag, get results and continue or stop
 
-__What is the website for?__
+__What is the project for?__ As shown in my intro, game is for anyone looking to test their knowledge of geography and flags.
+The objective is also to trigger anyone else to learn more about other countries and cultures via an unknown flag
 1.
-- *strategy* >
+- *strategy* > to make the game easy enough for anyone to build their knowledge of flags and countries while playing. Dont want to make anyone give up after one trial and dont want knowledgeables players to get bored
+Have an easy mode with 2 attempts for each flag where player is allowed to fail before trying another flag.
+15 random flags in one game
+Player build points and at the end of the game, get a result which can be improved > motivation to try again to get a better score
 
-__What is culturally appropriate?__
-- *strategy* >
+Difficult mode/level, can call it "map mode" or "extreme (so good players are not bored): display Google Map in background, flag displayed, player has to click on map to show correct matching country
 
-__Why is this so special?__
-————> strategy
+__What is culturally appropriate?__ appropriate for 6years old minimum and user-friendly for their age and dextirity
+- *strategy* >  make sure random fact are relevant for kids and do not contain inappropriate content
+> each button is not too small
+> font size big enough for a child of 6years old who is learning to read
+
+__What content would be relevant?__ flags and countries of the world (not fake, not regions or small ethnies) - appropriate random fact for kids
+- *strategy* > study the flag API and see if only real countries flag are in there, also maybe see if possible to remove the most known flags to make the game already up from basic level (ex: US, UK, France...)
+> study random fact API and see if all content is appropriate - if needed I will make up one API myself with random fact more relevant to kids
+
+__Why is this so special?__ hard to find simple games which are also educational for kids and adults on desktop or browser (not app). Most online games have poor or too complex design with a lot of content
+- *strategy* > catchy and compelling website, with brief but effective content.
 
 During my research in planning and designing the website, I asked a few questions to some friends who could be potential clients and also the practitioner himself. From those questions and my own research of other websites and practice, came the user stories below.
 Before the user stories, I wanted to add here a few questions asked and their answers.
 
 1. What does the User expect?
-	* I expect a professional looking and easy to navigate website with easy to read  information and easy to find contact details.
-2. How a website should look credible and trustworthy?
-	* This is very important. In my opinion websites for alternative medicine often look very dodgy, bad colours, font, very bad layout, not easy to read at all. It does not create trust. It creates the feeling that the person might not be credible at all.
-3. What do you expect?
-	* A website design that is ‘on brand’ with the practice. Use modern design, clean layout. It should look a bit more like a spa website and less like a car repair website
-4. How should it look valuable enough for me to stay?
-	* Easy to navigate tabs, good info on how to get in touch, clear prices, testimonials from existing clients, a nice bio/about page. No advertisements
-5. When you go to a particular site, where do you go first?
-	* Depends on why I visited the page, but in many cases to the ‘About’ tab to find out more about the person behind the product/brand
+	* I expect a simple game which is easy enough to get into it, with catchy colors and very minimal content. After a few games, I want to find a difficult level where I can continue to be challenged
+2. How can a game be interesting enough so I want to keep playing?
+	* With different modes and levels, where I can see my score so I am motivated to improve it. A game where I dont get bored and I can learn from it
+
 
 
 ## User Stories and Features:
@@ -108,7 +106,7 @@ __...__
 
 ### List of wireframes made before building the website
 
-I used Balsamic tool for the wireframes and attached them to the directory in assets. I spent a considerable amount of time doing wireframes in details as I had no clue of design before and wanted to have a clear idea of how the website looked like.
+I used Balsamiq tool for the wireframes and attached them to the directory in assets. I spent a considerable amount of time doing wireframes in details as I had no clue of design before and wanted to have a clear idea of how the website looked like.
 
 - [Home]()
 - [Home mobile]()
@@ -158,7 +156,15 @@ Example of an error in the MarkUp corrected:
 
 
 # Media and Content origin
+API I can use for the project:
+https://restcountries.eu/
+https://www.countryflags.io/
+Google map JavaScript API
 
+
+Resources:
+https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg
+https://stackoverflow.com/questions/3186635/disable-double-left-click-on-google-map
 *
 
 # Deployment
