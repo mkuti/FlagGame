@@ -8,7 +8,7 @@
 </div>
 <div align="center">
 
-[Website is deployed via GitHub pages here]()
+[Website is deployed via GitHub pages here](https://mkuti.github.io/FlagGame_milestone_2/)
 </div>
 
 For the second milestone project, I decided to make an interactive and educational game, so I could use Javascript functional programming which I have just learnt.
