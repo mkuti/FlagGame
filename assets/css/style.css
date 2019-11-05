@@ -1,3 +1,20 @@
 body {
+display: flex;
+flex-direction: column;
+background-color: #022F4F
+}
+
+#logo {
+padding: 0;
+margin: 0;
+text-decoration: none;
+}
+
+.attention {
+    background-color: #4B1E2E;
+    color: #F1F1E6;
+    width: 150px;
+    font-size: 40px;
+    text-align: center;
 
 }
