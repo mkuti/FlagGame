@@ -21,6 +21,7 @@ body {
 
 .flex-container {
     display: flex;
+    justify-content: space-between; /* so burger menu stands on the right side of the screen */
 }
 
 #logo {
@@ -34,10 +35,22 @@ body {
     font-size: 30px;
     text-align: center;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .banner {
     display: none;
+}
+
+/* burger icon inspired from https://mdbootstrap.com/docs/jquery/navigation/hamburger-menu/ */
+
+.fa-bars {
+    background-color: #4B1E2E;
+    color: #F1F1E6;
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
 }
 
 .main-container {
@@ -53,7 +66,8 @@ body {
     height: 400px;
 }
 
-@media (min-width: 768px) { .banner {
+@media (min-width: 768px) {
+    .banner {
     display: flex;
     flex-flow: row wrap;
     height: 100px;
@@ -61,4 +75,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+    button { /* removing burger menu from bigger screens */
+        display: none;
+    }
 }
+
