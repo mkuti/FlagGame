@@ -9,14 +9,18 @@
     color: #F1F1E6;
 }
 
+.bg-lightred {
+    background-color: #E80528;
+}
+
 h2 {
-    font-size: 3.5vmin; /* to make the font-size scale depending of screen size https://css-tricks.com/viewport-sized-typography/ */
+    font-size: 3.5vmin; /* to make the banner font-size scale depending of screen size https://css-tricks.com/viewport-sized-typography/ */
 }
 
 body {
     height: 100%;
     background-color: #022F4F;
-    font-family: "Shadows+Into+Light", sans-serif;
+    font-family: "Kalam", sans-serif;
 }
 
 .flex-container {
@@ -56,28 +60,55 @@ body {
 .main-container {
     height: 80vh; /* to fix the height of the container so I can center its item */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .center-box {
-    width: 400px;
-    height: 400px;
+    position: relative;
+    width: 600px;
+    border: 1px solid #F1F1E6;
+    border-radius: 1rem;
+    margin: 0 30px;
+}
+
+.center-box:after { /* found trick to make center box responsive without bootstrap: https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
+    content: "";
+    /* pseudo element’s parent is .square element and padding calculated as percentage of its parent’s width
+    fixing the height (padding-bottom: 100%) of the pseudo-element to the width of .square.
+    Whenever .square’s width changes, so will the pseudo-element’s height. */
+    display: block;
+    padding-bottom: 100%;
+}
+
+.box-banner {
+    height: 80px;
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 15px 0 15px;
 }
 
 @media (min-width: 768px) {
     .banner {
     display: flex;
-    flex-flow: row wrap;
     height: 100px;
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
     button { /* removing burger menu from bigger screens */
         display: none;
     }
+
+    /*.center-box {
+        width: 600px;
+        height: 600px;
+    }*/
 }
 
