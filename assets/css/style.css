@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700|Shadows+Into+Light:400|Kalam:300,400,700');
 
+/* {
+  box-sizing: border-box;
+}*/
+
 .bg-red {
     background-color: #4B1E2E;
     color: #F1F1E6;
 }
 
+h2 {
+    font-size: 3.5vmin; /* to make the font-size scale depending of screen size https://css-tricks.com/viewport-sized-typography/ */
+}
+
 body {
     height: 100%;
-    display: flex;
-    flex-direction: column;
     background-color: #022F4F;
     font-family: "Shadows+Into+Light", sans-serif;
 }
@@ -31,8 +37,28 @@ body {
 }
 
 .banner {
+    display: none;
+}
+
+.main-container {
+    height: 80vh; /* to fix the height of the container so I can center its item */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-box {
+    width: 400px;
+    height: 400px;
+}
+
+@media (min-width: 768px) { .banner {
+    display: flex;
+    flex-flow: row wrap;
     height: 100px;
     width: 100%;
-    font-size: 60px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 }
