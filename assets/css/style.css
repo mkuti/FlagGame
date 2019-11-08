@@ -15,6 +15,7 @@ body {
     background-color: #022F4F;
     font-family: "Kalam", sans-serif;
     font-weight: 300;
+    font-size: 16px;
 }
 
 .headers {
@@ -84,32 +85,47 @@ h2 {
 }
 
 .center-box {
-    position: relative;
-    width: 600px;
     border: 1px solid #F1F1E6;
     border-radius: 1rem;
-    margin: 0 30px;
+    margin: 0 15px;
 }
 
-.center-box:after { /* found trick to make center box responsive without bootstrap: https://spin.atomicobject.com/2015/07/14/css-responsive-square/ */
+/*.center-box:after { found trick to make center box responsive without bootstrap: https://spin.atomicobject.com/2015/07/14/css-responsive-square/
     content: "";
-    /* pseudo element’s parent is .square element and padding calculated as percentage of its parent’s width
+ pseudo element’s parent is .square element and padding calculated as percentage of its parent’s width
     fixing the height (padding-bottom: 100%) of the pseudo-element to the width of .square.
-    Whenever .square’s width changes, so will the pseudo-element’s height. */
+    Whenever .square’s width changes, so will the pseudo-element’s height.
     display: block;
     padding-bottom: 100%;
-}
+}*/
 
 .box-banner {
-    height: 80px;
-    width: 100%;
-    border: none;
-    border-radius: 1rem;
     text-align: center;
+    border-radius: 1rem;
     font-size: 30px;
     font-weight: 700;
     padding: 15px 0 15px;
     text-transform: uppercase;
+}
+
+.box-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 2;
+    overflow: auto;
+}
+
+.box-p {
+    padding: 0.2em;
+}
+
+ol {
+    text-align: left;
+    padding-left: 2em;
+    margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -126,6 +142,10 @@ h2 {
     button { /* removing burger menu from bigger screens */
         display: none;
     }
+
+    .center-box {
+       margin: 0;
+}
 
     /*.center-box {
         width: 600px;
