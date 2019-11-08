@@ -32,9 +32,8 @@ body {
     background-color: #E80528;
 }
 
-h2 {
-    font-size: inherit;
-    height: inherit;
+.bg-darkblue {
+background-color: #022F4F;
 }
 
 .flex-container {
@@ -56,8 +55,6 @@ h2 {
 .attention {
     width: 150px;
     font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
     margin: 0;
 }
 
@@ -77,17 +74,15 @@ h2 {
 }
 
 .main-container {
-    width: 100%;
-    height: 80vh; /* to fix the height of the container so I can center its item */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 30px;
 }
 
 .center-box {
     border: 1px solid #F1F1E6;
     border-radius: 1rem;
-    margin: 0 15px;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 3rem;
 }
 
 /*.center-box:after { found trick to make center box responsive without bootstrap: https://spin.atomicobject.com/2015/07/14/css-responsive-square/
@@ -105,7 +100,6 @@ h2 {
     font-size: 30px;
     font-weight: 700;
     padding: 15px 0 15px;
-    text-transform: uppercase;
 }
 
 .box-content {
@@ -113,7 +107,6 @@ h2 {
     width: 100%;
     height: 100%;
     margin-top: 5px;
-    text-align: center;
     line-height: 2;
     overflow: auto;
 }
@@ -128,6 +121,10 @@ ol {
     margin: 0;
 }
 
+button {
+    margin: 5px;
+}
+
 @media (min-width: 768px) {
     .banner {
     display: flex;
@@ -139,17 +136,12 @@ ol {
     font-size: 3.5vmin; /* to make the banner font-size scale depending of screen size https://css-tricks.com/viewport-sized-typography/ */
 }
 
-    button { /* removing burger menu from bigger screens */
+    .navbar-toggler { /* removing burger menu from bigger screens */
         display: none;
     }
 
     .center-box {
-       margin: 0;
+       padding-bottom: 15px;
 }
-
-    /*.center-box {
-        width: 600px;
-        height: 600px;
-    }*/
 }
 
