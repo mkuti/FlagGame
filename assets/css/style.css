@@ -123,6 +123,7 @@ ol {
 
 button {
     margin: 5px;
+    padding: 5px;
 }
 
 @media (min-width: 550px) {
@@ -152,6 +153,9 @@ button {
 
     .center-box {
        padding-bottom: 15px;
-}
+    }
+    button {
+    margin: 5px;
+    }
 }
 
