@@ -81,8 +81,8 @@ background-color: #022F4F;
     border: 1px solid #F1F1E6;
     border-radius: 1rem;
     margin: 0;
-    font-size: 1.5rem;
-    line-height: 3rem;
+    font-size: 1rem;
+    line-height: 2rem;
 }
 
 /*.center-box:after { found trick to make center box responsive without bootstrap: https://spin.atomicobject.com/2015/07/14/css-responsive-square/
@@ -97,7 +97,7 @@ background-color: #022F4F;
 .box-banner {
     text-align: center;
     border-radius: 1rem;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     padding: 15px 0 15px;
 }
@@ -123,6 +123,16 @@ ol {
 
 button {
     margin: 5px;
+}
+
+@media (min-width: 550px) {
+    .center-box {
+        font-size: 1.5rem;
+        line-height: 3rem;
+}
+    .box-banner {
+      font-size: 25px;
+}
 }
 
 @media (min-width: 768px) {
