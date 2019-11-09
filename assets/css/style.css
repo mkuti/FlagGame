@@ -137,7 +137,7 @@ ol {
 /* flag.html */
 
 .modes {
-    margin: -6px;
+    margin: -6px; /* added a negative margin here to avoid buttons of the banner going over the logo and to keep them on the same row */
     padding: 5px;
     list-style: none;
 }
