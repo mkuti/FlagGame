@@ -25,7 +25,7 @@ body {
 
 .bg-red {
     background-color: #4B1E2E;
-    color: #F1F1E6;
+    color: #F1F1E6!important;
 }
 
 .bg-lightred {
@@ -124,9 +124,22 @@ ol {
     margin: 0;
 }
 
-button {
+.match {
     margin: 5px;
     padding: 5px;
+}
+
+.match:hover {
+    background-color: #4B1E2E;
+    color: #F1F1E6;
+}
+
+/* flag.html */
+
+.modes {
+    margin: -6px;
+    padding: 5px;
+    list-style: none;
 }
 
 @media (min-width: 576px) {
@@ -142,12 +155,11 @@ button {
 @media (min-width: 768px) {
     .banner {
     display: flex;
-    height: 100px;
     width: 100%;
     justify-content: center;
     align-items: center;
     margin: 0;
-    font-size: 3.5vmin; /* to make the banner font-size scale depending of screen size https://css-tricks.com/viewport-sized-typography/ */
+    font-size: 2.5vmin; /* to make the banner font-size scale depending of screen size https://css-tricks.com/viewport-sized-typography/ */
 }
 
     .navbar-toggler { /* removing burger menu from bigger screens */

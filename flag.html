@@ -23,27 +23,25 @@
 </head>
 
 <body class="bg-darkblue">
-    <nav class="flex-container">
-        <a href="index.html" id="logo">
+    <nav class="flex-container bg-red">
+        <a class="text-decoration-none" href="index.html" id="logo">
             <img src="assets/images/map.png" width="150" height="100" alt="logo">
-            <h1 class="attention bg-red headers text-center text-uppercase">Match the Flag!</h1>
+            <h1 class="attention headers text-center text-uppercase text-decoration-none text-white">Match the Flag!</h1> <!-- text-white bootstrap class makes the color white important-->
         </a>
-        <div class="banner bg-red">
-            <ul class="navbar-nav mr-auto text-uppercase">
-                <li class="nav-item bg-darkblue">
-                    <a class="nav-link" href="flag.html">By Flag</a>
-                </li>
-                <li class="nav-item bg-darkblue">
-                    <a class="nav-link" href="country.html">By Country</a>
-                </li>
-                <li class="nav-item bg-darkblue">
-                    <a class="nav-link bg-darkblue" href="pair.html">Pair Them</a>
-                </li>
-                <li class="nav-item bg-darkblue">
-                    <a class="nav-link" href="extreme.html">Extreme</a>
-                </li>
-            </ul>
-        </div>
+        <ul class="banner text-uppercase">
+            <li class="col-3 modes bg-darkblue">
+                <a class="text-decoration-none text-white" href="flag.html">By Flag</a>
+            </li>
+            <li class="col-3 modes bg-darkblue">
+                <a class="text-decoration-none text-white" href="country.html">By Country</a>
+            </li>
+            <li class="col-3 modes bg-darkblue">
+                <a class="text-decoration-none text-white" href="pair.html">Pair Them</a>
+            </li>
+            <li class="col-3 modes bg-darkblue">
+                <a class="text-decoration-none text-white" href="extreme.html">Extreme</a>
+            </li>
+        </ul>
         <!-- button for smaller devices -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#burger" aria-controls="burger" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars"></span>
@@ -57,23 +55,14 @@
                     <h2 class="col-12 text-uppercase headers">Match the Flag!</h2>
                 </div>
                 <div class="row">
-                    <div class="col-12">
-                        <h4 class="box-p headers">Welcome to my flag game: have fun and learn!</h4>
-                        <h4 class="box-p headers">Instructions:</h4>
-                        <p class="box-p">Choose a mode</p>
-                        <ol class="text-left">
-                            <li>By Flag: Study the flag and find the country which designed it among 4 options</li>
-                            <li>By Country: Find flag which belongs to the country displayed</li>
-                            <li>Pair them: Get challenged by pairing very similar flags to their own countries</li>
-                            <li>Extreme map mode: Match the flag with the country by clicking directly on the map</li>
-                        </ol>
+                    <div class="col-12 flag">
                     </div>
                 </div>
                 <div class="row justify-content-center mt-3 mb-3">
-                        <button class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-white" href="">By Flag</button>
-                        <button class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-white" href="">By Country</button>
-                        <button class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-white" href="">Pair them</button>
-                        <button class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-white" href="">Extreme</button>
+                        <a class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-decoration-none answerA" href=""></a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-decoration-none answerB" href=""></a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-decoration-none answerC" href=""></a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-decoration-none answerD" href=""></a>
                 </div>
             </div>
         </div>
