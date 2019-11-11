@@ -1,12 +1,9 @@
 let flag = document.querySelector("#flag");
-let answerA = document.querySelector("answerA");
-let answerB = document.querySelector("answerB");
-let answerC = document.querySelector("answerC");
-let answerD = document.querySelector("answerD");
+let answers = Array.from(document.getElementsByClassName("answer-item"));
 
 const url = 'https://restcountries.eu/rest/v2/all';
 
-console.log(flag);
+console.log(answers);
 
 function returnData (url) {
     return fetch(url)
