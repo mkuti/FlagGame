@@ -23,6 +23,11 @@ body {
     padding-top: 5px;
 }
 
+.row {
+    margin-right: 0!important;
+    margin-left: 0!important;
+}
+
 .bg-red {
     background-color: #4B1E2E;
     color: #F1F1E6!important;
@@ -82,7 +87,7 @@ body {
 .center-box {
     border: 1px solid #F1F1E6;
     border-radius: 1rem;
-    margin: 0;
+    margin: 0!important;
     font-size: 1rem;
     font-weight: 400;
     line-height: 2rem;
