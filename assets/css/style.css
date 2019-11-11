@@ -147,6 +147,18 @@ ol {
     list-style: none;
 }
 
+#flag {
+    height: 252px;
+    background-color: #fff;
+    border: 1px solid #333;
+}
+#flag img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+/* madia queries */
+
 @media (min-width: 576px) {
     .center-box {
         font-size: 1.5rem;
