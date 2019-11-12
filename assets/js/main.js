@@ -23,19 +23,18 @@ const url = 'https://restcountries.eu/rest/v2/all';
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        countryArray = data;
-        let options = "";
+        countryArray = data; //defining countryArray variable to the fetched data
+        let options = ""; //setting an empty string which we will assign one country to be displayed at a time
         countryArray.forEach(item => options += `<option value="${item.alpha2Code}">${item.name}</option>`)
-        countriesData.innerHTML = options;
-        countriesData.selectedIndex = Math.floor(Math.random() * countryArray.length);
-        console.log(countriesData.selectedIndex);
-        displayRandomQuestion("FR");
+        countriesData.innerHTML = options; //adding country list as dropdown menu to a hidden container from which we'll pull randomly data
+        countriesData.selectedIndex = Math.floor(Math.random() * countryArray.length); //using index from dropdown menu to pull random numbers which we will then assign to question function so we get one country data randomly for each question
+        displayRandomQuestion(countriesData[countriesData.selectedIndex].value); //assigning parameters to question function: random index to which we check its value/country code
     })
     .catch(err => console.log(err))
     
 
-function displayRandomQuestion(countryByCode) {
-    let countryData = countryArray.find(country => country.alpha2Code == countryByCode);
-    console.log(countryData);
+function displayRandomQuestion(countryByCode) { //defining the random question function
+    let countryData = countryArray.find(country => country.alpha2Code == countryByCode); // to define a variable to a country which match the function argument which is the country code so we can apply data to it
+    console.log(countryData.flag);
 }
 
