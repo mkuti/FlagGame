@@ -1,11 +1,13 @@
 // setting variables for the whole game
 
-let flag = document.getElementById("flag");
+let flag = document.querySelector("#flag img");
 let answers = Array.from(document.getElementsByClassName("answer-item"));
 
 let flagNow = {};
 let acceptingAnswers= true;
 let availableQuestions = [];
+
+console.log(flag);
 
 // creating array of 50 objects which represent each challenge
 //within each object, will fetch a flag and offer 4 choices of country
@@ -19,7 +21,7 @@ fetch(url)
     .then(data => {
         let countryArray = data;
         countryArray.forEach(item => {
-           flag.innerHTML = item.flag;
+           flag.src = item.flag;
         })
     })
     .catch(err => console.log(err))

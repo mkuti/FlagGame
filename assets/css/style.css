@@ -148,9 +148,7 @@ ol {
 }
 
 #flag {
-    height: 252px;
-    background-color: #fff;
-    border: 1px solid #333;
+    height: 150px;
 }
 #flag img {
     display: block;
