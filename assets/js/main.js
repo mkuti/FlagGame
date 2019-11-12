@@ -1,8 +1,10 @@
 // setting variables for the whole game
 
-let countriesData = document.getElementById("countriesData");
+const countriesData = document.getElementById("countriesData");
+const flag = document.querySelector("#flag img");
 
-let flag = document.querySelector("#flag img");
+let countryArray; //contains fetched data
+
 let answers = Array.from(document.getElementsByClassName("answer-item"));
 
 let flagNow = {};
@@ -21,10 +23,19 @@ const url = 'https://restcountries.eu/rest/v2/all';
 fetch(url)
     .then(response => response.json())
     .then(data => {
-        let countryArray = data;
+        countryArray = data;
+        let options = "";
         countryArray.forEach(item => {
-           countriesData.innerHTML += `<option value="${item.alpha2Code}">${item.name}</option>`;
-           console.log(countriesData)
+           options += `<option value="${item.alpha2Code}">${item.name}</option>`;
         })
+        countriesData.innerHTML = options;
+        displayRandomQuestion("FR");
     })
     .catch(err => console.log(err))
+    
+
+function displayRandomQuestion(countryByCode) {
+    let countryData = countryArray.find(country => country.alpha2Code == countryByCode);
+    console.log(countryData);
+}
+
