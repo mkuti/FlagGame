@@ -25,10 +25,10 @@ fetch(url)
     .then(data => {
         countryArray = data;
         let options = "";
-        countryArray.forEach(item => {
-           options += `<option value="${item.alpha2Code}">${item.name}</option>`;
-        })
+        countryArray.forEach(item => options += `<option value="${item.alpha2Code}">${item.name}</option>`)
         countriesData.innerHTML = options;
+        countriesData.selectedIndex = Math.floor(Math.random() * countryArray.length);
+        console.log(countriesData.selectedIndex);
         displayRandomQuestion("FR");
     })
     .catch(err => console.log(err))
