@@ -35,6 +35,6 @@ fetch(url)
 
 function displayRandomQuestion(countryByCode) { //defining the random question function
     let countryData = countryArray.find(country => country.alpha2Code == countryByCode); // to define a variable to a country which match the function argument which is the country code so we can apply data to it
-    console.log(countryData.flag);
+    flag.src = countryData.flag;
 }
 

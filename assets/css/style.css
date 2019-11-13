@@ -148,7 +148,8 @@ ol {
 }
 
 #flag {
-    height: 150px;
+    height: 9rem;
+    width: 12rem;
 }
 #flag img {
     display: block;
