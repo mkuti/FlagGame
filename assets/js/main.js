@@ -38,13 +38,16 @@ function displayRandomQuestion(countryByCode) { //defining the random question f
     questionCount = 0; //reset number of questions being displayed after player finishes first round
 
     let countryData = countryArray.find(country => country.alpha2Code == countryByCode); // to define a variable to a country which match the function argument which is the country code so we can apply data to it
-    let incorrectAnswers = countryArray.filter(country => country.alpha2Code !== countryByCode); // to define a variable for all the other countries not matching the random number
-    let answersAmount = 4;
+    flag.src = countryData.flag; // assigning a random flag to the source of img inside flag ID
     
-    flag.src = countryData.flag;
+    let answersAmount = 4;
+    let incorrectAnswers = countryArray.filter(country => country.alpha2Code !== countryByCode); // to define a variable for all the other countries not matching the random number
+    let whereCorrectAnswer = Math.floor(Math.random() * answersAmount + 1)
+    
+    console.log(whereCorrectAnswer);
+
     answers.forEach(answer => {
         const number = answer.dataset['number'];
-        console.log(number);
     });
     
 }
