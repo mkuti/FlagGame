@@ -7,11 +7,9 @@ let countryArray; //contains fetched data
 
 let answers = Array.from(document.getElementsByClassName("answer-item"));
 
-let flagNow = {};
 let acceptingAnswers= true;
-let availableQuestions = [];
-
-console.log(countriesData);
+let score = 0;
+let questionCount = 0;
 
 // creating array of 50 objects which represent each challenge
 //within each object, will fetch a flag and offer 4 choices of country
@@ -28,13 +26,26 @@ fetch(url)
         countryArray.forEach(item => options += `<option value="${item.alpha2Code}">${item.name}</option>`)
         countriesData.innerHTML = options; //adding country list as dropdown menu to a hidden container from which we'll pull randomly data
         countriesData.selectedIndex = Math.floor(Math.random() * countryArray.length); //using index from dropdown menu to pull random numbers which we will then assign to question function so we get one country data randomly for each question
+        
         displayRandomQuestion(countriesData[countriesData.selectedIndex].value); //assigning parameters to question function: random index to which we check its value/country code
+    
     })
     .catch(err => console.log(err))
     
 
 function displayRandomQuestion(countryByCode) { //defining the random question function
+    score = 0; //reset score after player finishes first round
+    questionCount = 0; //reset number of questions being displayed after player finishes first round
+
     let countryData = countryArray.find(country => country.alpha2Code == countryByCode); // to define a variable to a country which match the function argument which is the country code so we can apply data to it
+    let incorrectAnswers = countryArray.filter(country => country.alpha2Code !== countryByCode); // to define a variable for all the other countries not matching the random number
+    let answersAmount = 4;
+    
     flag.src = countryData.flag;
+    answers.forEach(answer => {
+        const number = answer.dataset['number'];
+        console.log(number);
+    });
+    
 }
 
