@@ -8,6 +8,8 @@ let countryArray; //contains fetched data
 let acceptingAnswers= true;
 let score = 0;
 let questionCount = 0;
+let currentQuestion = [];
+let MatchCountry;
 
 // add events listeners
 
@@ -31,7 +33,8 @@ function fetchApi () {
         displayRandomQuestion(countriesData[countriesData.selectedIndex].value); //assigning parameters to question function: random index to which we check its value/country code
     */
     shuffleData (countryArray);
-    pullCurrentQuestion (countryArray)
+    pullCurrentQuestion (countryArray);
+    pullMatchCountry (currentQuestion);
     })
     
     .catch(err => console.log(err))
@@ -43,10 +46,17 @@ function shuffleData (countryArray) {
 }
 
 function pullCurrentQuestion (countryArray) {
-    let currentQuestion = [];
     for (let i = 0;; i++) {
         if (i > 3) break;
         currentQuestion.push(countryArray[i])
+    }
+}
+
+function pullMatchCountry (currentQuestion) {
+    for (let i = 0;; i++) {
+        if (i > 0) break;
+        MatchCountry += currentQuestion[i];
+        console.log(MatchCountry);
     }
 }
 
