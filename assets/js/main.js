@@ -21,20 +21,32 @@ function fetchApi () {
     .then(response => response.json())
     .then(data => {
         countryArray = data; //defining countryArray variable to the fetched data
-        let options = ""; //setting an empty string which we will assign one country to be displayed at a time
+        /*let options = ""; //setting an empty string which we will assign one country to be displayed at a time
         countryArray.forEach(item => options += `<option value="${item.alpha2Code}">${item.name}</option>`)
         countriesData.innerHTML = options; //adding country list as dropdown menu to a hidden container from which we'll pull randomly data
         countriesData.selectedIndex = Math.floor(Math.random() * countryArray.length); //using index from dropdown menu to pull random numbers which we will then assign to question function so we get one country data randomly for each question
         
-        console.log(countryArray)
+        
 
         displayRandomQuestion(countriesData[countriesData.selectedIndex].value); //assigning parameters to question function: random index to which we check its value/country code
-    
+    */
+    shuffleData (countryArray);
+    console.log(countryArray);
     })
+    
     .catch(err => console.log(err))
+
 }
 
-function displayRandomQuestion(countryByCode) { //defining the random question function
+function shuffleData (countryArray) {
+    return countryArray.sort(() => Math.random() - 0.5);   
+}
+
+
+fetchApi ();
+
+
+/*function displayRandomQuestion(countryByCode) { //defining the random question function
     score = 0; //reset score after player finishes first round
     questionCount = 0; //reset number of questions being displayed after player finishes first round
 
@@ -55,5 +67,9 @@ function displayRandomQuestion(countryByCode) { //defining the random question f
     
     let incorrectAnswers = countryArray.filter(country => country.alpha2Code !== countryByCode); // to define a variable for all the other countries not matching the random number
     
-}
+}*/
 
+/*function yodaShuffle(giveMeAnArray) {
+  return giveMeAnArray.sort(() => Math.random() - 0.5);
+}
+yodaShuffle([1,2,3,4,5,6,7,8,9,10])*/
