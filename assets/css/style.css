@@ -93,15 +93,6 @@ body {
     line-height: 2rem;
 }
 
-/*.center-box:after { found trick to make center box responsive without bootstrap: https://spin.atomicobject.com/2015/07/14/css-responsive-square/
-    content: "";
- pseudo element’s parent is .square element and padding calculated as percentage of its parent’s width
-    fixing the height (padding-bottom: 100%) of the pseudo-element to the width of .square.
-    Whenever .square’s width changes, so will the pseudo-element’s height.
-    display: block;
-    padding-bottom: 100%;
-}*/
-
 .box-banner {
     text-align: center;
     border-radius: 1rem;
@@ -139,7 +130,11 @@ ol {
     color: #F1F1E6;
 }
 
-/* flag.html */
+/* game */
+
+.game-container {
+    display: none;
+}
 
 .modes {
     margin: -6px; /* added a negative margin here to avoid buttons of the banner going over the logo and to keep them on the same row */
