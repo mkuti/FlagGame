@@ -31,7 +31,7 @@ function fetchApi () {
         displayRandomQuestion(countriesData[countriesData.selectedIndex].value); //assigning parameters to question function: random index to which we check its value/country code
     */
     shuffleData (countryArray);
-    console.log(countryArray);
+    pullCurrentQuestion (countryArray)
     })
     
     .catch(err => console.log(err))
@@ -42,6 +42,13 @@ function shuffleData (countryArray) {
     return countryArray.sort(() => Math.random() - 0.5);   
 }
 
+function pullCurrentQuestion (countryArray) {
+    let currentQuestion = [];
+    for (let i = 0;; i++) {
+        if (i > 3) break;
+        currentQuestion.push(countryArray[i])
+    }
+}
 
 fetchApi ();
 
