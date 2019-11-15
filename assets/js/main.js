@@ -44,6 +44,12 @@ function shuffleData (countryArray) {
     return countryArray.sort(() => Math.random() - 0.5);   
 }
 
+function shuffleAnswersItem (answers) {
+    answers.forEach(answer => {
+      number = Math.floor(Math.random() * answers.length);
+    });
+}
+
 function pullCurrentQuestion (countryArray) {
     for (let i = 0;; i++) {
         if (i > 3) break;
@@ -56,14 +62,8 @@ function CountrytoMatch (currentQuestion) {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length);
     MatchCountry = currentQuestion[countryIndex];
     flag.src = MatchCountry.flag;
-    randomAnswersItem (answers)
+    shuffleAnswersItem (answers)
     answers[number].innerText = MatchCountry.name;
-}
-
-function randomAnswersItem (answers) {
-    answers.forEach(answer => {
-      number = Math.floor(Math.random() * answers.length);
-    });
 }
 
 fetchApi ();
