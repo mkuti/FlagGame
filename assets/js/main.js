@@ -3,7 +3,7 @@ const url = 'https://restcountries.eu/rest/v2/all';
 const countriesData = document.getElementById("countriesData");
 const flag = document.querySelector("#flag img");
 const answers = Array.from(document.getElementsByClassName("answer-item"));
-
+let number;
 let countryArray; //contains fetched data
 let acceptingAnswers= true;
 let score = 0;
@@ -49,29 +49,24 @@ function pullCurrentQuestion (countryArray) {
         if (i > 3) break;
         currentQuestion.push(countryArray[i]);
     }
-    pullCountrytoMatch (currentQuestion)
-    AssignFlag (MatchCountry);
+    CountrytoMatch (currentQuestion)
 }
 /* assigning indexes, numbers to each country for the current question (https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) */ 
-function pullCountrytoMatch (currentQuestion) {
+function CountrytoMatch (currentQuestion) {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length);
     MatchCountry = currentQuestion[countryIndex];
+    flag.src = MatchCountry.flag;
+    randomAnswersItem (answers)
+    answers[number].innerText = MatchCountry.name;
 }
 
-function AssignFlag (MatchCountry) {
-    flag.src = MatchCountry.flag;
-}
-/*
-function whereMatchCountryName (answers) {
+function randomAnswersItem (answers) {
     answers.forEach(answer => {
-        let number = answer.dataset['number'];
-        let randomNumber = Math.floor(Math.random() * number + 1)
-        console.log(randomNumber)
+      number = Math.floor(Math.random() * answers.length);
     });
-}*/
+}
 
 fetchApi ();
-
 
 /*function displayRandomQuestion(countryByCode) { //defining the random question function
     score = 0; //reset score after player finishes first round
