@@ -9,7 +9,7 @@ let acceptingAnswers= true;
 let score = 0;
 let questionCount = 0;
 let currentQuestion = [];
-let MatchCountry;
+let MatchCountry = [];
 
 // add events listeners
 
@@ -55,7 +55,7 @@ function pullCurrentQuestion (countryArray) {
 function pullMatchCountry (currentQuestion) {
     for (let i = 0;; i++) {
         if (i > 0) break;
-        MatchCountry += currentQuestion[i];
+        MatchCountry.push(currentQuestion[i]);
         console.log(MatchCountry);
     }
 }
