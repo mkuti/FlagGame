@@ -50,20 +50,18 @@ function pullCurrentQuestion (countryArray) {
         currentQuestion.push(countryArray[i]);
     }
     pullCountrytoMatch (currentQuestion)
-    //pullMatchCountry (currentQuestion);
-    //AssignFlag (MatchCountry);
+    AssignFlag (MatchCountry);
 }
 /* assigning indexes, numbers to each country for the current question (https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) */ 
 function pullCountrytoMatch (currentQuestion) {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length);
     MatchCountry = currentQuestion[countryIndex];
-    console.log(MatchCountry);
 }
 
-/*unction AssignFlag (MatchCountry) {
-    flag.src = MatchCountry[0].flag;
+function AssignFlag (MatchCountry) {
+    flag.src = MatchCountry.flag;
 }
-
+/*
 function whereMatchCountryName (answers) {
     answers.forEach(answer => {
         let number = answer.dataset['number'];
