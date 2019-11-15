@@ -9,7 +9,7 @@ let acceptingAnswers= true;
 let score = 0;
 let questionCount = 0;
 let currentQuestion = [];
-let MatchCountry = [];
+let MatchCountry;
 
 // add events listeners
 
@@ -49,18 +49,18 @@ function pullCurrentQuestion (countryArray) {
         if (i > 3) break;
         currentQuestion.push(countryArray[i]);
     }
-    pullMatchCountry (currentQuestion);
-    AssignFlag (MatchCountry);
+    pullCountrytoMatch (currentQuestion)
+    //pullMatchCountry (currentQuestion);
+    //AssignFlag (MatchCountry);
+}
+/* assigning indexes, numbers to each country for the current question (https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) */ 
+function pullCountrytoMatch (currentQuestion) {
+    let countryIndex = Math.floor(Math.random() * currentQuestion.length);
+    MatchCountry = currentQuestion[countryIndex];
+    console.log(MatchCountry);
 }
 
-function pullMatchCountry (currentQuestion) {
-    for (let i = 0;; i++) {
-        if (i > 0) break;
-        MatchCountry.push(currentQuestion[i]);
-    }
-}
-
-function AssignFlag (MatchCountry) {
+/*unction AssignFlag (MatchCountry) {
     flag.src = MatchCountry[0].flag;
 }
 
@@ -70,10 +70,10 @@ function whereMatchCountryName (answers) {
         let randomNumber = Math.floor(Math.random() * number + 1)
         console.log(randomNumber)
     });
-}
+}*/
 
 fetchApi ();
-whereMatchCountryName (answers)
+
 
 /*function displayRandomQuestion(countryByCode) { //defining the random question function
     score = 0; //reset score after player finishes first round
