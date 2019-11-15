@@ -34,7 +34,6 @@ function fetchApi () {
     */
     shuffleData (countryArray);
     pullCurrentQuestion (countryArray);
-    pullMatchCountry (currentQuestion);
     })
     
     .catch(err => console.log(err))
@@ -48,16 +47,21 @@ function shuffleData (countryArray) {
 function pullCurrentQuestion (countryArray) {
     for (let i = 0;; i++) {
         if (i > 3) break;
-        currentQuestion.push(countryArray[i])
+        currentQuestion.push(countryArray[i]);
     }
+    pullMatchCountry (currentQuestion);
+    AssignFlag (MatchCountry);
 }
 
 function pullMatchCountry (currentQuestion) {
     for (let i = 0;; i++) {
         if (i > 0) break;
         MatchCountry.push(currentQuestion[i]);
-        console.log(MatchCountry);
     }
+}
+
+function AssignFlag (MatchCountry) {
+    flag.src = MatchCountry[0].flag;
 }
 
 fetchApi ();
