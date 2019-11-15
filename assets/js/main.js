@@ -64,8 +64,16 @@ function AssignFlag (MatchCountry) {
     flag.src = MatchCountry[0].flag;
 }
 
-fetchApi ();
+function whereMatchCountryName (answers) {
+    answers.forEach(answer => {
+        let number = answer.dataset['number'];
+        let randomNumber = Math.floor(Math.random() * number + 1)
+        console.log(randomNumber)
+    });
+}
 
+fetchApi ();
+whereMatchCountryName (answers)
 
 /*function displayRandomQuestion(countryByCode) { //defining the random question function
     score = 0; //reset score after player finishes first round
