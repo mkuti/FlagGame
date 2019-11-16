@@ -55,7 +55,8 @@ function pullCurrentQuestion (countryArray) {
         if (i > 3) break;
         currentQuestion.push(countryArray[i]);
     }
-    CountrytoMatch (currentQuestion)
+    CountrytoMatch (currentQuestion);
+    otherCountries (currentQuestion)
 }
 /* assigning indexes, numbers to each country for the current question (https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) */ 
 function CountrytoMatch (currentQuestion) {
@@ -64,6 +65,16 @@ function CountrytoMatch (currentQuestion) {
     flag.src = MatchCountry.flag;
     shuffleAnswersItem (answers)
     answers[number].innerText = MatchCountry.name;
+    currentQuestion.splice(countryIndex, 1)
+    answers.splice(answers[number], 1);
+}
+
+function otherCountries (currentQuestion) {
+    let newNumber = Math.floor(Math.random() * answers.length);
+    for (let country in currentQuestion) {
+        console.log(currentQuestion[country]);
+        answers[newNumber].innerText = currentQuestion[country].name;
+    };
 }
 
 fetchApi ();
