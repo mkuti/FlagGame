@@ -1,5 +1,7 @@
 // setting variables for the whole game
 const url = 'https://restcountries.eu/rest/v2/all';
+const homeContainer = document.getElementById("home-container");
+const gameContainer = document.getElementById("game-container");
 const startFlag = document.getElementById("flag-button");
 const startCountry = document.getElementById("country-button");
 const flag = document.querySelector("#flag img");
@@ -13,11 +15,12 @@ let acceptingAnswers= true;
 let score = 0;
 let questionCount = 0;
 
+console.log(homeContainer);
 
 // add events listeners
 startFlag.addEventListener("click", function(event){
-    document.getElementById("home-container").style.display("none");
-    document.getElementById("game-container").style.display("block");
+    homeContainer.classList.add("d-none");
+    gameContainer.classList.remove("d-none");
 })
 
 

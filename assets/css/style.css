@@ -132,10 +132,6 @@ ol {
 
 /* game */
 
-#game-container {
-    display: none;
-}
-
 .modes {
     margin: -6px; /* added a negative margin here to avoid buttons of the banner going over the logo and to keep them on the same row */
     padding: 5px;
