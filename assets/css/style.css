@@ -132,7 +132,7 @@ ol {
 
 /* game */
 
-.game-container {
+#game-container {
     display: none;
 }
 

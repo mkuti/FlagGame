@@ -1,6 +1,5 @@
 // setting variables for the whole game
 const url = 'https://restcountries.eu/rest/v2/all';
-const countriesData = document.getElementById("countriesData");
 const startFlag = document.getElementById("flag-button");
 const startCountry = document.getElementById("country-button");
 const flag = document.querySelector("#flag img");
@@ -16,7 +15,10 @@ let questionCount = 0;
 
 
 // add events listeners
-
+startFlag.addEventListener("click", function(event){
+    document.getElementById("home-container").style.display("none");
+    document.getElementById("game-container").style.display("block");
+})
 
 
 //fetching rest country API
