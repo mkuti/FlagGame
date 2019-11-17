@@ -5,11 +5,13 @@ const flag = document.querySelector("#flag img");
 const answers = Array.from(document.getElementsByClassName("answer-item"));
 let number;
 let countryArray; //contains fetched data
+let currentQuestion = [];
+let MatchCountry;
+
 let acceptingAnswers= true;
 let score = 0;
 let questionCount = 0;
-let currentQuestion = [];
-let MatchCountry;
+
 
 // add events listeners
 
