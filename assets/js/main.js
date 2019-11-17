@@ -34,6 +34,7 @@ function fetchApi () {
     */
     shuffleData (countryArray);
     pullCurrentQuestion (countryArray);
+    console.log(currentQuestion)
     })
     
     .catch(err => console.log(err))
@@ -66,15 +67,13 @@ function CountrytoMatch (currentQuestion) {
     shuffleAnswersItem (answers)
     answers[number].innerText = MatchCountry.name;
     currentQuestion.splice(countryIndex, 1)
-    answers.splice(answers[number], 1);
+    answers.splice(number, 1);
 }
 
 function otherCountries (currentQuestion) {
-    let newNumber = Math.floor(Math.random() * answers.length);
-    for (let country in currentQuestion) {
-        console.log(currentQuestion[country]);
-        answers[newNumber].innerText = currentQuestion[country].name;
-    };
+    answers[0].innerText = currentQuestion[0].name;
+    answers[1].innerText = currentQuestion[1].name;
+    answers[2].innerText = currentQuestion[2].name;
 }
 
 fetchApi ();
