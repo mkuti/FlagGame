@@ -5,6 +5,7 @@ const gameContainer = document.getElementById("game-container");
 const startFlag = document.getElementById("flag-button");
 const startCountry = document.getElementById("country-button");
 const flag = document.querySelector("#flag img");
+const answerItem = document.getElementsByClassName("answer-item");
 const answers = Array.from(document.getElementsByClassName("answer-item"));
 let number;
 let countryArray; //contains fetched data
@@ -15,13 +16,18 @@ let acceptingAnswers= true;
 let score = 0;
 let questionCount = 0;
 
-console.log(homeContainer);
-
 // add events listeners
 startFlag.addEventListener("click", function(event){
     homeContainer.classList.add("d-none");
     gameContainer.classList.remove("d-none");
 })
+
+/*answerItem.addEventListener(click, function(event) {
+    if (answerItem.innerText === MatchCountry.name) {
+        Swal.fire('Great Matching skills!');
+        pullCurrentQuestion (countryArray);
+        } else {return;}
+})*/
 
 
 //fetching rest country API
@@ -76,4 +82,4 @@ function otherCountries (currentQuestion) {
     answers[2].innerText = currentQuestion[2].name;
 }
 
-fetchApi ();
+fetchApi();
