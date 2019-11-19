@@ -165,6 +165,8 @@ Google map JavaScript API
 Resources:
 https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg
 https://stackoverflow.com/questions/3186635/disable-double-left-click-on-google-map
+http://nationfacts.net/
+https://www.worldatlas.com/
 *
 
 # Deployment
