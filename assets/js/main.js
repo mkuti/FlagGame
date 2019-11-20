@@ -10,7 +10,7 @@ const answers = Array.from(document.getElementsByClassName("answer-item"));
 let number;
 let countryArray; //contains fetched data
 let currentQuestion = [];
-let MatchCountry;
+var MatchCountry;
 
 let acceptingAnswers= true;
 let score = 0;
@@ -63,7 +63,8 @@ function pullCurrentQuestion (countryArray) {
         currentQuestion.push(countryArray[i]);
     }
     CountrytoMatch (currentQuestion);
-    otherCountries (currentQuestion)
+    otherCountries (currentQuestion);
+    //matchingCountry();
 }
 /* assigning indexes, numbers to each country for the current question (https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) */ 
 function CountrytoMatch (currentQuestion) {
@@ -82,4 +83,18 @@ function otherCountries (currentQuestion) {
     answers[2].innerText = currentQuestion[2].name;
 }
 
+function matchingCountry () {
+    answers.forEach(answer => {
+        answer.addEventListener("click", e => {
+            if(!acceptingAnswers) return;
+
+            acceptingAnswers= false;
+            let clickedAnswer = e.target;
+            let clickedAnswerNumber = clickedAnswer.dataset["number"];
+            console.log(clickedAnswerNumber);
+});
+})
+}
+
 fetchApi();
+matchingCountry();
