@@ -10,7 +10,7 @@ const answers = Array.from(document.getElementsByClassName("answer-item"));
 let number;
 let countryArray; //contains fetched data
 let currentQuestion = [];
-var MatchCountry;
+let MatchCountry;
 
 let acceptingAnswers= true;
 let score = 0;
@@ -62,20 +62,28 @@ function pullCurrentQuestion (countryArray) {
         if (i > 3) break;
         currentQuestion.push(countryArray[i]);
     }
-    CountrytoMatch (currentQuestion);
+    countrytoMatch (currentQuestion);
     otherCountries (currentQuestion);
     //matchingCountry();
 }
 /* assigning indexes, numbers to each country for the current question (https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) */ 
-function CountrytoMatch (currentQuestion) {
+function countrytoMatch (currentQuestion) {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length);
     MatchCountry = currentQuestion[countryIndex];
     flag.src = MatchCountry.flag;
     shuffleAnswersItem (answers)
     answers[number].innerText = MatchCountry.name;
-    currentQuestion.splice(countryIndex, 1)
-    answers.splice(number, 1);
+    
+    let slicedQuestion = currentQuestion.slice(!MatchCountry)
+    console.log(slicedQuestion)
+    //answers.splice(number, 1);
 }
+
+/*function slicedData () {
+    
+    console.log(MatchCountry);
+    //let slicedQuestion = currentQuestion.slice(countryIndex, 1)
+}*/
 
 function otherCountries (currentQuestion) {
     answers[0].innerText = currentQuestion[0].name;
@@ -98,3 +106,4 @@ function matchingCountry () {
 
 fetchApi();
 matchingCountry();
+//slicedData ()
