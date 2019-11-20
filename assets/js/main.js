@@ -19,21 +19,13 @@ let questionCount = 0;
 
 // add events listeners
 startFlag.addEventListener("click", function(event){
-    homeContainer.classList.add("d-none");
-    gameContainer.classList.remove("d-none");
+    if (homeContainer.style.display !== "block"){
+        homeContainer.classList.add("d-none");
+        gameContainer.classList.remove("d-none");
+    }
 })
 
-/*answerItem.addEventListener(click, function(event) {
-    if (answerItem.innerText === MatchCountry.name) {
-        Swal.fire('Great Matching skills!');
-        pullCurrentQuestion (countryArray);
-        } else {return;}
-})*/
-
-
 //fetching rest country API
-
-
 function fetchApi () {
     return fetch(url)
     .then(response => response.json())
@@ -52,7 +44,7 @@ function shuffleData (countryArray) {
     return countryArray.sort(() => Math.random() - 0.5);   
 }
 
-function shuffleAnswersItem (answers) {
+function mixAnswersItem (answers) {
     answers.forEach(answer => {
       number = Math.floor(Math.random() * answers.length);
     });
@@ -65,14 +57,14 @@ function pullCurrentQuestion (countryArray) {
     }
     countrytoMatch (currentQuestion);
     otherCountries (filteredQuestion);
-    //matchingCountry();
+    matchingCountry();
 }
 /* assigning indexes, numbers to each country for the current question (https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) */ 
 function countrytoMatch (currentQuestion) {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length);
     MatchCountry = currentQuestion[countryIndex];
     flag.src = MatchCountry.flag;
-    shuffleAnswersItem (answers)
+    mixAnswersItem (answers)
     answers[number].innerText = MatchCountry.name;
     
     filteredQuestion = currentQuestion.filter(countries => countries.name !== MatchCountry.name)
@@ -90,15 +82,17 @@ function otherCountries (filteredQuestion) {
 function matchingCountry () {
     answers.forEach(answer => {
         answer.addEventListener("click", e => {
-            if(!acceptingAnswers) return;
-
-            acceptingAnswers= false;
             let clickedAnswer = e.target;
-            let clickedAnswerNumber = clickedAnswer.dataset["number"];
-            console.log(clickedAnswerNumber);
+            //let clickedAnswerNumber = clickedAnswer.dataset["number"];
+            //console.log(clickedAnswer);
+            if(clickedAnswer.name == MatchCountry.name){
+                Swal.fire('Well done!');
+                pullCurrentQuestion (countryArray)
+            }
+            
+
 });
 })
 }
 
 fetchApi();
-//matchingCountry();
