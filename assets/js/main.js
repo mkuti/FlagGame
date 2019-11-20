@@ -11,6 +11,7 @@ let number;
 let countryArray; //contains fetched data
 let currentQuestion = [];
 let MatchCountry;
+let filteredQuestion;
 
 let acceptingAnswers= true;
 let score = 0;
@@ -63,7 +64,7 @@ function pullCurrentQuestion (countryArray) {
         currentQuestion.push(countryArray[i]);
     }
     countrytoMatch (currentQuestion);
-    otherCountries (currentQuestion);
+    otherCountries (filteredQuestion);
     //matchingCountry();
 }
 /* assigning indexes, numbers to each country for the current question (https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) */ 
@@ -74,21 +75,16 @@ function countrytoMatch (currentQuestion) {
     shuffleAnswersItem (answers)
     answers[number].innerText = MatchCountry.name;
     
-    let slicedQuestion = currentQuestion.slice(!MatchCountry)
-    console.log(slicedQuestion)
-    //answers.splice(number, 1);
+    filteredQuestion = currentQuestion.filter(countries => countries.name !== MatchCountry.name)
+    console.log(MatchCountry);
+    console.log(filteredQuestion)
+    answers.splice(number, 1);
 }
 
-/*function slicedData () {
-    
-    console.log(MatchCountry);
-    //let slicedQuestion = currentQuestion.slice(countryIndex, 1)
-}*/
-
-function otherCountries (currentQuestion) {
-    answers[0].innerText = currentQuestion[0].name;
-    answers[1].innerText = currentQuestion[1].name;
-    answers[2].innerText = currentQuestion[2].name;
+function otherCountries (filteredQuestion) {
+    answers[0].innerText = filteredQuestion[0].name;
+    answers[1].innerText = filteredQuestion[1].name;
+    answers[2].innerText = filteredQuestion[2].name;
 }
 
 function matchingCountry () {
@@ -105,5 +101,4 @@ function matchingCountry () {
 }
 
 fetchApi();
-matchingCountry();
-//slicedData ()
+//matchingCountry();
