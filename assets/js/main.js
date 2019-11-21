@@ -12,6 +12,7 @@ let countryArray; //contains fetched data
 let currentQuestion = [];
 let MatchCountry;
 let filteredQuestion;
+let filteredAnswers;
 
 let acceptingAnswers= true;
 let score = 0;
@@ -64,12 +65,17 @@ function countrytoMatch (currentQuestion) {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length);
     MatchCountry = currentQuestion[countryIndex];
     flag.src = MatchCountry.flag;
-    mixAnswersItem (answers)
+    mixAnswersItem(answers)
     answers[number].innerText = MatchCountry.name;
     
     filteredQuestion = currentQuestion.filter(countries => countries.name !== MatchCountry.name)
     console.log(MatchCountry);
     console.log(filteredQuestion)
+    /*filteredAnswers = answers.filter(answer => {
+        answer.dataset["number"] !== number;
+        console.log(currentQuestion[countryIndex])
+    });*/
+    
     answers.splice(number, 1);
 }
 
@@ -83,11 +89,10 @@ function matchingCountry () {
     answers.forEach(answer => {
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
-            //let clickedAnswerNumber = clickedAnswer.dataset["number"];
-            //console.log(clickedAnswer);
-            if(clickedAnswer.name == MatchCountry.name){
-                Swal.fire('Well done!');
-                pullCurrentQuestion (countryArray)
+            let match = clickedAnswer.name = MatchCountry.name;
+            
+            if(match){
+                window.alert('Well done!');
             }
             
 
