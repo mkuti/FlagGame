@@ -91,7 +91,7 @@ function matchingCountry () {
             let clickedAnswer = e.target;
             let match = clickedAnswer.name = MatchCountry.name;
             
-            if(match){
+            if(match == true){
                 window.alert('Well done!');
             }
             
