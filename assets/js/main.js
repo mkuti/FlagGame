@@ -47,7 +47,7 @@ function shuffleData (countryArray) {
 
 function mixAnswersItem (answers) {
     answers.forEach(answer => {
-      number = Math.floor(Math.random() * answers.length);
+      number = answer.dataset["number"];//Math.floor(Math.random() * answers.length);
     });
 }
 
@@ -65,18 +65,17 @@ function countrytoMatch (currentQuestion) {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length);
     MatchCountry = currentQuestion[countryIndex];
     flag.src = MatchCountry.flag;
-    mixAnswersItem(answers)
-    answers[number].innerText = MatchCountry.name;
+    answers.forEach(answer => {
+      number = answer.dataset["number"];
+      answer.innerText = currentQuestion[countryIndex].name;
+    });
+    
     
     filteredQuestion = currentQuestion.filter(countries => countries.name !== MatchCountry.name)
     console.log(MatchCountry);
     console.log(filteredQuestion)
-    /*filteredAnswers = answers.filter(answer => {
-        answer.dataset["number"] !== number;
-        console.log(currentQuestion[countryIndex])
-    });*/
-    
-    answers.splice(number, 1);
+    console.log(countryIndex)
+
 }
 
 function otherCountries (filteredQuestion) {
@@ -89,8 +88,8 @@ function matchingCountry () {
     answers.forEach(answer => {
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
-            let match = clickedAnswer.name = MatchCountry.name;
-            
+            let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase();
+            console.log(match)
             if(match == true){
                 window.alert('Well done!');
             }
