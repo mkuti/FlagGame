@@ -51,14 +51,15 @@ function mixAnswersItem (answers) {
     number = Math.floor(Math.random() * answers.length); /* Math.floor() function returns the largest integer less than or equal to a floating-point, pseudo-random number in the range of array length */
 }
 
+/* function to pull question which is an array of the first 4 countries after original arraw was shuffled */
 function pullCurrentQuestion (countryArray) {
     currentQuestion.push(...countryArray.slice(0,4));
     
-    selectingMatchCountry(currentQuestion);
+    selectingCountrytoMatch(currentQuestion); /* calling function to select country to match from the current question */
     
 }
 
-function selectingMatchCountry(currentQuestion) {
+function selectingCountrytoMatch(currentQuestion) {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length);
     MatchCountry = currentQuestion[countryIndex];
 
