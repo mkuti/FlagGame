@@ -18,23 +18,23 @@ let acceptingAnswers= true;
 let score = 0;
 let questionCount = 0;
 
-// add events listeners
+/* add events listeners */
 startFlag.addEventListener("click", function(event){
     if (homeContainer.style.display !== "block"){
         homeContainer.classList.add("d-none");
         gameContainer.classList.remove("d-none");
+        fetchApi();
     }
 })
 
-//fetching rest country API
+/* fetching rest country API */
 function fetchApi () {
     return fetch(url)
     .then(response => response.json())
     .then(data => {
-        countryArray = data; //defining countryArray variable to the fetched data
+        countryArray = data; /*defining countryArray variable to the fetched data*/
         
-    shuffleData (countryArray);
-    pullCurrentQuestion (countryArray);
+    pushCurrentQuestion ();
         })
     
     .catch(err => console.log(err))
@@ -42,31 +42,39 @@ function fetchApi () {
 }
 
 /* function retrieves a random number with Math.random() and through array.sort, it compares two items and sorts their index depending on the result being positive negative or 0. */
-function shuffleData (countryArray) {
+function shuffleData () {
     return countryArray.sort(() => Math.random() - 0.5);   /*while sorting the array and comparing its items, applying function to return a floating-point, pseudo-random number in the range of 0 and 1: The sole determinant of whether the elements are swapped or not is the return value of the compare function.*/
 }
 
 /* function to mix the html answers items which I have created an array from */
-function mixAnswersItem (answers) {
+function mixAnswersItem () {
     number = Math.floor(Math.random() * answers.length); /* Math.floor() function returns the largest integer less than or equal to a floating-point, pseudo-random number in the range of array length */
 }
 
 /* function to pull question which is an array of the first 4 countries after original arraw was shuffled */
-function pullCurrentQuestion (countryArray) {
+function pushCurrentQuestion () {
+    currentQuestion = []; /* empty current question array each time this function is called and current question is answered correctly */
+    shuffleData(); /* calling function to shuffle countryArray each time a current question is pulled */
     currentQuestion.push(...countryArray.slice(0,4));
     
-    selectingCountrytoMatch(currentQuestion); /* calling function to select country to match from the current question */
-    
+    selectingCountrytoMatch(); /* calling function to select country to match from the current question */
+}
+
+function emptyingCurrentQuestion () {
+
 }
 
 /* function to select randomly country to match from the current question array */
-function selectingCountrytoMatch(currentQuestion) {
+function selectingCountrytoMatch() {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length); /* defining a random index to each country in the array */
     MatchCountry = currentQuestion[countryIndex]; /* defining an empty variable to a random index of current question array */
 /* calling here functions to make the game displayed and after being clicked match verified */
     displayingFlag()
     displayingCountriesName()
     verifyMatch();
+
+    console.log(currentQuestion)
+    console.log(MatchCountry);
 }
 
 /* function to display flag from the MatchCountry variable */
@@ -89,13 +97,15 @@ function verifyMatch() {
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); /* define a variable to confirm a match with boolean value between 2 conditions */
-            console.log(match) 
-
+            console.log(match)
             if(match == true){ /* if match variable is true, alert is displayed */
                 Swal.fire('Well done!');
-            }
+                pushCurrentQuestion();
+                console.log(countryArray)
+            } if (match == false) { 
+                Swal.fire('Almost there, Try again!');
+        } 
           });
         })
 }
 
-fetchApi();
