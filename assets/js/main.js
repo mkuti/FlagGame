@@ -59,19 +59,22 @@ function pullCurrentQuestion (countryArray) {
     
 }
 
+/* function to select randomly country to match from the current question array */
 function selectingCountrytoMatch(currentQuestion) {
-    let countryIndex = Math.floor(Math.random() * currentQuestion.length);
-    MatchCountry = currentQuestion[countryIndex];
-
+    let countryIndex = Math.floor(Math.random() * currentQuestion.length); /* defining a random index to each country in the array */
+    MatchCountry = currentQuestion[countryIndex]; /* defining an empty variable to a random index of current question array */
+/* calling here functions to make the game displayed and after being clicked match verified */
     displayingFlag()
     displayingCountriesName()
     verifyMatch();
 }
 
+/* function to display flag from the MatchCountry variable */
 function displayingFlag() {
     flag.src = MatchCountry.flag;
 }
 
+/* function to assign a random country name from the current question array to a different answer item */
 function displayingCountriesName() {
     mixAnswersItem (answers)
     answers[0].innerText = currentQuestion[3].name;
@@ -79,15 +82,16 @@ function displayingCountriesName() {
     answers[2].innerText = currentQuestion[0].name;
     answers[3].innerText = currentQuestion[1].name;
 }
-    
+
+/* function to verify match after clicking on each answer item */
 function verifyMatch() {
-    answers.forEach(answer => {
+    answers.forEach(answer => { /* for each element of the answers array, we listen to a click and we study its value */
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
-            let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase();
-            console.log(match)
+            let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); /* define a variable to confirm a match with boolean value between 2 conditions */
+            console.log(match) 
 
-            if(match == true){
+            if(match == true){ /* if match variable is true, alert is displayed */
                 Swal.fire('Well done!');
             }
           });
