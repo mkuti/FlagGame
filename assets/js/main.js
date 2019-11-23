@@ -41,62 +41,56 @@ function fetchApi () {
 
 }
 
+/* function retrieves a random number with Math.random() and through array.sort, it compares two items and sorts their index depending on the result being positive negative or 0. */
 function shuffleData (countryArray) {
-    return countryArray.sort(() => Math.random() - 0.5);   
+    return countryArray.sort(() => Math.random() - 0.5);   /*while sorting the array and comparing its items, applying function to return a floating-point, pseudo-random number in the range of 0 and 1: The sole determinant of whether the elements are swapped or not is the return value of the compare function.*/
 }
 
+/* function to mix the html answers items which I have created an array from */
 function mixAnswersItem (answers) {
-    answers.forEach(answer => {
-      number = answer.dataset["number"];//Math.floor(Math.random() * answers.length);
-    });
+    number = Math.floor(Math.random() * answers.length); /* Math.floor() function returns the largest integer less than or equal to a floating-point, pseudo-random number in the range of array length */
 }
 
 function pullCurrentQuestion (countryArray) {
-    for (let i = 0;; i++) {
-        if (i > 3) break;
-        currentQuestion.push(countryArray[i]);
-    }
-    countrytoMatch (currentQuestion);
-    otherCountries (filteredQuestion);
-    matchingCountry();
+    currentQuestion.push(...countryArray.slice(0,4));
+    
+    selectingMatchCountry(currentQuestion);
+    
 }
-/* assigning indexes, numbers to each country for the current question (https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript) */ 
-function countrytoMatch (currentQuestion) {
+
+function selectingMatchCountry(currentQuestion) {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length);
     MatchCountry = currentQuestion[countryIndex];
+
+    displayingFlag()
+    displayingCountriesName()
+    verifyMatch();
+}
+
+function displayingFlag() {
     flag.src = MatchCountry.flag;
-    answers.forEach(answer => {
-      number = answer.dataset["number"];
-      answer.innerText = currentQuestion[countryIndex].name;
-    });
-    
-    
-    filteredQuestion = currentQuestion.filter(countries => countries.name !== MatchCountry.name)
-    console.log(MatchCountry);
-    console.log(filteredQuestion)
-    console.log(countryIndex)
-
 }
 
-function otherCountries (filteredQuestion) {
-    answers[0].innerText = filteredQuestion[0].name;
-    answers[1].innerText = filteredQuestion[1].name;
-    answers[2].innerText = filteredQuestion[2].name;
+function displayingCountriesName() {
+    mixAnswersItem (answers)
+    answers[0].innerText = currentQuestion[3].name;
+    answers[1].innerText = currentQuestion[2].name;
+    answers[2].innerText = currentQuestion[0].name;
+    answers[3].innerText = currentQuestion[1].name;
 }
-
-function matchingCountry () {
+    
+function verifyMatch() {
     answers.forEach(answer => {
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase();
             console.log(match)
-            if(match == true){
-                window.alert('Well done!');
-            }
-            
 
-});
-})
+            if(match == true){
+                Swal.fire('Well done!');
+            }
+          });
+        })
 }
 
 fetchApi();
