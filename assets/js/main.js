@@ -60,10 +60,6 @@ function pushCurrentQuestion () {
     selectingCountrytoMatch(); /* calling function to select country to match from the current question */
 }
 
-function emptyingCurrentQuestion () {
-
-}
-
 /* function to select randomly country to match from the current question array */
 function selectingCountrytoMatch() {
     let countryIndex = Math.floor(Math.random() * currentQuestion.length); /* defining a random index to each country in the array */
@@ -100,8 +96,10 @@ function verifyMatch() {
             console.log(match)
             if(match == true){ /* if match variable is true, alert is displayed */
                 Swal.fire('Well done!');
+                setTimeout(() => { /* setTimeout to wait 1sec before new current Question is loaded so recording new click event and answers matches*/
                 pushCurrentQuestion();
                 console.log(countryArray)
+    }, 1000);                
             } if (match == false) { 
                 Swal.fire('Almost there, Try again!');
         } 
