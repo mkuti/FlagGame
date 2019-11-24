@@ -7,6 +7,8 @@ const startCountry = document.getElementById("country-button");
 const flag = document.querySelector("#flag img");
 const answerItem = document.getElementsByClassName("answer-item");
 const answers = Array.from(document.getElementsByClassName("answer-item"));
+const questionInfo = document.getElementById("question-count");
+const scoreInfo = document.getElementById("score-count");
 let number;
 let countryArray; //contains fetched data
 let currentQuestion = [];
@@ -16,7 +18,7 @@ let filteredAnswers;
 
 let score = 0;
 let questionCount = 0;
-const MAX_QUESTIONS = 20;
+const maxQuestions = 20;
 
 /* add events listeners */
 startFlag.addEventListener("click", function(event){
@@ -60,6 +62,8 @@ function mixAnswersItem () {
 
 /* function to pull question which is an array of the first 4 countries after original arraw was shuffled */
 function pushCurrentQuestion () {
+    questionCount++;
+    questionInfo.innerText = `${questionCount}/${maxQuestions}`
     currentQuestion = []; /* empty current question array each time this function is called and current question is answered correctly */
     shuffleData(); /* calling function to shuffle countryArray each time a current question is pulled */
     currentQuestion.push(...countryArray.slice(0,4));
