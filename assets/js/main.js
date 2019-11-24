@@ -14,9 +14,9 @@ let MatchCountry;
 let filteredQuestion;
 let filteredAnswers;
 
-let acceptingAnswers= true;
 let score = 0;
 let questionCount = 0;
+const MAX_QUESTIONS = 20;
 
 /* add events listeners */
 startFlag.addEventListener("click", function(event){
@@ -34,12 +34,19 @@ function fetchApi () {
     .then(data => {
         countryArray = data; /*defining countryArray variable to the fetched data*/
         
-    pushCurrentQuestion ();
+    pushCurrentQuestion();
         })
     
     .catch(err => console.log(err))
 
 }
+
+function startGame() {
+  questionCount = 0;
+  score = 0;
+  
+};
+
 
 /* function retrieves a random number with Math.random() and through array.sort, it compares two items and sorts their index depending on the result being positive negative or 0. */
 function shuffleData () {
@@ -95,14 +102,20 @@ function verifyMatch() {
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); /* define a variable to confirm a match with boolean value between 2 conditions */
             console.log(match)
             if(match == true){ /* if match variable is true, alert is displayed */
-                Swal.fire('Well done!');
-                setTimeout(() => { /* setTimeout to wait 1sec before new current Question is loaded so recording new click event and answers matches*/
-                pushCurrentQuestion();
-                console.log(countryArray)
-    }, 1000);                
+                Swal.fire({
+                    text: 'Well done! Continue to the next match challenge',
+                    showCancelButton: false,
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.value) {
+                        pushCurrentQuestion();
+                        console.log(countryArray)
+                    }
+                });  
             } if (match == false) { 
                 Swal.fire('Almost there, Try again!');
-        } 
+            } //else Swal.fire("You'll be able to prove your talents in the next question");
           });
         })
 }
