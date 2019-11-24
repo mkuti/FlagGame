@@ -63,7 +63,8 @@ function mixAnswersItem () {
 /* function to pull question which is an array of the first 4 countries after original arraw was shuffled */
 function pushCurrentQuestion () {
     questionCount++;
-    questionInfo.innerText = `${questionCount}/${maxQuestions}`
+    questionInfo.innerText = `${questionCount}/${maxQuestions}`;
+    scoreInfo.innerText = score
     currentQuestion = []; /* empty current question array each time this function is called and current question is answered correctly */
     shuffleData(); /* calling function to shuffle countryArray each time a current question is pulled */
     currentQuestion.push(...countryArray.slice(0,4));
@@ -108,6 +109,7 @@ function verifyMatch() {
             if(match == true){ /* if match variable is true, alert is displayed */
                 Swal.fire('Well done! Continue to the next match challenge').then((result) => {
                     if (result.value) {
+                        score++;
                         pushCurrentQuestion();
                         console.log(countryArray)
                     }
