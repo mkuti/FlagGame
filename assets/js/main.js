@@ -33,13 +33,9 @@ function fetchApi () {
     .then(response => response.json())
     .then(data => {
         countryArray = data; /*defining countryArray variable to the fetched data*/
-        
-<<<<<<< HEAD
+       
     startGame();
-=======
-    pushCurrentQuestion();
->>>>>>> bb86b63a9ab9953726fcbd92029b332f097a7aae
-        })
+      })
     
     .catch(err => console.log(err))
 
@@ -48,12 +44,8 @@ function fetchApi () {
 function startGame() {
   questionCount = 0;
   score = 0;
-<<<<<<< HEAD
   pushCurrentQuestion();
-=======
-  
->>>>>>> bb86b63a9ab9953726fcbd92029b332f097a7aae
-};
+}
 
 
 /* function retrieves a random number with Math.random() and through array.sort, it compares two items and sorts their index depending on the result being positive negative or 0. */
@@ -121,8 +113,7 @@ function verifyMatch() {
                         console.log(countryArray)
                     }
                 });  
-<<<<<<< HEAD
-            } else Swal.fire("You'll be able to prove your talents in the next question").then((result) => {
+                        } else Swal.fire("You'll be able to prove your talents in the next question").then((result) => {
                     if (result.value) {
                         pushCurrentQuestion();
                         console.log(countryArray)
@@ -130,13 +121,4 @@ function verifyMatch() {
                 });  ;
           });
         })
-}
-=======
-            } if (match == false) { 
-                Swal.fire('Almost there, Try again!');
-            } //else Swal.fire("You'll be able to prove your talents in the next question");
-          });
-        })
-}
-
->>>>>>> bb86b63a9ab9953726fcbd92029b332f097a7aae
+    }
