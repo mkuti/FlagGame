@@ -2,6 +2,7 @@
 const url = 'https://restcountries.eu/rest/v2/all';
 const homeContainer = document.getElementById("home-container");
 const gameContainer = document.getElementById("game-container");
+const gameOver = document.getElementById("game-over");
 const startFlag = document.getElementById("flag-button");
 const startCountry = document.getElementById("country-button");
 const flag = document.querySelector("#flag img");
@@ -62,9 +63,14 @@ function mixAnswersItem () {
 
 /* function to pull question which is an array of the first 4 countries after original arraw was shuffled */
 function pushCurrentQuestion () {
+    if(questionCount >= maxQuestions) {
+        gameContainer.classList.add("d-none");
+        gameOver.classList.remove("d-none");
+    }
+
     questionCount++;
     questionInfo.innerText = `${questionCount}/${maxQuestions}`;
-    scoreInfo.innerText = score
+    scoreInfo.innerText = score;
     currentQuestion = []; /* empty current question array each time this function is called and current question is answered correctly */
     shuffleData(); /* calling function to shuffle countryArray each time a current question is pulled */
     currentQuestion.push(...countryArray.slice(0,4));
