@@ -102,12 +102,7 @@ function verifyMatch() {
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); /* define a variable to confirm a match with boolean value between 2 conditions */
             console.log(match)
             if(match == true){ /* if match variable is true, alert is displayed */
-                Swal.fire({
-                    text: 'Well done! Continue to the next match challenge',
-                    showCancelButton: false,
-                    confirmButtonColor: '#3085d6',
-                    confirmButtonText: 'OK'
-                }).then((result) => {
+                Swal.fire('Well done! Continue to the next match challenge').then((result) => {
                     if (result.value) {
                         pushCurrentQuestion();
                         console.log(countryArray)
