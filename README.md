@@ -167,6 +167,8 @@ https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg
 https://stackoverflow.com/questions/3186635/disable-double-left-click-on-google-map
 http://nationfacts.net/
 https://www.worldatlas.com/
+https://12go.asia/en/cambodia/interesting-facts
+https://southbaybeachclub.com/20-fun-facts-about-the-cayman-islands/
 *
 
 # Deployment

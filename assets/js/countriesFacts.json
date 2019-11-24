@@ -205,8 +205,128 @@
         "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
     },
     {
-        "name": "Barbados",
-        "fact1": "Barbados has a special dialect of English called Bajan.",
-        "fact2": "Coucou and flying fish is the national dish of Barbados. Coucou is a cornmeal product made with okra."
+        "name": "Cambodia",
+        "fact1": "Cambodia is home to the largest religious building in the entire world: Angkor Wat which name directly translates to 'City of Temples'",
+        "fact2": "Cambodian flag is the only one in the world with a building on it, Angkor Wat. its renown 'City of Temples'"
+    },
+    {
+        "name": "Cameroon",
+        "fact1": "Cameroon is often known as “Africa in miniature” as ethnically diverse with over 250 individual groups who coexist in peace and home to over 1738 different linguistic groups",
+        "fact2": "The name Cameroon means shrimp and was given due to the large swarm of ghost shrimp in the Wouri River."
+    },
+    {
+        "name": "Canada",
+        "fact1": "Montreal has the second-highest population of French speakers in the world. It falls second only to Paris, France.",
+        "fact2": "Dinosaur Provincial Park is a site where many fossils have been found. Over 500 specimens from over 40 species have been discovered here."
+    },
+    {
+        "name": "Cabo Verde",
+        "fact1": "The Cape Verde islands consist of two small (volcanic in origin) archipelagos, about 400 miles off the western coast of Africa.",
+        "fact2": "Cesária Évora is an international superstar from Cape Verde who specializes in Morna, a type of folk music that originated in the country"
+    },
+    {
+        "name": "Cayman Islands",
+        "fact1": "On May 10, 1503, on his final voyage to the 'New World,' Christopher Columbus spotted the Cayman Islands. He named them Las Tortugas after the numerous sea turtles that inhabited their waters.",
+        "fact2": "There’s supposedly a treasure on the islands left behind when the pirates occupied Cayman Island in the 18th century."
+    },
+    {
+        "name": "Central African Republic",
+        "fact1": "The Central African Republic is famed for its lowland gorilla population, Pygmy culture and for its fabulous national parks.",
+        "fact2": "On the flag, the red stripe is said to represent the blood of humanity and symbolizes the respect that Europeans and Africans have for each other. The yellow star of independence symbolizes a bright future."
+    },
+    {
+        "name": "Chad",
+        "fact1": "The ancient land called Chad was inhabited over one million years ago, at a time when much of it was only water. In modern Chad, precious water is often difficult to find",
+        "fact2": "Much of the country is positioned within the hot and dry Sahara Desert, covering Chad with sand and barren scrub land. "
+    },
+    {
+        "name": "Chile",
+        "fact1": "The national drink is known as ‘Pisco’ (a clear liquid) with the most famous version being the ‘Pisco Sour’ which consists of lemon juice, ice, sugar and beaten egg whites",
+        "fact2": "The national bird is called the Andean Condor and is the largest flying bird in the world"
+    },
+    {
+        "name": "China",
+        "fact1": "Ice cream originated in China. It was first invented in 2000 BC when the Chinese put together soft milk and rice in the snow.",
+        "fact2": "A game by the name of Cuju was created in China during the Han Dynasty. This game spread to other parts of the world, and eventually became known as what we know call soccer."
+    },
+    {
+        "name": "Christmas Island",
+        "fact1": "Christmas Island is an Australian territory located in the Indian Ocean, around 350 kilometres (220 mi) south of Java and Sumatra",
+        "fact2": "Christmas Island was uninhabited until the late 19th century, allowing many species to evolve without human interference. "
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+    },
+    {
+        "name": "Burundi",
+        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
+        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
     }
 ]
