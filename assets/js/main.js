@@ -114,7 +114,7 @@ function verifyMatch() {
                         console.log(countryArray)
                     }
                 });  
-                        } else Swal.fire("You'll be able to prove your talents in the next question").then((result) => {
+                        } else Swal.fire(`Sorry it was ${MatchCountry.name}. You'll be able to prove your knowledge in the next question`).then((result) => {
                     if (result.value) {
                         pushCurrentQuestion();
                         console.log(countryArray)
