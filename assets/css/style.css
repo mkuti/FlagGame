@@ -12,7 +12,6 @@ html {
 
 body {
     height: 100%;
-    background-color: #022F4F;
     font-family: "Kalam", sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -28,18 +27,18 @@ body {
     margin-left: 0;
 }
 
-.bg-red {
-    background-color: #4B1E2E;
+.bg-green {
+    background-color: rgb(9, 97, 31);
     color: #F1F1E6!important;
 }
 
-.bg-lightred {
-    background-color: rgb(161, 87, 98);
-    color: #022F4F;
+.bg-prawn {
+    background-color: rgb(250, 250, 250);
+    color: rgb(14, 148, 48);
 }
 
-.bg-darkblue {
-    background-color: #022F4F;
+.bg-lightgreen {
+    background-color: rgb(177, 206, 184);;
     color: #F1F1E6;
 }
 
