@@ -29,13 +29,12 @@
         <a href="index.html" id="logo">
             <img src="assets/images/map.png" width="100" height="100" alt="logo">
         </a>
-        <div class="banner bg-green">
-            <h1 class="attention headers text-center text-uppercase">Match the Flag!</h1>
+<!-- two buttons of banner to be displayed only on game-container, will get js to remove d-none class when game-container is shown -->
+        <div class="row bg-green" id="banner">
+            <a class="col-4 col-sm-6 col-md-4 bg-lightgreen text-uppercase text-decoration-none banner-button d-none" id="reset" href="">Restart</a>
+            <h2 class="col-4 attention headers text-center text-uppercase">Match the Flag!</h1>
+            <a class="col-4 col-sm-6 col-md-4 bg-lightgreen text-uppercase text-decoration-none banner-button d-none" id="mode" href="#home-container">Other mode</a>
         </div>
-        <!-- button for smaller devices 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#burger" aria-controls="burger" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars"></span>
-        </button>-->
     </nav>
 
     <main class="container main-container" id="home-container">
@@ -58,8 +57,8 @@
                     </div>
                 </div>
                 <div class="row justify-content-center mt-3 mb-3">
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none match" id="flag-button" href="#game-container">By Flag</a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none match" id="country-button" href="">By Country</a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button" id="flag-button" href="#game-container">By Flag</a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button" id="country-button" href="">By Country</a>
                         <!--<a class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-decoration-none match pair-button" href="">Pair them</a>
                         <a class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-decoration-none match extreme-button" href="">Extreme</a>-->
                 </div>
@@ -84,7 +83,7 @@
                     </div>
                 </div>
                 <div class="row mt-3 mb-3 justify-content-center">
-                    <div class="row"> <!--had to add a row here to make the flag stand within the col 12 in the center of the other row-->
+                    <div class="row"> <!--add a row here to make the flag stand within the col 12 in the center of the other row-->
                         <div class="col-12" id="flag">
                             <img src="" alt="">
                         </div>
@@ -92,10 +91,10 @@
                 </div>
 
                 <div class="row justify-content-center mt-3 mb-3">
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none match answer-item" data-number="1" href="#game-container">Choice 1</a> <!--data-number is to add a dataset property of different value depending of the answer-->
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none match answer-item" data-number="2" href="#game-container">Choice 1</a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none match answer-item" data-number="3" href="#game-container">Choice 1</a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none match answer-item" data-number="4" href="#game-container">Choice 1</a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="1" href="#game-container">Choice 1</a> <!--data-number is to add a dataset property of different value depending of the answer-->
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="2" href="#game-container">Choice 1</a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="3" href="#game-container">Choice 1</a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="4" href="#game-container">Choice 1</a>
                 </div>
 
                 <div class="row mt-3 mb-3 justify-content-center">
