@@ -3,6 +3,10 @@ const url = 'https://restcountries.eu/rest/v2/all';
 const homeContainer = document.getElementById("home-container");
 const gameContainer = document.getElementById("game-container");
 const gameOver = document.getElementById("game-over");
+const reset = document.getElementById("reset");
+const mode = document.getElementById("mode");
+const matchFlagBanner = document.getElementById("attention");
+const clickGame = document.getElementsByClassName("game");
 const startFlag = document.getElementById("flag-button");
 const startCountry = document.getElementById("country-button");
 const flag = document.querySelector("#flag img");
@@ -21,13 +25,16 @@ let score = 0;
 let questionCount = 0;
 const maxQuestions = 20;
 
+console.log(matchFlagBanner);
+
 /* add events listeners */
-startFlag.addEventListener("click", function(event){
-    if (homeContainer.style.display !== "block"){
+startFlag.addEventListener("click", function(){
         homeContainer.classList.add("d-none");
+        matchFlagBanner.classList.add("d-none");
         gameContainer.classList.remove("d-none");
+        reset.classList.remove("d-none");
+        mode.classList.remove("d-none");
         fetchApi();
-    }
 })
 
 /* fetching rest country API */
@@ -120,7 +127,7 @@ function verifyMatch() {
                         console.log(countryArray)
                     }
                 });  
-                        } else Swal.fire(`Sorry it was ${MatchCountry.name}. You'll be able to prove your knowledge in the next question`).then((result) => {
+                        } else Swal.fire(`Sorry it was ${MatchCountry.name}.`).then((result) => {
                     if (result.value) {
                         pushCurrentQuestion();
                         console.log(countryArray)

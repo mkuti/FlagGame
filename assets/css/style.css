@@ -59,7 +59,7 @@ body {
 .flex-container {
     width: 100%;
     display: flex;
-    justify-content: space-between; /* so burger menu stands on the right side of the screen */
+    justify-content: space-between;
 }
 
 #logo {
@@ -72,29 +72,17 @@ body {
     vertical-align: middle;
 }
 
-.attention {
-    display: none;
-    font-size: 1.5rem;
-    margin: 0;
-}
-
 #banner {
     display: none;
 }
 
-.banner-button {
-
+.banner-btn {
+    color: inherit;
 }
 
-/* burger icon inspired from https://mdbootstrap.com/docs/jquery/navigation/hamburger-menu/ */
-
-.fa-bars {
-    background-color: #4B1E2E;
-    color: #F1F1E6;
-    font-size: 40px;
-    padding: 5px;
-    border-radius: 5px;
-    margin-right: 5px;
+.banner-btn:hover {
+    background-color:rgb(177, 206, 184);
+    color: rgb(9, 97, 31)!important;
 }
 
 .main-container {
@@ -169,23 +157,21 @@ ol {
 @media (min-width: 768px) {
     #banner {
     display: flex;
-    width: 100%;
     justify-content: center;
+    width: 100%;
     align-items: center;
     margin: 0;
     font-size: 2.5vmin; /* to make the banner font-size scale depending of screen size https://css-tricks.com/viewport-sized-typography/ */
 }
 
-    .navbar-toggler { /* removing burger menu from bigger screens */
-        display: none;
-    }
-
     .center-box {
        padding-bottom: 15px;
     }
+
     button {
     margin: 5px;
     }
+
     .attention {
     display: block;
     font-size: 1.5rem;
