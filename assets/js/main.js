@@ -29,12 +29,21 @@ console.log(matchFlagBanner);
 
 /* add events listeners */
 startFlag.addEventListener("click", function(){
-        homeContainer.classList.add("d-none");
-        matchFlagBanner.classList.add("d-none");
-        gameContainer.classList.remove("d-none");
-        reset.classList.remove("d-none");
-        mode.classList.remove("d-none");
-        fetchApi();
+    homeContainer.classList.add("d-none");
+    matchFlagBanner.classList.add("d-none");
+    gameContainer.classList.remove("d-none");
+    reset.classList.remove("d-none");
+    mode.classList.remove("d-none");
+    fetchApi();
+})
+
+mode.addEventListener("click", function(){
+    homeContainer.classList.remove("d-none");
+    gameContainer.classList.add("d-none");
+})
+
+reset.addEventListener("click", function(){
+    startGame()
 })
 
 /* fetching rest country API */
