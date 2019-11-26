@@ -128,29 +128,33 @@ function verifyMatch() {
             let clickedAnswer = e.target;
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); /* define a variable to confirm a match with boolean value between 2 conditions */
             console.log(match)
-             /* if match variable is true, alert is displayed */
-                Swal.fire(whichAlert(false, MatchCountry.name)).then((result) => {
+            if(match){ /* if match variable is true, alert is displayed */
+                Swal.fire('Yaaayy doing amazing! Keep going...').then((result) => {
+                    if (result.value) {
+                        score++;
+                        pushCurrentQuestion();
+                        console.log(countryArray)
+                    }
+                });  
+                        } else Swal.fire(`Almost there... it was ${MatchCountry.name}.`).then((result) => {
                     if (result.value) {
                         pushCurrentQuestion();
                         console.log(countryArray)
-                };         
+                    }
+                });  ;
           });
         })
-    })
-}
+    }
 
 
-function whichAlert (value, country) {
+function whichAlert (match, country) {
     const defaultAlert = {
-        text: "",
-        icon: "",
         position:'center',
         allowEscapeKey: "false",
         allowOutsideClick: "false",
         timer: 2000
     };
     if(value) {
-        score++;
         defaultAlert.text = "Yaaayy doing amazing! Keep going...";
         defaultAlert.icon = "success";
     } else {
