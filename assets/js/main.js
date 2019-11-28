@@ -16,8 +16,6 @@ const questionInfo = document.getElementById("question-count");
 const scoreInfo = document.getElementById("score-count");
 let currentQuestion = [];
 let MatchCountry;
-let filteredQuestion;
-let filteredAnswers;
 
 let score = 0;
 let questionCount = 0;
