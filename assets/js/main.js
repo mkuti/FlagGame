@@ -14,7 +14,6 @@ const answerItem = document.getElementsByClassName("answer-item");
 const answers = Array.from(document.getElementsByClassName("answer-item"));
 const questionInfo = document.getElementById("question-count");
 const scoreInfo = document.getElementById("score-count");
-let number;
 let currentQuestion = [];
 let MatchCountry;
 let filteredQuestion;
@@ -50,7 +49,7 @@ function fetchApi () {
     return fetch(url)
     .then(response => response.json())
     .then(data => {
-        let countryData = shuffleData(data); /*defining countryArray variable to the fetched data*/
+        let countryData = shuffleData(data); /*defining array variable to the fetched data*/
         console.log(countryData)
     startGame(countryData);
       })
@@ -72,8 +71,8 @@ function shuffleData (json) {
 }
 
 /* function to mix the html answers items which I have created an array from */
-function mixAnswersItem () {
-    number = Math.floor(Math.random() * answers.length); /* Math.floor() function returns the largest integer less than or equal to a floating-point, pseudo-random number in the range of array length */
+function mixAnswersItem (answerItems) {
+    Math.floor(Math.random() * answerItems.length); /* Math.floor() function returns the largest integer less than or equal to a floating-point, pseudo-random number in the range of array length */
 }
 
 /* function to pull question which is an array of the first 4 countries after original arraw was shuffled */
@@ -113,7 +112,7 @@ function displayingFlag() {
 
 /* function to assign a random country name from the current question array to a different answer item */
 function displayingCountriesName() {
-    mixAnswersItem (answers)
+    mixAnswersItem(answers)
     answers[0].innerText = currentQuestion[3].name;
     answers[1].innerText = currentQuestion[2].name;
     answers[2].innerText = currentQuestion[0].name;
@@ -137,7 +136,6 @@ function verifyMatch(countryData) {
                         } else Swal.fire(`Almost there... it was ${MatchCountry.name}.`).then((result) => {
                     if (result.value) {
                         pushCurrentQuestion(countryData);
-                        console.log(countryArray)
                     }
                 });  ;
           });
