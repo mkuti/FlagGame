@@ -15,7 +15,6 @@ const answers = Array.from(document.getElementsByClassName("answer-item"));
 const questionInfo = document.getElementById("question-count");
 const scoreInfo = document.getElementById("score-count");
 let number;
-let countryArray; //contains fetched data
 let currentQuestion = [];
 let MatchCountry;
 let filteredQuestion;
@@ -51,25 +50,25 @@ function fetchApi () {
     return fetch(url)
     .then(response => response.json())
     .then(data => {
-        countryArray = data; /*defining countryArray variable to the fetched data*/
-       
-    startGame();
+        let countryData = shuffleData(data); /*defining countryArray variable to the fetched data*/
+        console.log(countryData)
+    startGame(countryData);
       })
     
     .catch(err => console.log(err))
 
 }
 
-function startGame() {
+function startGame(countryData) {
   questionCount = 0;
   score = 0;
-  pushCurrentQuestion();
+  pushCurrentQuestion(countryData);
 }
 
 
 /* function retrieves a random number with Math.random() and through array.sort, it compares two items and sorts their index depending on the result being positive negative or 0. */
-function shuffleData () {
-    return countryArray.sort(() => Math.random() - 0.5);   /*while sorting the array and comparing its items, applying function to return a floating-point, pseudo-random number in the range of 0 and 1: The sole determinant of whether the elements are swapped or not is the return value of the compare function.*/
+function shuffleData (json) {
+    return json.sort(() => Math.random() - 0.5);   /*while sorting the array and comparing its items, applying function to return a floating-point, pseudo-random number in the range of 0 and 1: The sole determinant of whether the elements are swapped or not is the return value of the compare function.*/
 }
 
 /* function to mix the html answers items which I have created an array from */
@@ -78,7 +77,7 @@ function mixAnswersItem () {
 }
 
 /* function to pull question which is an array of the first 4 countries after original arraw was shuffled */
-function pushCurrentQuestion () {
+function pushCurrentQuestion(countryData) {
     if(questionCount >= maxQuestions) {
         gameContainer.classList.add("d-none");
         gameOver.classList.remove("d-none");
@@ -88,8 +87,8 @@ function pushCurrentQuestion () {
     questionInfo.innerText = `${questionCount}/${maxQuestions}`;
     scoreInfo.innerText = score;
     currentQuestion = []; /* empty current question array each time this function is called and current question is answered correctly */
-    shuffleData(); /* calling function to shuffle countryArray each time a current question is pulled */
-    currentQuestion.push(...countryArray.slice(0,4));
+    /* calling function to shuffle countryArray each time a current question is pulled */
+    currentQuestion.push(...countryData.slice(0,4));
     
     selectingCountrytoMatch(); /* calling function to select country to match from the current question */
 }
@@ -122,7 +121,7 @@ function displayingCountriesName() {
 }
 
 /* function to verify match after clicking on each answer item */
-function verifyMatch() {
+function verifyMatch(countryData) {
     answers.forEach(answer => { /* for each element of the answers array, we listen to a click and we study its value */
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
@@ -132,13 +131,12 @@ function verifyMatch() {
                 Swal.fire('Yaaayy doing amazing! Keep going...').then((result) => {
                     if (result.value) {
                         score++;
-                        pushCurrentQuestion();
-                        console.log(countryArray)
+                        pushCurrentQuestion(countryData);
                     }
                 });  
                         } else Swal.fire(`Almost there... it was ${MatchCountry.name}.`).then((result) => {
                     if (result.value) {
-                        pushCurrentQuestion();
+                        pushCurrentQuestion(countryData);
                         console.log(countryArray)
                     }
                 });  ;
