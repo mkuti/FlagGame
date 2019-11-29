@@ -14,7 +14,7 @@ const answerItem = document.getElementsByClassName("answer-item");
 const answers = Array.from(document.getElementsByClassName("answer-item"));
 const questionInfo = document.getElementById("question-count");
 const scoreInfo = document.getElementById("score-count");
-let currentQuestion = [];
+let currentQuestion = []; //array of 4 first countries sliced from shuffled data for each question
 let MatchCountry;
 
 let score = 0;
@@ -48,7 +48,7 @@ function fetchApi () {
     .then(response => response.json())
     .then(data => {
         let countryData = shuffleData(data); /*defining array variable to the fetched data*/
-        console.log(countryData)
+        
     startGame(countryData);
       })
     
@@ -69,8 +69,8 @@ function shuffleData (json) {
 }
 
 /* function to mix the html answers items which I have created an array from */
-function mixAnswersItem (answerItems) {
-    Math.floor(Math.random() * answerItems.length); /* Math.floor() function returns the largest integer less than or equal to a floating-point, pseudo-random number in the range of array length */
+function mixAnswersItem (arrayItems) {
+    return Math.floor(Math.random() * arrayItems.length); /* Math.floor() function returns the largest integer less than or equal to a floating-point, pseudo-random number in the range of array length */
 }
 
 /* function to pull question which is an array of the first 4 countries after original arraw was shuffled */
@@ -92,8 +92,8 @@ function pushCurrentQuestion(countryData) {
 
 /* function to select randomly country to match from the current question array */
 function selectingCountrytoMatch() {
-    let countryIndex = Math.floor(Math.random() * currentQuestion.length); /* defining a random index to each country in the array */
-    MatchCountry = currentQuestion[countryIndex]; /* defining an empty variable to a random index of current question array */
+    //let countryIndex = Math.floor(Math.random() * currentQuestion.length); /* defining a random index to each country in the array */
+    MatchCountry = currentQuestion[mixAnswersItem(currentQuestion)]; /* defining an empty variable to a random index of current question array */
 /* calling here functions to make the game displayed and after being clicked match verified */
     displayingFlag()
     displayingCountriesName()
@@ -111,6 +111,7 @@ function displayingFlag() {
 /* function to assign a random country name from the current question array to a different answer item */
 function displayingCountriesName() {
     mixAnswersItem(answers)
+    console.log(answers)
     answers[0].innerText = currentQuestion[3].name;
     answers[1].innerText = currentQuestion[2].name;
     answers[2].innerText = currentQuestion[0].name;
@@ -118,12 +119,11 @@ function displayingCountriesName() {
 }
 
 /* function to verify match after clicking on each answer item */
-function verifyMatch(countryData) {
+function verifyMatch() {
     answers.forEach(answer => { /* for each element of the answers array, we listen to a click and we study its value */
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); /* define a variable to confirm a match with boolean value between 2 conditions */
-            console.log(match)
             if(match){ /* if match variable is true, alert is displayed */
                 Swal.fire('Yaaayy doing amazing! Keep going...').then((result) => {
                     if (result.value) {
