@@ -56,10 +56,10 @@ function fetchApi () {
 
 }
 
-function startGame(countryData) {
+function startGame(data) {
   questionCount = 0;
   score = 0;
-  pushCurrentQuestion(countryData);
+  pushCurrentQuestion(data);
 }
 
 
@@ -73,8 +73,8 @@ function mixItems (arrayItems) {
     return Math.floor(Math.random() * arrayItems.length); /* Math.floor() function returns the largest integer less than or equal to a floating-point, pseudo-random number in the range of array length */
 }
 
-/* function to pull question which is an array of the first 4 countries after original arraw was shuffled */
-function pushCurrentQuestion(countryData) {
+/* function to pull question which is an array of the first 4 countries from any array*/
+function pushCurrentQuestion(data) {
     if(questionCount >= maxQuestions) {
         gameContainer.classList.add("d-none");
         gameOver.classList.remove("d-none");
@@ -85,7 +85,7 @@ function pushCurrentQuestion(countryData) {
     scoreInfo.innerText = score;
     currentQuestion = []; /* empty current question array each time this function is called and current question is answered correctly */
     /* calling function to shuffle countryArray each time a current question is pulled */
-    currentQuestion.push(...countryData.slice(0,4));
+    currentQuestion.push(...data.slice(0,4));
     
     selectingCountrytoMatch(); /* calling function to select country to match from the current question */
 }
