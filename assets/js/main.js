@@ -185,14 +185,14 @@ function verifyMatch() {
             let clickedAnswer = e.target;
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); 
             if(match){ 
-                Swal.fire(whichAlert(match, country)).then((result) => {
+                Swal.fire("Yaaayy doing amazing! Keep going...").then((result) => {
                     console.log(result)
                     if (result.value) {
                         score++;
                         pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  
-                        } else Swal.fire(whichAlert(match, country)).then((result) => {
+                        } else Swal.fire(`Ooooops...it is ${MatchCountry.name}.`).then((result) => {
                     if (result.value) {
                         pushCurrentQuestion(shuffleData(countryData));
                     }
