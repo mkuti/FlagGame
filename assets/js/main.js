@@ -49,10 +49,19 @@ startFlag.addEventListener("click", function(){
 
 mode.addEventListener("click", function(){
     homeContainer.classList.remove("d-none");
+    reset.classList.add("d-none");
+    mode.classList.add("d-none");
+    matchFlagBanner.classList.remove("d-none");
     gameContainer.classList.add("d-none");
+    gameOver.classList.add("d-none");
 })
 
 reset.addEventListener("click", function(){
+    if(gameOver.style.display = "block"){
+        gameOver.classList.add("d-none");
+        gameContainer.classList.remove("d-none");
+    }
+    
     restart();
 })
 
