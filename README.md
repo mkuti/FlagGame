@@ -108,15 +108,13 @@ __...__
 
 I used Balsamiq tool for the wireframes and attached them to the directory in assets. I spent a considerable amount of time doing wireframes in details as I had no clue of design before and wanted to have a clear idea of how the website looked like.
 
-- [Home]()
-- [Home mobile]()
--
+- [Home](wireframes/Wireframe desktop version, welcome page.png)
+- [Desktop game page](wireframes/wireframe mobile version, welcome page copy.png)
+- [Mobile Home page](wireframes/wireframe mobile version, welcome page.pngwireframes/wireframe mobile version, welcome page copy.png)
+- [Mobile game page](wireframes/wireframe mobile version, welcome page copy.png)
 
-As always when implementing coding, these wireframes templates do not exactly reflect the final version of the website itself but they were very useful for me to have an approximate design in my head and to also share with the client.
-
-During mentoring session, I was for example advised to push down some content in a separate section to improve user experience because of overloaded content.
-
-The footer changed completely during coding phase while the navbar was greatly improved thanks to more option for color and fonts.
+As always when implementing coding, these wireframes templates do not exactly reflect the final version of the website itself but they were very useful for me to have an approximate design in my head.
+The color theme changed completely after implementing design in the code. I removed lots of features due to lack of time and expertise, such as the map in the background which was supposed to be for one extreme game mode.
 
 # Technologies Used
 - This website used HTML and CSS programming languages.
