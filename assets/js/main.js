@@ -22,6 +22,7 @@ const scoreInfo = document.getElementById("score-count");
 const scoreComment = document.getElementById("scoreComment");
 
 /* variables for the question*/
+let countryData;
 let currentQuestion = []; //array of 4 first countries sliced from shuffled data for each question
 let MatchCountry;
 
@@ -67,9 +68,9 @@ function fetchApi () {
     return fetch(url)
     .then(response => response.json())
     .then(data => {
-        let countryData = shuffleData(data); /*defining array variable to the fetched data*/
-        
-    pushCurrentQuestion(countryData);
+        countryData = shuffleData(data); /*defining array variable to the fetched data*/
+        console.log(countryData)
+    pushCurrentQuestion();
       })
     
     .catch(err => console.log(err))
@@ -81,19 +82,19 @@ function fetchApi () {
  * Compares two items and sorts their index depending on the result being positive negative or 0.
  */
 function shuffleData (json) {
-    return json.sort(() => Math.random() - 0.5);   /*while sorting the array and comparing its items, applying function to return a floating-point, pseudo-random number in the range of 0 and 1: The sole determinant of whether the elements are swapped or not is the return value of the compare function.*/
+    return json.sort(() => Math.random() - 0.5);   
 }
 
 /**
  * function to start game with first question and resetting question count and score at 0
  */
-function startGame(data) {
+function startGame() {
   questionCount = 0;
   score = 0;
-  pushCurrentQuestion(data);
+  pushCurrentQuestion();
 }
 
-function reset(data){
+function restart(data){
   questionCount = 0;
   score = 0;
   pushCurrentQuestion(data);
@@ -112,7 +113,7 @@ function mixItems (arrayItems) {
  * function empties the currentQuestion array from previous question's data
  * function increments questionCount and changes display of questionCount and score
  */
-function pushCurrentQuestion(data, verifyMatch) {
+function pushCurrentQuestion() {
     if(questionCount >= maxQuestions) {
         gameContainer.classList.add("d-none");
         gameOver.classList.remove("d-none");
@@ -122,13 +123,9 @@ function pushCurrentQuestion(data, verifyMatch) {
     questionInfo.innerText = `${questionCount}/${maxQuestions}`;
     scoreInfo.innerText = score;
     currentQuestion = []; 
-    currentQuestion.push(...data.slice(0,4));
+    currentQuestion.push(...countryData.slice(0,4));
     
-    selectingCountrytoMatch(); /* calling function to select country to match from the current question */
-
-    if(verifyMatch){
-        return data;
-    }
+    selectingCountrytoMatch();
 }
 
 /**
@@ -136,12 +133,12 @@ function pushCurrentQuestion(data, verifyMatch) {
  * integrating mixItems function to get random number from 4 items
  * calling functions to play game with current question to display flag, display countries name and verify match
  */
-function selectingCountrytoMatch(question) {
-    let MatchCountry = question[mixItems(currentQuestion)];
+function selectingCountrytoMatch() {
+    MatchCountry = currentQuestion[mixItems(currentQuestion)];
 
     displayingFlag()
     displayingCountriesName()
-    verifyMatch(pushCurrentQuestion, true);
+    verifyMatch();
 
     console.log(currentQuestion)
     console.log(MatchCountry);
@@ -170,7 +167,7 @@ function displayingCountriesName() {
  * event listener integrated within a forEach to loop through the answer items
  * displaying different alert depending of the match
  */
-function verifyMatch(pushCurrentQuestion) {
+function verifyMatch() {
     answers.forEach(answer => { 
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
