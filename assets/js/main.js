@@ -1,7 +1,8 @@
+/*
 =================================
-VARIABLES
+            VARIABLES
 =================================
-
+*/
 /* constant variables associated with the DOM */
 const url = 'https://restcountries.eu/rest/v2/all';
 const homeContainer = document.getElementById("home-container");
@@ -20,7 +21,7 @@ const questionInfo = document.getElementById("question-count");
 const scoreInfo = document.getElementById("score-count");
 const scoreComment = document.getElementById("scoreComment");
 
-/* variables for the game set up*/
+/* variables for the question*/
 let currentQuestion = []; //array of 4 first countries sliced from shuffled data for each question
 let MatchCountry;
 
@@ -29,9 +30,12 @@ let score = 0;
 let questionCount = 0;
 const maxQuestions = 20;
 
-console.log(matchFlagBanner);
+/*
+=================================
+            EVENT LISTENERS
+=================================
+*/
 
-/* add events listeners */
 startFlag.addEventListener("click", function(){
     homeContainer.classList.add("d-none");
     matchFlagBanner.classList.add("d-none");
@@ -50,7 +54,15 @@ reset.addEventListener("click", function(){
     startGame()
 })
 
-/* fetching rest country API */
+/*
+=================================
+            FUNCTIONS
+=================================
+*/
+
+/**
+ *  fetching rest country API
+ */
 function fetchApi () {
     return fetch(url)
     .then(response => response.json())
@@ -61,28 +73,39 @@ function fetchApi () {
       })
     
     .catch(err => console.log(err))
-    
-    pushCurrentQuestion(countryData);
 }
 
+/**
+ * function to start game with first question and resetting question count and score at 0
+ */
 function startGame(data) {
   questionCount = 0;
   score = 0;
   pushCurrentQuestion(data);
 }
 
-
-/* function retrieves a random number with Math.random() and through array.sort, it compares two items and sorts their index depending on the result being positive negative or 0. */
+/**
+ * function to shuffle an array containing different json objects of data. 
+ * Sorting the array with random numbers which can be positive or negative
+ * Compares two items and sorts their index depending on the result being positive negative or 0.
+ */
 function shuffleData (json) {
     return json.sort(() => Math.random() - 0.5);   /*while sorting the array and comparing its items, applying function to return a floating-point, pseudo-random number in the range of 0 and 1: The sole determinant of whether the elements are swapped or not is the return value of the compare function.*/
 }
 
-/* function to mix the html answers items which I have created an array from */
+/**
+ * function to mix an array of items by using a pseudo-random number in the range of array length
+ */
 function mixItems (arrayItems) {
-    return Math.floor(Math.random() * arrayItems.length); /* Math.floor() function returns the largest integer less than or equal to a floating-point, pseudo-random number in the range of array length */
+    return Math.floor(Math.random() * arrayItems.length); /*  */
 }
 
-/* function to pull question which is an array of the first 4 countries from any array*/
+/**
+ * function to push question inside an empty array by slicing the first 4 elements of any array
+ * function looks first if game has already reached the maximum number of questions and if it does, hide this container and show game-over container
+ * function empties the currentQuestion array from previous question's data
+ * function increments questionCount and changes display of questionCount and score
+ */
 function pushCurrentQuestion(data) {
     if(questionCount >= maxQuestions) {
         gameContainer.classList.add("d-none");
@@ -92,17 +115,20 @@ function pushCurrentQuestion(data) {
     questionCount++;
     questionInfo.innerText = `${questionCount}/${maxQuestions}`;
     scoreInfo.innerText = score;
-    currentQuestion = []; /* empty current question array each time this function is called and current question is answered correctly */
-    /* calling function to shuffle countryArray each time a current question is pulled */
+    currentQuestion = []; 
     currentQuestion.push(...data.slice(0,4));
     
     selectingCountrytoMatch(); /* calling function to select country to match from the current question */
 }
 
-/* function to select randomly country to match from the current question array */
+/**
+ * function to select randomly country to match from the current question array
+ * integrating mixItems function to get random number from 4 items
+ * calling functions to play game with current question to display flag, display countries name and verify match
+ */
 function selectingCountrytoMatch() {
-    MatchCountry = currentQuestion[mixItems(currentQuestion)]; /* defining an empty variable to a random index of current question array */
-/* calling here functions to make the game displayed and after being clicked match verified */
+    MatchCountry = currentQuestion[mixItems(currentQuestion)];
+
     displayingFlag()
     displayingCountriesName()
     verifyMatch(pushCurrentQuestion);
@@ -111,12 +137,16 @@ function selectingCountrytoMatch() {
     console.log(MatchCountry);
 }
 
-/* function to display flag from the MatchCountry variable */
+/**
+ * function to display flag from the MatchCountry variable
+ */
 function displayingFlag() {
     flag.src = MatchCountry.flag;
 }
 
-/* function to assign a random country name from the current question array to a different answer item */
+/**
+ * function to assign a country name from the current question array to a random answer item
+ */
 function displayingCountriesName() {
     mixItems(answers)
     answers[0].innerText = currentQuestion[3].name;
@@ -125,7 +155,11 @@ function displayingCountriesName() {
     answers[3].innerText = currentQuestion[1].name;
 }
 
-/* function to verify match after clicking on each answer item */
+/**
+ * function to verify match after clicking on each answer item
+ * event listener integrated within a forEach to loop through the answer items
+ * displaying different alert depending of the match
+ */
 function verifyMatch() {
     answers.forEach(answer => { /* for each element of the answers array, we listen to a click and we study its value */
         answer.addEventListener("click", e => {
@@ -147,7 +181,9 @@ function verifyMatch() {
         })
     }
 
-
+/**
+ * function to create a default alert object which can be used to fire customised alerts called when match verified
+ */
 function whichAlert (match, country) {
     const defaultAlert = {
         position:'center',
@@ -165,6 +201,9 @@ function whichAlert (match, country) {
     }
 }
 
+/**
+ * function to add content on game-over container depending of score
+ */
 function showGameOver(questionInfo, scoreComment){
     questionInfo.innerText = `${questionCount}/${maxQuestions}`;
     if(questionInfo.value<=10){
