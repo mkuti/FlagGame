@@ -43,7 +43,9 @@ startFlag.addEventListener("click", function(){
     matchFlagBanner.classList.add("d-none");
     gameContainer.classList.remove("d-none");
     reset.classList.remove("d-none");
+    reset.classList.add("col-6");
     mode.classList.remove("d-none");
+    mode.classList.add("col-6");
     fetchApi();
 })
 
@@ -54,7 +56,6 @@ mode.addEventListener("click", function(){
     matchFlagBanner.classList.remove("d-none");
     gameContainer.classList.add("d-none");
     gameOver.classList.add("d-none");
-    restart();
 })
 
 reset.addEventListener("click", function(){
