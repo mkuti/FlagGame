@@ -54,6 +54,7 @@ mode.addEventListener("click", function(){
     matchFlagBanner.classList.remove("d-none");
     gameContainer.classList.add("d-none");
     gameOver.classList.add("d-none");
+    restart();
 })
 
 reset.addEventListener("click", function(){
@@ -233,13 +234,18 @@ function showGameOver(){
         scoreComment.innerHTML = `
         <h1>Got there!...definitely can do better!<h2>
         <p>Dare to try again and improve this score?<p>`
-    } else if(score>10 && score<=15){
+    } else if(score>10 && score<=16){
         scoreComment.innerHTML = `
         <h1>WOW very impressive!<h2>
         <p>With more practice, you can beat this great score!<p>`
-    } else {
+    } 
+    else if(score<20 && score>15){
         scoreComment.innerHTML = `
         <h1>Bravooooo you are super smart!<h2>
         <p>Reach the 20/20 or wait for the extreme mode...?<p>`
+    } else {
+        scoreComment.innerHTML = `
+        <h1>Amazing you beat the game!<h2>
+        <p>Now I really have to build the extreme mode...<p>`
     }
 }
