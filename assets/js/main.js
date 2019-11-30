@@ -52,7 +52,7 @@ mode.addEventListener("click", function(){
 })
 
 reset.addEventListener("click", function(){
-    startGame()
+    restart();
 })
 
 /*
@@ -91,13 +91,13 @@ function shuffleData (json) {
 function startGame() {
   questionCount = 0;
   score = 0;
-  pushCurrentQuestion();
+  pushCurrentQuestion(shuffleData(countryData));
 }
 
-function restart(data){
+function restart(){
   questionCount = 0;
   score = 0;
-  pushCurrentQuestion(data);
+  pushCurrentQuestion(shuffleData(countryData));
 }
 
 /**
@@ -177,12 +177,12 @@ function verifyMatch() {
                     console.log(result)
                     if (result.value) {
                         score++;
-                        pushCurrentQuestion();
+                        pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  
                         } else Swal.fire(`Ooooops...it is ${MatchCountry.name}.`).then((result) => {
                     if (result.value) {
-                        pushCurrentQuestion();
+                        pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  ;
           });
