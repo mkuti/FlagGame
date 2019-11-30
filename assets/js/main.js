@@ -185,14 +185,14 @@ function verifyMatch() {
             let clickedAnswer = e.target;
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); 
             if(match){ 
-                Swal.fire("Yaaayy doing amazing! Keep going...").then((result) => {
+                Swal.fire(whichAlert(match, country)).then((result) => {
                     console.log(result)
                     if (result.value) {
                         score++;
                         pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  
-                        } else Swal.fire(`Ooooops...it is ${MatchCountry.name}.`).then((result) => {
+                        } else Swal.fire(whichAlert(match, country)).then((result) => {
                     if (result.value) {
                         pushCurrentQuestion(shuffleData(countryData));
                     }
@@ -246,6 +246,6 @@ function showGameOver(){
     } else {
         scoreComment.innerHTML = `
         <h1>Amazing you beat the game!<h2>
-        <p>Now I really have to build the extreme mode...<p>`
+        <p>Now I really have to build the extreme mode asap...<p>`
     }
 }

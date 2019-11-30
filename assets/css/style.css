@@ -80,7 +80,18 @@ body {
 /* banner */
 
 #banner {
-    display: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    font-size: 4vmin; /* to make the banner font-size scale depending of screen size https://css-tricks.com/viewport-sized-typography/ */
+}
+
+#attention {
+    display: block;
+    margin: 0;
+    font-size: inherit;
 }
 
 .banner-btn {
@@ -101,7 +112,7 @@ body {
 }
 
 .center-box {
-    border: 1px solid #F1F1E6;
+    border: none;
     border-radius: 1rem;
     margin: 0!important;
     font-size: 1rem;
@@ -150,15 +161,6 @@ ol {
 }
 
 @media (min-width: 768px) {
-    #banner {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    margin: 0;
-    font-size: 2.5vmin; /* to make the banner font-size scale depending of screen size https://css-tricks.com/viewport-sized-typography/ */
-}
-
     .center-box {
        padding-bottom: 15px;
     }
@@ -166,10 +168,4 @@ ol {
     button {
     margin: 5px;
     }
-
-    .attention {
-    display: block;
-    font-size: 1.5rem;
-    margin: 0;
-}
 }
