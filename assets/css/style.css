@@ -86,6 +86,7 @@ body {
 .banner-btn {
     color: inherit;
     cursor: pointer;
+    width: 50px;
 }
 
 .banner-btn:hover {

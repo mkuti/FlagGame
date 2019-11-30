@@ -19,6 +19,7 @@ const answerItem = document.getElementsByClassName("answer-item");
 const answers = Array.from(document.getElementsByClassName("answer-item"));
 const questionInfo = document.getElementById("question-count");
 const scoreInfo = document.getElementById("score-count");
+const finalScore = document.getElementById("final-score");
 const scoreComment = document.getElementById("scoreComment");
 
 /* variables for the question*/
@@ -117,6 +118,7 @@ function pushCurrentQuestion() {
     if(questionCount >= maxQuestions) {
         gameContainer.classList.add("d-none");
         gameOver.classList.remove("d-none");
+        showGameOver()
     }
 
     questionCount++;
@@ -214,19 +216,21 @@ function whichAlert(match, country) {
 /**
  * function to add content on game-over container depending of score
  */
-function showGameOver(questionInfo, scoreComment){
-    questionInfo.innerText = `${questionCount}/${maxQuestions}`;
-    if(questionInfo.value<=10){
+function showGameOver(){
+    finalScore.innerText = score;
+    console.log(score)
+    console.log(finalScore)
+    if(score<=10){
         scoreComment.innerHTML = `
-        <h2>Got there!...definitely can do better!<h2>
+        <h1>Got there!...definitely can do better!<h2>
         <p>Dare to try again and improve this score?<p>`
-    } if(questionInfo<=15){
+    } else if(score>10 && score<=15){
         scoreComment.innerHTML = `
-        <h2>WOW very impressive!<h2>
+        <h1>WOW very impressive!<h2>
         <p>With more practice, you can beat this great score!<p>`
     } else {
         scoreComment.innerHTML = `
-        <h2>Bravooooo you are super smart!<h2>
+        <h1>Bravooooo you are super smart!<h2>
         <p>Reach the 20/20 or wait for the extreme mode...?<p>`
     }
 }
