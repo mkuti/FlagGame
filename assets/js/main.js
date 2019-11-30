@@ -69,10 +69,19 @@ function fetchApi () {
     .then(data => {
         let countryData = shuffleData(data); /*defining array variable to the fetched data*/
         
-    startGame(countryData);
+    pushCurrentQuestion(countryData);
       })
     
     .catch(err => console.log(err))
+}
+
+/**
+ * function to shuffle an array containing different json objects of data. 
+ * Sorting the array with random numbers which can be positive or negative
+ * Compares two items and sorts their index depending on the result being positive negative or 0.
+ */
+function shuffleData (json) {
+    return json.sort(() => Math.random() - 0.5);   /*while sorting the array and comparing its items, applying function to return a floating-point, pseudo-random number in the range of 0 and 1: The sole determinant of whether the elements are swapped or not is the return value of the compare function.*/
 }
 
 /**
@@ -84,13 +93,10 @@ function startGame(data) {
   pushCurrentQuestion(data);
 }
 
-/**
- * function to shuffle an array containing different json objects of data. 
- * Sorting the array with random numbers which can be positive or negative
- * Compares two items and sorts their index depending on the result being positive negative or 0.
- */
-function shuffleData (json) {
-    return json.sort(() => Math.random() - 0.5);   /*while sorting the array and comparing its items, applying function to return a floating-point, pseudo-random number in the range of 0 and 1: The sole determinant of whether the elements are swapped or not is the return value of the compare function.*/
+function reset(data){
+  questionCount = 0;
+  score = 0;
+  pushCurrentQuestion(data);
 }
 
 /**
@@ -106,7 +112,7 @@ function mixItems (arrayItems) {
  * function empties the currentQuestion array from previous question's data
  * function increments questionCount and changes display of questionCount and score
  */
-function pushCurrentQuestion(data) {
+function pushCurrentQuestion(data, verifyMatch) {
     if(questionCount >= maxQuestions) {
         gameContainer.classList.add("d-none");
         gameOver.classList.remove("d-none");
@@ -119,6 +125,10 @@ function pushCurrentQuestion(data) {
     currentQuestion.push(...data.slice(0,4));
     
     selectingCountrytoMatch(); /* calling function to select country to match from the current question */
+
+    if(verifyMatch){
+        return data;
+    }
 }
 
 /**
@@ -126,12 +136,12 @@ function pushCurrentQuestion(data) {
  * integrating mixItems function to get random number from 4 items
  * calling functions to play game with current question to display flag, display countries name and verify match
  */
-function selectingCountrytoMatch() {
-    MatchCountry = currentQuestion[mixItems(currentQuestion)];
+function selectingCountrytoMatch(question) {
+    let MatchCountry = question[mixItems(currentQuestion)];
 
     displayingFlag()
     displayingCountriesName()
-    verifyMatch(pushCurrentQuestion);
+    verifyMatch(pushCurrentQuestion, true);
 
     console.log(currentQuestion)
     console.log(MatchCountry);
@@ -160,21 +170,22 @@ function displayingCountriesName() {
  * event listener integrated within a forEach to loop through the answer items
  * displaying different alert depending of the match
  */
-function verifyMatch() {
-    answers.forEach(answer => { /* for each element of the answers array, we listen to a click and we study its value */
+function verifyMatch(pushCurrentQuestion) {
+    answers.forEach(answer => { 
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
-            let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); /* define a variable to confirm a match with boolean value between 2 conditions */
-            if(match){ /* if match variable is true, alert is displayed */
+            let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); 
+            if(match){ 
                 Swal.fire("Yaaayy doing amazing! Keep going...").then((result) => {
+                    console.log(result)
                     if (result.value) {
                         score++;
-                        pushCurrentQuestion(countryData);
+                        pushCurrentQuestion();
                     }
                 });  
                         } else Swal.fire(`Ooooops...it is ${MatchCountry.name}.`).then((result) => {
                     if (result.value) {
-                        pushCurrentQuestion(countryData);
+                        pushCurrentQuestion();
                     }
                 });  ;
           });
@@ -183,8 +194,9 @@ function verifyMatch() {
 
 /**
  * function to create a default alert object which can be used to fire customised alerts called when match verified
+ * @param match {boolean}
  */
-function whichAlert (match, country) {
+function whichAlert(match, country) {
     const defaultAlert = {
         position:'center',
         allowEscapeKey: "false",
@@ -199,6 +211,7 @@ function whichAlert (match, country) {
         defaultAlert.text = `Ooooops...it is ${MatchCountry.name}.`;
         defaultAlert.icon = "error";
     }
+    return defaultAlert;
 }
 
 /**
