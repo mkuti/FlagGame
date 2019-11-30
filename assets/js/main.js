@@ -1,4 +1,8 @@
-// setting variables for the whole game
+=================================
+VARIABLES
+=================================
+
+/* constant variables associated with the DOM */
 const url = 'https://restcountries.eu/rest/v2/all';
 const homeContainer = document.getElementById("home-container");
 const gameContainer = document.getElementById("game-container");
@@ -14,9 +18,13 @@ const answerItem = document.getElementsByClassName("answer-item");
 const answers = Array.from(document.getElementsByClassName("answer-item"));
 const questionInfo = document.getElementById("question-count");
 const scoreInfo = document.getElementById("score-count");
+const scoreComment = document.getElementById("scoreComment");
+
+/* variables for the game set up*/
 let currentQuestion = []; //array of 4 first countries sliced from shuffled data for each question
 let MatchCountry;
 
+/* variables for the game set up*/
 let score = 0;
 let questionCount = 0;
 const maxQuestions = 20;
@@ -53,7 +61,8 @@ function fetchApi () {
       })
     
     .catch(err => console.log(err))
-
+    
+    pushCurrentQuestion(countryData);
 }
 
 function startGame(data) {
@@ -96,7 +105,7 @@ function selectingCountrytoMatch() {
 /* calling here functions to make the game displayed and after being clicked match verified */
     displayingFlag()
     displayingCountriesName()
-    verifyMatch();
+    verifyMatch(pushCurrentQuestion);
 
     console.log(currentQuestion)
     console.log(MatchCountry);
@@ -110,7 +119,6 @@ function displayingFlag() {
 /* function to assign a random country name from the current question array to a different answer item */
 function displayingCountriesName() {
     mixItems(answers)
-    console.log(answers)
     answers[0].innerText = currentQuestion[3].name;
     answers[1].innerText = currentQuestion[2].name;
     answers[2].innerText = currentQuestion[0].name;
@@ -118,19 +126,19 @@ function displayingCountriesName() {
 }
 
 /* function to verify match after clicking on each answer item */
-function verifyMatch(match) {
+function verifyMatch() {
     answers.forEach(answer => { /* for each element of the answers array, we listen to a click and we study its value */
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); /* define a variable to confirm a match with boolean value between 2 conditions */
             if(match){ /* if match variable is true, alert is displayed */
-                Swal.fire(whichAlert(match)).then((result) => {
+                Swal.fire("Yaaayy doing amazing! Keep going...").then((result) => {
                     if (result.value) {
                         score++;
                         pushCurrentQuestion(countryData);
                     }
                 });  
-                        } else Swal.fire((whichAlert(false))).then((result) => {
+                        } else Swal.fire(`Ooooops...it is ${MatchCountry.name}.`).then((result) => {
                     if (result.value) {
                         pushCurrentQuestion(countryData);
                     }
@@ -147,11 +155,29 @@ function whichAlert (match, country) {
         allowOutsideClick: "false",
         timer: 2000
     };
+    console.log(defaultAlert)
     if(match) {
         defaultAlert.text = "Yaaayy doing amazing! Keep going...";
         defaultAlert.icon = "success";
     } else {
         defaultAlert.text = `Ooooops...it is ${MatchCountry.name}.`;
         defaultAlert.icon = "error";
+    }
+}
+
+function showGameOver(questionInfo, scoreComment){
+    questionInfo.innerText = `${questionCount}/${maxQuestions}`;
+    if(questionInfo.value<=10){
+        scoreComment.innerHTML = `
+        <h2>Got there!...definitely can do better!<h2>
+        <p>Dare to try again and improve this score?<p>`
+    } if(questionInfo<=15){
+        scoreComment.innerHTML = `
+        <h2>WOW very impressive!<h2>
+        <p>With more practice, you can beat this great score!<p>`
+    } else {
+        scoreComment.innerHTML = `
+        <h2>Bravooooo you are super smart!<h2>
+        <p>Reach the 20/20 or wait for the extreme mode...?<p>`
     }
 }
