@@ -189,15 +189,15 @@ function verifyMatch() {
             let clickedAnswer = e.target;
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); 
             if(match){ 
-                Swal.fire("Yaaayy doing amazing! Keep going...").then((result) => {
-                    console.log(result)
-                    if (result.value) {
+                Swal.fire(whichAlert(true, MatchCountry.name)).then((result) => {
+                    console.log(result.dismiss)
+                    if (result.dismiss) {
                         score++;
                         pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  
-                        } else Swal.fire(`Ooooops...it is ${MatchCountry.name}.`).then((result) => {
-                    if (result.value) {
+                        } else Swal.fire(whichAlert(false, MatchCountry.name)).then((result) => {
+                    if (result.dismiss) {
                         pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  ;
@@ -216,12 +216,11 @@ function whichAlert(match, country) {
         allowOutsideClick: "false",
         timer: 2000
     };
-    console.log(defaultAlert)
     if(match) {
         defaultAlert.text = "Yaaayy doing amazing! Keep going...";
         defaultAlert.icon = "success";
     } else {
-        defaultAlert.text = `Ooooops...it is ${MatchCountry.name}.`;
+        defaultAlert.text = `Ooooops...it is ${country}.`;
         defaultAlert.icon = "error";
     }
     return defaultAlert;
