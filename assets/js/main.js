@@ -17,7 +17,9 @@ const startFlag = document.getElementById("flag-button");
 const startCountry = document.getElementById("country-button");
 const flag = document.querySelector("#flag img");
 const answerItem = document.getElementsByClassName("answer-item");
-const answers = Array.from(document.getElementsByClassName("answer-item"));
+const countryAnswers = Array.from(document.getElementsByClassName("answer-item"));
+const countryName = document.getElementById("country-name");
+const flagChoices = Array.from(document.getElementsByClassName("choice-item"));
 const questionInfo = document.getElementById("question-count");
 const scoreInfo = document.getElementById("score-count");
 const finalScore = document.getElementById("final-score");
@@ -180,8 +182,13 @@ function selectingCountrytoMatch() {
     console.log(MatchCountry);
 }
 
+/*
+=================================
+            MODE: BY FLAG
+=================================
+*/
 /**
- * function to display flag from the MatchCountry variable
+ * function to display flag from the MatchCountry variable under Match by flag mode
  */
 function displayingFlag() {
     flag.src = MatchCountry.flag;
@@ -191,11 +198,11 @@ function displayingFlag() {
  * function to assign a country name from the current question array to a random answer item
  */
 function displayingCountriesName() {
-    mixItems(answers)
-    answers[0].innerText = currentQuestion[3].name;
-    answers[1].innerText = currentQuestion[2].name;
-    answers[2].innerText = currentQuestion[0].name;
-    answers[3].innerText = currentQuestion[1].name;
+    mixItems(countryAnswers)
+    countryAnswers[0].innerText = currentQuestion[3].name;
+    countryAnswers[1].innerText = currentQuestion[2].name;
+    countryAnswers[2].innerText = currentQuestion[0].name;
+    countryAnswers[3].innerText = currentQuestion[1].name;
 }
 
 /**
@@ -204,7 +211,7 @@ function displayingCountriesName() {
  * displaying different alert depending of the match
  */
 function verifyMatchFlag() {
-    answers.forEach(answer => { 
+    countryAnswers.forEach(answer => { 
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); 
@@ -224,6 +231,29 @@ function verifyMatchFlag() {
           });
         })
     }
+
+    /*
+=================================
+            MODE: BY COUNTRY
+=================================
+*/
+/**
+ * function to display country name from the MatchCountry variable under the match by country mode
+ */
+function displayingCountryName() {
+    countryName.innerHTML = MatchCountry.name;
+}
+
+/**
+ * function to assign a flag from the current question array to a random answer item
+ */
+function displayingFlags() {
+    mixItems(flagChoices)
+    flagChoices[0].innerHTML = `<img src="${currentQuestion[3].flag}" alt="">`;
+    flagChoices[1].innerHTML = `<img src="${currentQuestion[2].flag}" alt="">`;
+    flagChoices[2].innerHTML = `<img src="${currentQuestion[0].flag}" alt="">`;
+    flagChoices[3].innerHTML = `<img src="${currentQuestion[1].flag}" alt="">`;
+}
 
 /**
  * Function to create a default alert object which can be used to fire customised alerts called when match verified
