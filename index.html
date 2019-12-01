@@ -31,9 +31,9 @@
         </a>
 <!-- two buttons of banner to be displayed only on game-container, will get js to remove d-none class when game-container is shown -->
         <div class="row bg-green" id="banner">
-            <a class="headers text-uppercase text-decoration-none banner-btn text-right d-none bg-lightgreen" id="reset">Restart</a>
+            <a class="headers text-uppercase text-decoration-none banner-btn text-right d-none" id="reset">Restart</a>
             <h2 class="col-12 headers text-center text-uppercase" id="attention">Explore the world!</h1>
-            <a class="headers text-uppercase text-decoration-none banner-btn d-none bg-lightgreen" id="mode">Modes</a>
+            <a class="headers text-uppercase text-decoration-none banner-btn d-none" id="mode">Modes</a>
         </div>
     </nav>
 
@@ -66,7 +66,7 @@
         </div>
     </main>
 
-    <section class="container main-container d-none" id="game-container"> 
+    <section class="container main-container d-none" id="byFlag-container"> 
         <div class="row text-center justify-content-center bg-lightgreen center-box">
             <div class="col-12">
                 <div class="row box-banner bg-green">
@@ -91,10 +91,50 @@
                 </div>
 
                 <div class="row justify-content-center mt-3 mb-3">
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="1" href="#game-container">Choice 1</a> <!--data-number is to add a dataset property of different value depending of the answer-->
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="2" href="#game-container">Choice 1</a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="3" href="#game-container">Choice 1</a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="4" href="#game-container">Choice 1</a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="1">Choice 1</a> <!--data-number is to add a dataset property of different value depending of the answer-->
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="2">Choice 1</a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="3">Choice 1</a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item" data-number="4">Choice 1</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container main-container d-none" id="byCountry-container"> 
+        <div class="row text-center justify-content-center bg-lightgreen center-box">
+            <div class="col-12">
+                <div class="row box-banner bg-green">
+                    <h2 class="col-12 text-uppercase headers">Match the Flag!</h2>
+                </div>
+                <div class="row game-info">
+                    <div class="col-6 info-item">
+                        <h3>Question</h3> 
+                        <h3 id="question-count"></h3>
+                    </div>
+                    <div class="col-6 info-item">
+                        <h3>Score</h3> 
+                        <h3 id="score-count"></h3>
+                    </div>
+                </div>
+                <div class="row mt-3 mb-3 justify-content-center">
+                        <div class="col-12" id="country-name">
+                            <h1 id="country-name"></h1>
+                        </div>
+                    </div>
+
+                <div class="row justify-content-center mt-3 mb-3">
+                        <a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item" data-number="1">
+                            <img src="" alt="">
+                        </a> <!--data-number is to add a dataset property of different value depending of the answer-->
+                        <a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item" data-number="2">
+                            <img src="" alt="">
+                        </a> 
+                        <a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item" data-number="3">
+                            <img src="" alt="">
+                        </a> 
+                        <a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item" data-number="4">
+                            <img src="" alt="">
+                        </a> 
                 </div>
             </div>
         </div>

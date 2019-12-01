@@ -6,7 +6,8 @@
 /* constant variables associated with the DOM */
 const url = 'https://restcountries.eu/rest/v2/all';
 const homeContainer = document.getElementById("home-container");
-const gameContainer = document.getElementById("game-container");
+const matchFlagContainer = document.getElementById("byFlag-container");
+const matchCountryContainer = document.getElementById("byCountry-container");
 const gameOver = document.getElementById("game-over");
 const reset = document.getElementById("reset");
 const mode = document.getElementById("mode");
@@ -41,7 +42,18 @@ const maxQuestions = 20;
 startFlag.addEventListener("click", function(){
     homeContainer.classList.add("d-none");
     matchFlagBanner.classList.add("d-none");
-    gameContainer.classList.remove("d-none");
+    matchFlagContainer.classList.remove("d-none");
+    reset.classList.remove("d-none");
+    reset.classList.add("col-6");
+    mode.classList.remove("d-none");
+    mode.classList.add("col-6");
+    fetchApi();
+})
+
+startCountry.addEventListener("click", function(){
+    homeContainer.classList.add("d-none");
+    matchFlagBanner.classList.add("d-none");
+    matchCountryContainer.classList.remove("d-none");
     reset.classList.remove("d-none");
     reset.classList.add("col-6");
     mode.classList.remove("d-none");
@@ -54,7 +66,7 @@ mode.addEventListener("click", function(){
     reset.classList.add("d-none");
     mode.classList.add("d-none");
     matchFlagBanner.classList.remove("d-none");
-    gameContainer.classList.add("d-none");
+    matchFlagContainer.classList.add("d-none");
     gameOver.classList.add("d-none");
     stopGame()
 })
@@ -62,7 +74,7 @@ mode.addEventListener("click", function(){
 reset.addEventListener("click", function(){
     if(gameOver.style.display = "block"){
         gameOver.classList.add("d-none");
-        gameContainer.classList.remove("d-none");
+        matchFlagContainer.classList.remove("d-none");
     }
     
     restart();
@@ -130,7 +142,7 @@ function mixItems (arrayItems) {
  */
 function pushCurrentQuestion() {
     if(questionCount >= maxQuestions) {
-        gameContainer.classList.add("d-none");
+        matchFlagContainer.classList.add("d-none");
         gameOver.classList.remove("d-none");
         showGameOver()
     }
@@ -152,9 +164,17 @@ function pushCurrentQuestion() {
 function selectingCountrytoMatch() {
     MatchCountry = currentQuestion[mixItems(currentQuestion)];
 
-    displayingFlag()
-    displayingCountriesName()
-    verifyMatch();
+    if(matchFlagContainer.style.display = "block") {
+        displayingFlag()
+        displayingCountriesName()
+        verifyMatchFlag();
+    }
+    
+    if(matchCountryContainer.style.display = "block") {
+        displayingCountryName()
+        displayingFlags()
+        verifyMatchCountry();
+    }
 
     console.log(currentQuestion)
     console.log(MatchCountry);
@@ -183,7 +203,7 @@ function displayingCountriesName() {
  * event listener integrated within a forEach to loop through the answer items
  * displaying different alert depending of the match
  */
-function verifyMatch() {
+function verifyMatchFlag() {
     answers.forEach(answer => { 
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
@@ -206,7 +226,7 @@ function verifyMatch() {
     }
 
 /**
- * function to create a default alert object which can be used to fire customised alerts called when match verified
+ * Function to create a default alert object which can be used to fire customised alerts called when match verified
  * @param match {boolean}
  */
 function whichAlert(match, country) {
