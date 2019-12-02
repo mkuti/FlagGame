@@ -289,8 +289,9 @@ function verifyMatchCountry() {
 function whichAlert(match, country) {
     const defaultAlert = {
         position:'center',
-        allowEscapeKey: "false",
-        allowOutsideClick: "false",
+        allowEscapeKey: false,
+        allowOutsideClick: false,
+        showConfirmButton: false,
         timer: 2000
     };
     if(match) {
