@@ -21,7 +21,9 @@ const countryAnswers = Array.from(document.getElementsByClassName("answer-item")
 const countryName = document.getElementById("country-name");
 const flagChoices = Array.from(document.getElementsByClassName("choice-item"));
 const questionInfo = document.getElementById("question-count");
+const questionInfo2 = document.getElementById("question2-count");
 const scoreInfo = document.getElementById("score-count");
+const scoreInfo2 = document.getElementById("score2-count");
 const finalScore = document.getElementById("final-score");
 const scoreComment = document.getElementById("scoreComment");
 
@@ -75,7 +77,8 @@ mode.addEventListener("click", function(){
 })
 
 reset.addEventListener("click", function(){
-   restart();
+    gameOver.classList.add("d-none");
+    restart();
     
 })
 
@@ -143,13 +146,16 @@ function mixItems (arrayItems) {
 function pushCurrentQuestion() {
     if(questionCount >= maxQuestions) {
         matchFlagContainer.classList.add("d-none");
+        matchCountryContainer.classList.add("d-none");
         gameOver.classList.remove("d-none");
         showGameOver()
     }
 
     questionCount++;
     questionInfo.innerText = `${questionCount}/${maxQuestions}`;
+    questionInfo2.innerText = `${questionCount}/${maxQuestions}`;
     scoreInfo.innerText = score;
+    scoreInfo2.innerText = score;
     currentQuestion = []; 
     currentQuestion.push(...countryData.slice(0,4));
     
