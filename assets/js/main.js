@@ -69,17 +69,14 @@ mode.addEventListener("click", function(){
     mode.classList.add("d-none");
     matchFlagBanner.classList.remove("d-none");
     matchFlagContainer.classList.add("d-none");
+    matchCountryContainer.classList.add("d-none");
     gameOver.classList.add("d-none");
     stopGame()
 })
 
 reset.addEventListener("click", function(){
-    if(gameOver.style.display = "block"){
-        gameOver.classList.add("d-none");
-        matchFlagContainer.classList.remove("d-none");
-    }
+   restart();
     
-    restart();
 })
 
 /*
@@ -117,6 +114,7 @@ function shuffleData (json) {
  */
 
 function restart(){
+    
   questionCount = 0;
   score = 0;
   pushCurrentQuestion(shuffleData(countryData));
@@ -264,7 +262,6 @@ function verifyMatchCountry() {
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
             let match = clickedAnswer.src.slice(30, 33) == MatchCountry.alpha3Code.toLowerCase(); 
-            console.log(clickedAnswer.src.slice(30, 33))
             if(match){ 
                 Swal.fire(whichAlert(true, MatchCountry.name)).then((result) => {
                     console.log(result.dismiss)
@@ -321,7 +318,7 @@ function showGameOver(){
     else if(score<20 && score>=15){
         scoreComment.innerHTML = `
         <h1>Bravooooo you are super smart!<h2>
-        <p>Reach the 20/20 or wait for the extreme mode...?<p>`
+        <p>Reach the 20/20 or wait for the extreme mode to be built...?<p>`
     } else {
         scoreComment.innerHTML = `
         <h1>Amazing you beat the game!<h2>
