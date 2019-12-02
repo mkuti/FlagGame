@@ -249,10 +249,10 @@ function displayingCountryName() {
  */
 function displayingFlags() {
     mixItems(flagChoices)
-    flagChoices[0].innerHTML = `<img src="${currentQuestion[3].flag}" alt="">`;
-    flagChoices[1].innerHTML = `<img src="${currentQuestion[2].flag}" alt="">`;
-    flagChoices[2].innerHTML = `<img src="${currentQuestion[0].flag}" alt="">`;
-    flagChoices[3].innerHTML = `<img src="${currentQuestion[1].flag}" alt="">`;
+    flagChoices[0].innerHTML = `<img src="${currentQuestion[3].flag}" alt="" width=200 height=120>`;
+    flagChoices[1].innerHTML = `<img src="${currentQuestion[2].flag}" alt="" width=200 height=120>`;
+    flagChoices[2].innerHTML = `<img src="${currentQuestion[0].flag}" alt="" width=200 height=120>`;
+    flagChoices[3].innerHTML = `<img src="${currentQuestion[1].flag}" alt="" width=200 height=120>`;
 }
 
 /**
