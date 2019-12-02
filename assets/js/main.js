@@ -255,6 +255,33 @@ function displayingFlags() {
     flagChoices[3].innerHTML = `<img src="${currentQuestion[1].flag}" alt="" width=200 height=120>`;
 }
 
+function flagURL(){
+    
+}
+
+function verifyMatchCountry() {
+    flagChoices.forEach(answer => { 
+        answer.addEventListener("click", e => {
+            let clickedAnswer = e.target;
+            let match = clickedAnswer.src.slice(30, 33) == MatchCountry.alpha3Code.toLowerCase(); 
+            console.log(clickedAnswer.src.slice(30, 33))
+            if(match){ 
+                Swal.fire(whichAlert(true, MatchCountry.name)).then((result) => {
+                    console.log(result.dismiss)
+                    if (result.dismiss) {
+                        score++;
+                        pushCurrentQuestion(shuffleData(countryData));
+                    }
+                });  
+                        } else Swal.fire(whichAlert(false, MatchCountry.name)).then((result) => {
+                    if (result.dismiss) {
+                        pushCurrentQuestion(shuffleData(countryData));
+                    }
+                });  ;
+          });
+        })
+    }
+
 /**
  * Function to create a default alert object which can be used to fire customised alerts called when match verified
  * @param match {boolean}
