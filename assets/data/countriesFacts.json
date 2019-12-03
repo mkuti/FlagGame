@@ -1,118 +1,95 @@
 [
     {
         "name": "Afghanistan",
-        "fact1": "Snow leopard, red flying squirrel, corsac fox, and desert hedgehog are some of the animals in Afghanistan.",
-        "fact2": "Kite flying or 'Gudiparan Bazi' is one of Afghanistan's national outdoor sports."
+        "fact": "Kite flying or 'Gudiparan Bazi' is one of Afghanistan's national outdoor sports."
     },
     {
         "name": "Åland Islands",
-        "fact1": "Åland is an archipelago province at the entrance to the Gulf of Bothnia in the Baltic Sea belonging to Finland.",
-        "fact2": "Although belonging to Finland, most inhabitants speak Swedish (the sole official language) as their first language."
+        "fact": "Åland is an archipelago province at the entrance to the Gulf of Bothnia in the Baltic Sea belonging to Finland."
     },
     {
         "name": "Albania",
-        "fact1": "Mother Teresa is the country’s heroine. She is also the only Nobel laureate from Albania.",
-        "fact2": "One of the leading individual sports practiced by Albanians is weightlifting. The country has won many weightlifting championships in European and global competitions."
+        "fact": "Mother Teresa is the country’s heroine. She is also the only Nobel laureate from Albania."
     },
     {
         "name": "Algeria",
-        "fact1": "Only 12% of Algeria’s land mass is inhabited, as 90% of the country is the Sahara Desert.",
-        "fact2": "The national dish of Algeria is couscous, often served with lamb, chicken or cooked vegetables."
+        "fact": "Only 12% of Algeria’s land mass is inhabited, as 90% of the country is the Sahara Desert."
     },
     {
         "name": "American Samoa",
-        "fact1": "As the only U.S. territory located south of the Equator, American Samoa's flag is symbolic of that association, as it features the red, white and blue of the U.S. Stars and Stripes, as well as an American bald eagle. ",
-        "fact2": "Located in the South Pacific Ocean, American Samoa is made up of 5 main islands, and 2 coral atolls."
+        "fact": "As the only U.S. territory located south of the Equator, American Samoa's flag is symbolic of that association, as it features the red, white and blue of the U.S. Stars and Stripes, as well as an American bald eagle. "
     },
     {
         "name": "Andorra",
-        "fact1": "Andorra, located in the heart of the Pyrenees Mountains, is the highest inhabited country in Europe.",
-        "fact2": "With duty-free shopping, gorgeous scenery and great skiing, Andorra attracts thousands of worldwide visitors on an annual basis."
+        "fact": "Andorra, located in the heart of the Pyrenees Mountains, is the highest inhabited country in Europe."
     },
     {
         "name": "Angola",
-        "fact1": "Angola gets its name from the ancient Kingdom of Ndongo, whose kings carried the title of 'ngola'.",
-        "fact2": "Angola is the origin of the dreadlocks hair style."
+        "fact": "Angola is the origin of the dreadlocks hair style."
     },
     {
         "name": "Anguilla",
-        "fact1": "Anguilla is a British territory located in the Caribbean, near Puerto Rico.",
-        "fact2": "Christopher Columbus named it for its eel-like shape: Anguilla means 'eel' in Spanish."
+        "fact": "Anguilla is a British territory located in the Caribbean, near Puerto Rico."
     },
     {
         "name": "Antarctica",
-        "fact1": "Antarctica is noted as the last region on Earth in recorded history to be discovered, unseen until 1820",
-        "fact2": "At 14,200,000 square kilometres (5,500,000 square miles), Antarctica is the fifth-largest continent and nearly twice the size of Australia."
+        "fact": "Antarctica is noted as the last region on Earth in recorded history to be discovered, unseen until 1820"
     },
     {
         "name": "Antigua and Barbuda",
-        "fact1": "A sovereign state in the West Indies in the Americas, lying between the Caribbean Sea and the Atlantic Ocean which consists of two major islands, Antigua and Barbuda, and a number of smaller islands",
-        "fact2": "The yellow, blue, and white colors of the flag represent the sun, the Caribbean Sea, and the country's beaches, while black represents the African heritage of the people and red stands for the energy of the people"
+        "fact": "A sovereign state in the West Indies in the Americas, lying between the Caribbean Sea and the Atlantic Ocean which consists of two major islands, Antigua and Barbuda, and a number of smaller islands"
     },
     {
         "name": "Argentina",
-        "fact1": "July 20th marks Friends Day, which is celebrated every year in Argentina.",
-        "fact2": "The city of Ushuaia, located in Argentina, is believed to be the most southernmost city in the entire world."
+        "fact": "The city of Ushuaia, located in Argentina, is believed to be the most southernmost city in the entire world."
     },
     {
         "name": "Armenia",
-        "fact1": "Armenia is a mountainous, landlocked country, on the southeastern edge of Europe, and at the gateway to the Middle East and Asia.",
-        "fact2": "Chess is taught in schools as a mandatory subject."
+        "fact": "Armenia is a mountainous, landlocked country, on the southeastern edge of Europe, and at the gateway to the Middle East and Asia."
     },
     {
         "name": "Aruba",
-        "fact1": "This sunshiny place of balmy (some say perfect) weather, sandy beaches, duty-free shopping is one of the most popular vacation destinations in the entire Caribbean.",
-        "fact2": "Has one of the most fascinating ecosystems on the planet as being surrounded by the warm, aquamarine waters of the Caribbean Sea."
+        "fact": "This sunshiny place of balmy (some say perfect) weather, sandy beaches, duty-free shopping is one of the most popular vacation destinations in the entire Caribbean."
     },
     {
         "name": "Australia",
-        "fact1": "The snow-covered areas of Australia are larger than Switzerland.",
-        "fact2": "Australia is home to 21 of the 25 most venomous snakes in the world. It has more venomous snake species than any other continent."
+        "fact": "Australia is home to 21 of the 25 most venomous snakes in the world. It has more venomous snake species than any other continent."
     },
     {
         "name": "Austria",
-        "fact1": "There are eight countries bordering Austria, including Slovenia, Italy, Switzerland, Liechtenstein, Hungary, Slovakia, Germany and the Czech Republic.",
-        "fact2": "Austria has a very strong spa and sauna culture. Most of the saunas are mixed gender for starters, and swimming costumes are not allowed."
+        "fact": "There are eight countries bordering Austria, including Slovenia, Italy, Switzerland, Liechtenstein, Hungary, Slovakia, Germany and the Czech Republic."
     },
     {
         "name": "Azerbaijan",
-        "fact1": "Azerbaijan, located on the western edge of the Caspian Sea, sits at the crossroad between East and West. (Asia and Europe)",
-        "fact2": "Azerbaijan became the first Muslim nation to declare women and men equal in political rights - long before the United Kingdom and the United States."
+        "fact": "Azerbaijan became the first Muslim nation to declare women and men equal in political rights - long before the United Kingdom and the United States."
     },
     {
         "name": "Bahamas",
-        "fact1": "Christopher Columbus's first landfall in the 'New World' was on the Bahamian island of San Salvador.",
-        "fact2": "As Bahamas is in the CommonWealth, some Bahamian dollar notes display a portrait of Queen Elizabeth II"
+        "fact1": "Christopher Columbus's first landfall in the 'New World' was on the Bahamian island of San Salvador."
     },
     {
         "name": "Bahrain",
-        "fact1": "Located just off the eastern coastline of Saudi Arabia in the Persian Gulf, Bahrain is a small archipelago of 33 islands, with the largest island being Bahrain Island.",
-        "fact2": "Its land (especially Bahrain Island) is primarily barren desert, with a limestone surface. Petroleum processing and refining, as well as international banking are the major industries."
+        "fact": "Located just off the eastern coastline of Saudi Arabia in the Persian Gulf, Bahrain is a small archipelago of 33 islands, with the largest island being Bahrain Island."
     },
     {
         "name": "Bangladesh",
-        "fact1": "The Bay of Bengal is the largest bay in the entire world.",
-        "fact2": "The Royal Bengal Tiger is the country’s national animal."
+        "fact": "The Royal Bengal Tiger is the country’s national animal."
     },
     {
         "name": "Barbados",
-        "fact1": "Barbados has a special dialect of English called Bajan.",
-        "fact2": "Coucou and flying fish is the national dish of Barbados. Coucou is a cornmeal product made with okra."
+        "fact": "Coucou and flying fish is the national dish of Barbados. Coucou is a cornmeal product made with okra."
     },
     {
         "name": "Belarus",
-        "fact1": "It is believed that the prefix Bela- originated from Sanskrit 'Bala' (morning/white) and that early cultures held to the notion that the color represented freedom, purity and nobility",
-        "fact2": "Ice hockey is the most popular sport in Belarus and is heavily funded by the nation's government. The national ice hockey team of Belarus regularly competes in the World Championships. "
+        "fact": "Ice hockey is the most popular sport in Belarus and is heavily funded by the nation's government. The national ice hockey team of Belarus regularly competes in the World Championships. "
     },
     {
         "name": "Belgium",
-        "fact1": "Belgium is a multinational state with most Belgians being a part of one of two communities, the Flemings from the north who speak Dutch or the Walloons in the South who speak French.",
-        "fact2": "In addition to being well known got their famous waffles, Belgium is also known for a very different kind of snack called moules frites which are mussels served with french fries."
+        "fact": "In addition to being well known got their famous waffles, Belgium is also known for a very different kind of snack called moules frites which are mussels served with french fries."
     },
     {
         "name": "Belize",
-        "fact1": "Archaeological evidence in Belize indicates that the famed Mayan culture began to emerge in this lowland area of the Yucatan Peninsula around 1000 BC.",
-        "fact2": "The country’s most exotic delicacy is the gibnut rodent, also known as the “royal rat” because it was once served to Queen Elizabeth."
+        "fact": "Archaeological evidence in Belize indicates that the famed Mayan culture began to emerge in this lowland area of the Yucatan Peninsula around 1000 BC."
     },
     {
         "name": "Benin",
@@ -121,211 +98,301 @@
     },
     {
         "name": "Bermuda",
-        "fact1": "Spanish navigator, Juan de Bermudez (for whom the islands are named), discovered the area in 1505 and claimed it for the Spanish Empire.",
-        "fact2": "Bermuda shorts originated with the British Army for wear in tropical and desert climates during a shortage of clothing in Bermuda in the Second World War."
+        "fact": "Bermuda shorts originated with the British Army for wear in tropical and desert climates during a shortage of clothing in Bermuda in the Second World War."
     },
     {
         "name": "Bhutan",
-        "fact1": "Called Druk Yul (Land of the Thunder Dragon) by its people, the strikingly beautiful Kingdom of Bhutan lies in the eastern Himalayas, sandwiched between China and India.",
-        "fact2": "Bhutan is rated as one of the happiest countries in Asia."
+        "fact": "Called Druk Yul (Land of the Thunder Dragon) by its people, the strikingly beautiful Kingdom of Bhutan lies in the eastern Himalayas, sandwiched between China and India."
     },
     {
         "name": "Bolivia",
-        "fact1": "Bolivia is named after Simon Bolivar who led Ecuador, Venezuela, Bolivia, Peru and Columbia to independence in 1852",
-        "fact2": "Bolivia is considered to be one of the wettest countries in the world as there is approximately 8000mm of rainfall per year"
+        "fact": "Bolivia is considered to be one of the wettest countries in the world as there is approximately 8000mm of rainfall per year"
     },
     {
         "name": "Bonaire, Sint Eustatius and Saba",
-        "fact1": "The Caribbean Netherlands are the three special municipalities of the Netherlands that are located in the Caribbean Sea.",
-        "fact2": "Until 1 January 2011, the three islands used the Netherlands Antillean guilder; after that all three switched to the US dollar, rather than the euro (which is used in the European Netherlands)."
+        "fact": "The Caribbean Netherlands are the three special municipalities of the Netherlands that are located in the Caribbean Sea."
     },
     {
         "name": "Bosnia and Herzegovina",
-        "fact1": "As part of the Austrio-Hungarian Empire, tragedy struck Bosnian capital Sarajevo as the heir of the Empire was assassinated by a Serb nationalist youth in 1914; an event that set World War I into motion.",
-        "fact2": "With its vibrant mountain backdrops and major rivers suitable for rafting and kayaking, Bosnia and Herzegovina is easily becoming one of the go-to spots for those with a desire for outdoor adventure."
+        "fact": "With its vibrant mountain backdrops and major rivers suitable for rafting and kayaking, Bosnia and Herzegovina is easily becoming one of the go-to spots for those with a desire for outdoor adventure."
     },
     {
         "name": "Botswana",
-        "fact1": "Botswana is home to approximately 130,451 elephants and has a density of 1.28 elephants per square km, which is the highest elephant concentration in Africa.",
-        "fact2": "The Okavango Delta is a massive inland delta located in the Kalahari Desert, is one of the Seven Natural Wonders of Africa and has been designated as a UNESCO World Heritage Site."
-    },
-    {
-        "name": "Barbados",
-        "fact1": "Barbados has a special dialect of English called Bajan.",
-        "fact2": "Coucou and flying fish is the national dish of Barbados. Coucou is a cornmeal product made with okra."
+        "fact": "Botswana is home to approximately 130,451 elephants and has a density of 1.28 elephants per square km, which is the highest elephant concentration in Africa."
     },
     {
         "name": "Bouvet Island",
-        "fact1": "Bouvet Island is an uninhabited subantarctic high island and dependency of Norway located in the South Atlantic Ocean.",
-        "fact2": "The island was first spotted on 1 January 1739 by Frenchman Jean-Baptiste Charles Bouvet de Lozier, on a French exploration mission in the South Atlantic with the ships Aigle and Marie. "
+        "fact": "Bouvet Island is an uninhabited subantarctic high island and dependency of Norway located in the South Atlantic Ocean."
     },
     {
         "name": "Brazil",
-        "fact1": "Brazil received its name from the tree brazilwood, which is abundant in the country.",
-        "fact2": "Capoeira is a form of martial arts that originated within African slaves. It is an artistic sport that resembles dance, and is a favorite pastime of many Brazilians."
+        "fact": "Capoeira is a form of martial arts that originated within African slaves. It is an artistic sport that resembles dance, and is a favorite pastime of many Brazilians."
     },
     {
         "name": "British Indian Ocean Territory",
-        "fact1": "Territory is situated in the Indian Ocean halfway between Tanzania and Indonesia, and directly south of the Maldives.",
-        "fact2": "The territory is also called the Chagos Archipelago. The Chagossians, numbering about 2,000 people, were expelled to other islands so a joint UK/US military base could be built there."
+        "fact": "Also called the Chagos Archipelago. The Chagossians, numbering about 2,000 people, were expelled to other islands so a joint UK/US military base could be built there."
     },
     {
         "name": "United States Minor Outlying Islands",
-        "fact1": "The denomination consists of 8 US islands of the Pacific Ocean (Baker Island, Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Atoll, Palmyra Atoll, and Wake Island) and 1 in the Caribbean Sea (Navassa Island).",
-        "fact2": "The only human population consists of temporarily stationed scientific and military personnel."
+        "fact": "The only human population consists of temporarily stationed scientific and military personnel."
     },
     {
         "name": "Virgin Islands (British)",
-        "fact1": "In 1493, Christopher Columbus spotted these beautiful islands and named them 'Santa Ursula y las Once Mil Vírgenes' (Saint Ursula and her 11,000 Virgins).",
-        "fact2": "As a modern offshore financial center, the British Virgin Islands now enjoy one of the more prosperous economies in the Caribbean."
+        "fact": "In 1493, Christopher Columbus spotted these beautiful islands and named them 'Santa Ursula y las Once Mil Vírgenes' (Saint Ursula and her 11,000 Virgins)."
     },
     {
         "name": "Virgin Islands (U.S.)",
-        "fact1": "In 1493, Christopher Columbus spotted these beautiful islands and named them 'Santa Ursula y las Once Mil Vírgenes' (Saint Ursula and her 11,000 Virgins).",
-        "fact2": "the U.S. Virgin Islands remain one of the busiest cruise ship ports and family vacations destinations in all of the Caribbean."
+        "fact": "In 1493, Christopher Columbus spotted these beautiful islands and named them 'Santa Ursula y las Once Mil Vírgenes' (Saint Ursula and her 11,000 Virgins)."
     },
     {
         "name": "Brunei Darussalam",
-        "fact1": "The small country of Brunei Darussalam is situated on the northwestern edge of the island of Borneo",
-        "fact2": "The country benefits from its extensive petroleum and natural gas fields, and this tax-free haven's citizens enjoy one of the highest (per capita) GDPs in the world."
+        "fact": "The small country of Brunei Darussalam is situated on the northwestern edge of the island of Borneo"
     },
     {
         "name": "Bulgaria",
-        "fact1": "Situated between the Balkans and Sradna Gora mountains is a unique place known as the Valley of Roses, which is responsible for 85% of the world's rose oil production.",
-        "fact2": "Bulgaria's name is said to have come from the Turkic verb bulgha (to mix, shake, stir) and bulgak (revolt, disorder)"
+        "fact": "Situated between the Balkans and Sradna Gora mountains is a unique place known as the Valley of Roses, which is responsible for 85% of the world's rose oil production."
     },
     {
         "name": "Burkina Faso",
-        "fact1": "A xylophone-like instrument called the balophon that is made with dried gourds is often used to produce music in the western part of the country. ",
-        "fact2": "Burkina Faso has a rich tradition of oral literature. For centuries, the history of the country’s various ethnic groups was conserved in the form of folk tales and legends, poems, heroic epics, songs, and dances."
+        "fact": "Burkina Faso has a rich tradition of oral literature. For centuries, the history of the country’s various ethnic groups was conserved in the form of folk tales and legends, poems, heroic epics, songs, and dances."
     },
     {
         "name": "Burundi",
-        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
-        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+        "fact": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace."
     },
     {
         "name": "Cambodia",
-        "fact1": "Cambodia is home to the largest religious building in the entire world: Angkor Wat which name directly translates to 'City of Temples'",
-        "fact2": "Cambodian flag is the only one in the world with a building on it, Angkor Wat. its renown 'City of Temples'"
+        "fact": "Cambodia is home to the largest religious building in the entire world: Angkor Wat which name directly translates to 'City of Temples'"
     },
     {
         "name": "Cameroon",
-        "fact1": "Cameroon is often known as “Africa in miniature” as ethnically diverse with over 250 individual groups who coexist in peace and home to over 1738 different linguistic groups",
-        "fact2": "The name Cameroon means shrimp and was given due to the large swarm of ghost shrimp in the Wouri River."
+        "fact": "Cameroon is often known as “Africa in miniature” as ethnically diverse with over 250 individual groups who coexist in peace and home to over 1738 different linguistic groups"
     },
     {
         "name": "Canada",
-        "fact1": "Montreal has the second-highest population of French speakers in the world. It falls second only to Paris, France.",
-        "fact2": "Dinosaur Provincial Park is a site where many fossils have been found. Over 500 specimens from over 40 species have been discovered here."
+        "fact": "Dinosaur Provincial Park is a site where many fossils have been found. Over 500 specimens from over 40 species have been discovered here."
     },
     {
         "name": "Cabo Verde",
-        "fact1": "The Cape Verde islands consist of two small (volcanic in origin) archipelagos, about 400 miles off the western coast of Africa.",
-        "fact2": "Cesária Évora is an international superstar from Cape Verde who specializes in Morna, a type of folk music that originated in the country"
+        "fact": "The Cape Verde islands consist of two small (volcanic in origin) archipelagos, about 400 miles off the western coast of Africa."
     },
     {
         "name": "Cayman Islands",
-        "fact1": "On May 10, 1503, on his final voyage to the 'New World,' Christopher Columbus spotted the Cayman Islands. He named them Las Tortugas after the numerous sea turtles that inhabited their waters.",
-        "fact2": "There’s supposedly a treasure on the islands left behind when the pirates occupied Cayman Island in the 18th century."
+        "fact": "On May 10, 1503, on his final voyage to the 'New World,' Christopher Columbus spotted the Cayman Islands. He named them Las Tortugas after the numerous sea turtles that inhabited their waters."
     },
     {
         "name": "Central African Republic",
-        "fact1": "The Central African Republic is famed for its lowland gorilla population, Pygmy culture and for its fabulous national parks.",
-        "fact2": "On the flag, the red stripe is said to represent the blood of humanity and symbolizes the respect that Europeans and Africans have for each other. The yellow star of independence symbolizes a bright future."
+        "fact1": "The Central African Republic is famed for its lowland gorilla population, Pygmy culture and for its fabulous national parks."
     },
     {
         "name": "Chad",
-        "fact1": "The ancient land called Chad was inhabited over one million years ago, at a time when much of it was only water. In modern Chad, precious water is often difficult to find",
-        "fact2": "Much of the country is positioned within the hot and dry Sahara Desert, covering Chad with sand and barren scrub land. "
+        "fact1": "The ancient land called Chad was inhabited over one million years ago, at a time when much of it was only water. In modern Chad, precious water is often difficult to find"
     },
     {
         "name": "Chile",
-        "fact1": "The national drink is known as ‘Pisco’ (a clear liquid) with the most famous version being the ‘Pisco Sour’ which consists of lemon juice, ice, sugar and beaten egg whites",
-        "fact2": "The national bird is called the Andean Condor and is the largest flying bird in the world"
+        "fact": "The national drink is known as ‘Pisco’ (a clear liquid) with the most famous version being the ‘Pisco Sour’ which consists of lemon juice, ice, sugar and beaten egg whites"
     },
     {
         "name": "China",
-        "fact1": "Ice cream originated in China. It was first invented in 2000 BC when the Chinese put together soft milk and rice in the snow.",
-        "fact2": "A game by the name of Cuju was created in China during the Han Dynasty. This game spread to other parts of the world, and eventually became known as what we know call soccer."
+        "fact1": "Ice cream originated in China. It was first invented in 2000 BC when the Chinese put together soft milk and rice in the snow."
     },
     {
         "name": "Christmas Island",
-        "fact1": "Christmas Island is an Australian territory located in the Indian Ocean, around 350 kilometres (220 mi) south of Java and Sumatra",
-        "fact2": "Christmas Island was uninhabited until the late 19th century, allowing many species to evolve without human interference. "
+        "fact": "Christmas Island is an Australian territory located in the Indian Ocean, around 350 kilometres (220 mi) south of Java and Sumatra"
     },
     {
         "name": "Cocos (Keeling) Islands",
-        "fact1": "an Australian external territory on the Indian Ocean, comprising a small archipelago approximately midway between Australia and Sri Lanka and closer to the Indonesian island of Sumatra.",
+        "fact": "An Australian external territory on the Indian Ocean, comprising a small archipelago approximately midway between Australia and Sri Lanka and closer to the Indonesian island of Sumatra.",
     },
     {
         "name": "Colombia",
-        "fact1": "Bogota, Colombia, is 8,360 feet above sea level and is one of the highest cities in the world.",
-        "fact2": "Colombia is considered one of the most biodiverse countries in the world, boasting over 300 different ecosystems."
+        "fact": "Bogota, Colombia, is 8,360 feet above sea level and is one of the highest cities in the world."
     },
     {
         "name": "Comoros",
-        "fact1": "The archipelago of Comoros is situated in the tropical waters of the Indian Ocean between the eastern coast of Africa and Madagascar.",
-        "fact2": "Its capital is based at the foot of an active volcano named Mount Karthala, and thus gets its name Moroni, meaning 'in the heart of the fire'."
+        "fact": "The archipelago of Comoros is situated in the tropical waters of the Indian Ocean between the eastern coast of Africa and Madagascar."
     },
     {
         "name": "Congo",
-        "fact1": "Kimpa Vita, a Catholic nun, is known as the African Joan of Arc, after seeing visions commanding her to restore the kingdom of Kongo and being accused of being a witch in the 1600s.",
-        "fact2": "The population of the Congo is concentrated in the south of the country, between its capital, Brazzaville and the coastal city of Pointe Noire, leaving the vast areas of tropical jungle in the north uninhabited."
+        "fact": "Kimpa Vita, a Catholic nun, is known as the African Joan of Arc, after seeing visions commanding her to restore the kingdom of Kongo and being accused of being a witch in the 1600s."
     },
     {
         "name": "Congo (Democratic Republic of the)",
-        "fact1": "Dissected by the Equator, the Democratic Republic of the Congo (DRC), formerly called Zaire, is the third largest country on the African continent.",
-        "fact2": "One of the unique wildlife species found in the Congo is the Bonobo, a species of chimpanzee where they can freely roam in the wild"
+        "fact": "One of the unique wildlife species found in the Congo is the Bonobo, a species of chimpanzee where they can freely roam in the wild"
     },
     {
         "name": "Cook Islands",
-        "fact1": "These easy-on-the-eyes islands, fifteen in all, were named after Captain Cook, the famed British explorer, who sailed through them in 1773. ",
-        "fact2": "As a self-governing territorial democracy of New Zealand, the Cook Island's flag features the Union Jack (upper left), recalling New Zealand's long association with Great Britain."
+        "fact": "These easy-on-the-eyes islands, fifteen in all, were named after Captain Cook, the famed British explorer, who sailed through them in 1773."
     },
     {
         "name": "Costa Rica",
-        "fact1": "Costa Rica has over 100 volcanic formations, and seven of those are active. Arenal Volcano is one of the world's most active volcanoes.",
-        "fact2": "Costa Rica is often referred to as a hummingbird capital. The country has about 52 native species of hummingbirds."
+        "fact": "Costa Rica has over 100 volcanic formations, and seven of those are active. Arenal Volcano is one of the world's most active volcanoes."
     },
     {
         "name": "Croatia",
-        "fact1": "Latin in origin, Croatia's name literally means 'Land of Croats'",
-        "fact2": "With medieval castles punctuating the Dalmatian coastline, its numerous lakes and beaches, Croatia maintains a thriving tourism industry."
+        "fact": "With medieval castles punctuating the Dalmatian coastline, its numerous lakes and beaches, Croatia maintains a thriving tourism industry."
     },
     {
         "name": "Cuba",
-        "fact1": "The smallest bird in the world can be found in Cuba. It is the Bee Hummingbird, which only grows to be 2 inches in length.",
-        "fact2": "There is a statue of John Lennon from The Beatles in the country of Cuba. It was erected in 2000 by Fidel Castro, after Castro declared John Lennon to be a music revolutionary."
+        "fact": "The smallest bird in the world can be found in Cuba. It is the Bee Hummingbird, which only grows to be 2 inches in length."
     },
     {
         "name": "Curaçao",
-        "fact1": "Curaçao is a Lesser Antilles island in the southern Caribbean Sea and the Dutch Caribbean region, about 65 km north of the Venezuelan coast.",
-        "fact2": "Unlike many other Caribbean islands, Curacao is underneath what is known as the “hurricane belt.” It’s very rare for the island to ever experience a hurricane."
+        "fact": "Curaçao is a Lesser Antilles island in the southern Caribbean Sea and the Dutch Caribbean region, about 65 km north of the Venezuelan coast."
     },
     {
         "name": "Cyprus",
-        "fact1": "Cyprus was the legendary birthplace of the Greek gods, Aphrodite and Adonis, and home to King Cinyras and Pygmalion.",
-        "fact2": "it is suggested that the name of Cyprus comes from the cypress tree, or from the Eteocypriot word for copper - which is found on the island."
+        "fact": "Cyprus was the legendary birthplace of the Greek gods, Aphrodite and Adonis, and home to King Cinyras and Pygmalion."
     },
     {
-        "name": "Burundi",
-        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
-        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+        "name": "Czech Republic",
+        "fact": "Archaeologists have found evidence of human settlements in the Czech Republic, dating back to the Stone Age."
     },
     {
-        "name": "Burundi",
-        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
-        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+        "name": "Czech Republic",
+        "fact": "Archaeologists have found evidence of human settlements in the Czech Republic, dating back to the Stone Age."
     },
     {
-        "name": "Burundi",
-        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
-        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
+        "name": "Denmark",
+        "fact": "Home to the world Clock which was built in 27 years and is supposed to keep time accurately for the next 570,000 years"
     },
     {
-        "name": "Burundi",
-        "fact1": "The three stars represent the three ethnic groups that live in the country; the Hutu, Tutsi and the Twa. The red in the flag stands for the independence struggle, the green for hope and the white for peace.",
-        "fact2": "The landlocked small country of Burundi, located on the northeastern shoreline of Lake Tanganyika, is a very mountainous country."
-    }
-]
+        "name": "Djibouti",
+        "fact": "The tiny country of Djibouti is strategically situated between the western edge of the Gulf of Aden and the entrance to the Red Sea. "
+    },
+    {
+        "name": "Dominica",
+        "fact": "Christopher Columbus named the island after the day of the week on which he spotted it, a Sunday (Dominica in Latin)."
+    },
+    {
+        "name": "Dominican Republic",
+        "fact": "The island of Hispaniola, the second largest island in the Caribbean, contains two separate countries; the Dominican Republic and Haiti."
+    },
+    {
+        "name": "Ecuador",
+        "fact": "Iguana Park is located in Guyaquil, Ecuador and it is a safe haven for Iguanas."
+    },
+    {
+        "name": "Egypt",
+        "fact": "The Ancient Egyptians invented the clock, and were the first civilization to have 365 day calendars that were divided into 12 months."
+    },
+    {
+        "name": "El Salvador",
+        "fact": "El Salvador is Central America’s smallest nation by size."
+    },
+    {
+        "name": "Equatorial Guinea",
+        "fact": "Equatorial Guinea is believed to have first been inhabited by Pygmies"
+    },
+    {
+        "name": "Eritrea",
+        "fact": "Eritrea is surrounded by the Red Sea to the eastern and northeastern side, Djibouti to the southeastern side, Ethiopia to the South, and Sudan to the west."
+    },
+    {
+        "name": "Estonia",
+        "fact": "The oldest known settlement in Estonia is the Pulli settlement, which according to radiocarbon dating was settled around 11,000 years ago."
+    },
+    {
+        "name": "Ethiopia",
+        "fact": "Legends in Ethiopia state that the Biblical Queen of Sheba was Makeda, a ruler from the ancient Ethiopian city of Axum."
+    },
+    {
+        "name": "Falkland Islands (Malvinas)",
+        "fact": "A self-governing territory of the United Kingdom (UK). Spanish speaking countries of South America refer to them as (Islas Malvinas)"
+    },
+    {
+        "name": "Faroe Islands",
+        "fact": "The Faroe Islands is a self-governing archipelago, part of the Kingdom of Denmark. It comprises 18 rocky, volcanic islands between Iceland and Norway in the North Atlantic Ocean"
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Finland",
+        "fact": "Between 1906 and 1907, Finland became the first country in the world to both allow ALL its adult citizens the right to vote AND to run for office."
+    },
+    {
+        "name": "France",
+        "fact": "French people greet each other by kissing each other’s cheeks. They may kiss each other’s cheeks up to four times depending on what region of the country they are from."
+    },
+    {
+        "name": "French Guiana",
+        "fact": "Kourou is where the European Space Agency has a satellite launch site."
+    },
+    {
+        "name": "French Polynesia",
+        "fact": "French Polynesia is an overseas possession of France. Its flag depicts a canoe (piroque), sailing under a golden sun."
+    },
+    {
+        "name": "French Southern Territories",
+        "fact": "The French Southern and Antarctic Lands is an overseas territory of France situated between Africa and Antarctica"
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
+    {
+        "name": "Fiji",
+        "fact": "Originally settled by Polynesians, the Fiji islands were sort of discovered in 1643 by Dutch explorer, Abel Tasman."
+    },
