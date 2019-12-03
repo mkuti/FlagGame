@@ -78,8 +78,7 @@ mode.addEventListener("click", function(){
 
 reset.addEventListener("click", function(){
     gameOver.classList.add("d-none");
-    restart();
-    
+    restart();  
 })
 
 /*
@@ -147,6 +146,7 @@ function pushCurrentQuestion() {
     if(questionCount >= maxQuestions) {
         matchFlagContainer.classList.add("d-none");
         matchCountryContainer.classList.add("d-none");
+        reset.classList.add("d-none");
         gameOver.classList.remove("d-none");
         showGameOver()
     }
