@@ -168,7 +168,9 @@ function pushCurrentQuestion() {
  * calling functions to play game with current question to display flag, display countries name and verify match
  */
 function selectingCountrytoMatch() {
-    MatchCountry = currentQuestion[mixItems(currentQuestion)];
+    MatchCountry = currentQuestion[0];
+    countryData.splice(0, 1);
+    console.log(countryData)
 
     if(matchFlagContainer.style.display = "block") {
         displayingFlag()
