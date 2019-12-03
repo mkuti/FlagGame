@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="" target="_blank"><img src="" alt=""/></a>
+  <a href="" target="_blank"><img src="assets/images/logo.png" alt=""/></a>
 </h1>
 
 <div align="center">
@@ -133,6 +133,8 @@ The color theme changed completely after implementing design in the code. I remo
 - [Favicon converter](https://favicon.io/favicon-converter/) - I used Favicon converter to convert the logo into a favicon which I was able to insert in the asset folder and I tested it to be working
 
 # Testing
+
+
 
 ### Final and official testing:
   * [W3 MarkUp validation](https://validator.w3.org)
