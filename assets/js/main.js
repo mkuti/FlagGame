@@ -253,10 +253,10 @@ function displayingCountryName() {
  */
 function displayingFlags() {
     mixItems(flagChoices)
-    flagChoices[0].innerHTML = `<img src="${currentQuestion[3].flag}" alt="" width=200 height=120>`;
-    flagChoices[1].innerHTML = `<img src="${currentQuestion[2].flag}" alt="" width=200 height=120>`;
-    flagChoices[2].innerHTML = `<img src="${currentQuestion[0].flag}" alt="" width=200 height=120>`;
-    flagChoices[3].innerHTML = `<img src="${currentQuestion[1].flag}" alt="" width=200 height=120>`;
+    flagChoices[0].innerHTML = `<img src="${currentQuestion[3].flag}" alt="${currentQuestion[3].name}" width=200 height=120>`;
+    flagChoices[1].innerHTML = `<img src="${currentQuestion[2].flag}" alt="${currentQuestion[2].name}" width=200 height=120>`;
+    flagChoices[2].innerHTML = `<img src="${currentQuestion[0].flag}" alt="${currentQuestion[0].name}" width=200 height=120>`;
+    flagChoices[3].innerHTML = `<img src="${currentQuestion[1].flag}" alt="${currentQuestion[1].name}" width=200 height=120>`;
 }
 
 function flagURL(){
@@ -276,7 +276,7 @@ function verifyMatchCountry() {
                         pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  
-                        } else Swal.fire(whichAlert(false, MatchCountry.name)).then((result) => {
+                        } else Swal.fire(whichAlert(false, clickedAnswer.alt)).then((result) => {
                     if (result.dismiss) {
                         pushCurrentQuestion(shuffleData(countryData));
                     }
