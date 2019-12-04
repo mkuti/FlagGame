@@ -27,6 +27,7 @@ const scoreInfo2 = document.getElementById("score2-count");
 const finalScore = document.getElementById("final-score");
 const scoreComment = document.getElementById("scoreComment");
 
+console.log(reset.parentElement)
 /* variables for the question*/
 let countryData;
 let currentQuestion = []; //array of 4 first countries sliced from shuffled data for each question
@@ -45,31 +46,31 @@ const maxQuestions = 20;
 
 startFlag.addEventListener("click", function(){
     homeContainer.classList.add("d-none");
-    matchFlagBanner.classList.add("d-none");
+    matchFlagBanner.parentElement.classList.add("d-none");
     matchFlagContainer.classList.remove("d-none");
-    reset.classList.remove("d-none");
-    reset.classList.add("col-6");
-    mode.classList.remove("d-none");
-    mode.classList.add("col-6");
+    reset.parentElement.classList.remove("d-none");
+    reset.parentElement.classList.add("col-6");
+    mode.parentElement.classList.remove("d-none");
+    mode.parentElement.classList.add("col-6");
     fetchApi();
 })
 
 startCountry.addEventListener("click", function(){
     homeContainer.classList.add("d-none");
-    matchFlagBanner.classList.add("d-none");
+    matchFlagBanner.parentElement.classList.add("d-none");
     matchCountryContainer.classList.remove("d-none");
-    reset.classList.remove("d-none");
-    reset.classList.add("col-6");
-    mode.classList.remove("d-none");
-    mode.classList.add("col-6");
+    reset.parentElement.classList.remove("d-none");
+    reset.parentElement.classList.add("col-6");
+    mode.parentElement.classList.remove("d-none");
+    mode.parentElement.classList.add("col-6");
     fetchApi();
 })
 
 mode.addEventListener("click", function(){
     homeContainer.classList.remove("d-none");
-    reset.classList.add("d-none");
-    mode.classList.add("d-none");
-    matchFlagBanner.classList.remove("d-none");
+    reset.parentElement.classList.add("d-none");
+    mode.parentElement.classList.add("d-none");
+    matchFlagBanner.parentElement.classList.remove("d-none");
     matchFlagContainer.classList.add("d-none");
     matchCountryContainer.classList.add("d-none");
     gameOver.classList.add("d-none");

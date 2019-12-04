@@ -27,13 +27,19 @@
 <!-- navbar and logo -->
     <nav class="flex-container">
         <a href="index.html" id="logo">
-            <img src="assets/images/logo.png" width="100" height="100" alt="logo">
+            <img src="assets/images/logo.png" alt="logo">
         </a>
 <!-- two buttons of banner to be displayed only on game-container, will get js to remove d-none class when game-container is shown -->
         <div class="row bg-green" id="banner">
-            <a class="headers text-uppercase text-decoration-none banner-btn text-right d-none" id="reset">Restart</a>
-            <h2 class="col-12 headers text-center text-uppercase" id="attention">Explore the world!</h1>
-            <a class="headers text-uppercase text-decoration-none banner-btn d-none" id="mode">Modes</a>
+            <div class="d-none text-right">
+                <a class="headers text-uppercase text-decoration-none banner-btn" id="reset">Restart</a>
+            </div>
+            <div class="col-12">
+                <h2 class="headers text-center text-uppercase" id="attention">Explore the world!</h1>
+            </div>
+            <div class="d-none">
+                <a class="headers text-uppercase text-decoration-none banner-btn" id="mode">Modes</a>
+            </div>
         </div>
     </nav>
 
