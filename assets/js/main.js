@@ -12,7 +12,6 @@ const gameOver = document.getElementById("game-over");
 const reset = document.getElementById("reset");
 const mode = document.getElementById("mode");
 const matchFlagBanner = document.getElementById("attention");
-const clickGame = document.getElementsByClassName("game");
 const startFlag = document.getElementById("flag-button");
 const startCountry = document.getElementById("country-button");
 const flag = document.querySelector("#flag img");
@@ -299,6 +298,7 @@ function whichAlert(match, country) {
         allowOutsideClick: false,
         showConfirmButton: false,
         timer: 2000
+        
     };
     if(match) {
         defaultAlert.text = "Yaaayy doing amazing! Keep going...";

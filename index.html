@@ -31,6 +31,7 @@
         </a>
 <!-- two buttons of banner to be displayed only on game-container, will get js to remove d-none class when game-container is shown -->
         <div class="row bg-green" id="banner">
+        <!-- with js, will add col-6 class on each hidden button once they are shown -->
             <div class="d-none text-right">
                 <a class="headers text-uppercase text-decoration-none banner-btn" id="reset">Restart</a>
             </div>
@@ -43,6 +44,7 @@
         </div>
     </nav>
 
+<!-- home container for instructions. Js will hide this container when other containers are displayed-->
     <section class="container main-container" id="home-container">
         <div class="row text-center justify-content-center bg-lightgreen green center-box">
             <div class="col-12">
@@ -57,28 +59,25 @@
                         <ul class="text-center">
                             <li>1. By Flag: Find the country of the flag displayed</li>
                             <li>2. By Country: Find the flag associated to the country displayed</li>
-                            <!--<li>Pair them: Get challenged by pairing very similar flags to their own countries</li>
-                            <li>Extreme map mode: Match the flag with the country by clicking directly on the map</li>-->
                         </ol>
                     </div>
                 </div>
                 <div class="row justify-content-center mt-3 mb-3">
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button game" id="flag-button" href="#byFlag-container">By Flag</a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button game" id="country-button" href="#byCountry-container">By Country</a>
-                        <!--<a class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-decoration-none match pair-button" href="">Pair them</a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-darkblue text-uppercase text-decoration-none match extreme-button" href="">Extreme</a>-->
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button" id="flag-button">By Flag</a>
+                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button" id="country-button">By Country</a>
                 </div>
             </div>
         </div>
     </section>
 
+<!-- Flag game container which is initially hidden and JS will show it when flag-button is clicked from home-container-->
     <section class="container main-container d-none" id="flag-container"> 
         <div class="row text-center justify-content-center bg-lightgreen green center-box">
             <div class="col-12">
                 <div class="row box-banner bg-green">
-                    <h2 class="col-12 text-uppercase headers">Match the Flag!</h2>
+                    <h2 class="text-uppercase headers text-center">Match the Flag!</h2>
                 </div>
-                <div class="row game-info">
+                <div class="row">
                     <div class="col-6 info-item">
                         <h3>Question</h3> 
                         <h3 id="question-count"></h3>
@@ -107,6 +106,7 @@
         </div>
     </section>
 
+<!-- Country game container which is initially hidden and JS will show it when country-button is clicked from home-container-->
     <section class="container main-container d-none" id="country-container"> 
         <div class="row text-center justify-content-center bg-lightgreen green center-box">
             <div class="col-12">
