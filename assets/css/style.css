@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700|Shadows+Into+Light:400|Kalam:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Kalam:300,400,700');
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 html {
+    margin: 0;
+    padding: 0;
     line-height: 1.15;
 }
 
@@ -14,12 +14,12 @@ body {
     height: 100%;
     font-family: "Kalam", sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .headers {
     font-weight: 500;
-    padding-top: 5px;
+    padding-top: 0.35rem;
 }
 
 .row {
@@ -34,14 +34,8 @@ body {
     color: #F1F1E6!important;
 }
 
-.bg-prawn {
-    background-color: rgb(250, 250, 250);
-    color: rgb(9, 97, 31);
-}
-
 .bg-lightgreen {
     background-color: rgb(177, 206, 184);
-    color:rgb(9, 97, 31);
 }
 
 .green {
@@ -49,8 +43,8 @@ body {
 }
 
 .button {
-    margin: 5px;
-    padding: 5px;
+    margin: 1.35rem;
+    padding: 1.35rem;
     cursor: pointer;
 }
 
@@ -110,8 +104,8 @@ body {
 /* main container */
 
 .main-container {
-    margin-top: 30px;
-    min-height: 66.5vh;
+    margin-top: 1.9rem;
+    min-height: 67vh;
 }
 
 .center-box {
@@ -125,9 +119,9 @@ body {
 .box-banner {
     text-align: center;
     border-radius: 1rem;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: 700;
-    padding: 15px 0 15px;
+    padding: 1rem 0 1rem;
 }
 
 .box-p {
@@ -155,8 +149,8 @@ ul {
 /* footer */
 
 .footer-row {
-    padding: 10px;
-    margin-top: 15px;
+    padding: 0.6rem;
+    margin-top: 1rem;
 }
 
 .footer-contact {
@@ -175,7 +169,7 @@ ul {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    font-size: 35px;
+    font-size: 1rem;
     text-align: center;
     vertical-align: middle;
     display: table-cell;
@@ -202,22 +196,19 @@ ul {
         line-height: 3rem;
 }
     .box-banner {
-      font-size: 25px;
+      font-size: 1.5rem;
 }
 .main-container {
-    margin-top: 160px;
-}
-.footer-row {
-    margin-top: 100px;
+    margin-top: 10rem;
 }
 }
 
 @media (min-width: 768px) {
     .center-box {
-       padding-bottom: 15px;
+       padding-bottom: 1rem;
     }
 
     button {
-    margin: 5px;
+    margin: 0.35rem;
     }
 }
