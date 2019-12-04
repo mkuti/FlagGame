@@ -6,8 +6,8 @@
 /* constant variables associated with the DOM */
 const url = 'https://restcountries.eu/rest/v2/all';
 const homeContainer = document.getElementById("home-container");
-const matchFlagContainer = document.getElementById("byFlag-container");
-const matchCountryContainer = document.getElementById("byCountry-container");
+const matchFlagContainer = document.getElementById("flag-container");
+const matchCountryContainer = document.getElementById("country-container");
 const gameOver = document.getElementById("game-over");
 const reset = document.getElementById("reset");
 const mode = document.getElementById("mode");
