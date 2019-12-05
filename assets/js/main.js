@@ -26,7 +26,7 @@ const scoreInfo2 = document.getElementById("score2-count");
 const finalScore = document.getElementById("final-score");
 const scoreComment = document.getElementById("scoreComment");
 
-console.log(reset.parentElement)
+console.log(countryAnswers)
 // Variables for the question
 let countryData;
 let currentQuestion = []; //array of 4 first countries sliced from shuffled data for each question
@@ -118,7 +118,7 @@ function shuffleData (json) {
 function restart(){
   questionCount = 0;
   score = 0;
-  pushCurrentQuestion(shuffleData(countryData));
+  fetchApi ();
 }
 
 /**
@@ -177,9 +177,10 @@ function pushCurrentQuestion() {
  * @callback <verifyMatchCountry>
  */
 function selectingCountrytoMatch() {
-    MatchCountry = currentQuestion[0];
-    countryData.splice(0, 1);
-
+    MatchCountry = currentQuestion[mixItems(currentQuestion)];
+    countryData = countryData.filter(country => country.name !== MatchCountry.name);
+    console.log(countryData)
+    
     if(matchFlagContainer.style.display = "block") {
         displayingFlag()
         displayingCountriesName()
@@ -209,7 +210,6 @@ function displayingFlag() {
  * Assign a country name from the current question array to a random answer item
  */
 function displayingCountriesName() {
-    mixItems(countryAnswers)
     countryAnswers[0].innerText = currentQuestion[3].name;
     countryAnswers[1].innerText = currentQuestion[2].name;
     countryAnswers[2].innerText = currentQuestion[0].name;
@@ -236,6 +236,7 @@ function verifyMatchFlag() {
                 });  
                         } else Swal.fire(whichAlert(false, MatchCountry.name)).then((result) => {
                     if (result.dismiss) {
+                        console.log(countryData)
                         pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  ;
