@@ -3,7 +3,7 @@
             VARIABLES
 =================================
 */
-/* constant variables associated with the DOM */
+// Constant variables associated with the DOM
 const url = 'https://restcountries.eu/rest/v2/all';
 const homeContainer = document.getElementById("home-container");
 const matchFlagContainer = document.getElementById("flag-container");
@@ -27,12 +27,12 @@ const finalScore = document.getElementById("final-score");
 const scoreComment = document.getElementById("scoreComment");
 
 console.log(reset.parentElement)
-/* variables for the question*/
+// Variables for the question
 let countryData;
 let currentQuestion = []; //array of 4 first countries sliced from shuffled data for each question
 let MatchCountry;
 
-/* variables for the game set up*/
+// Variables for the game set up
 let score = 0;
 let questionCount = 0;
 const maxQuestions = 20;
@@ -88,7 +88,8 @@ reset.addEventListener("click", function(){
 */
 
 /**
- *  fetching rest country API
+ * Fetching rest country API
+ * @callback <pushCurrentQuestion>
  */
 function fetchApi () {
     return fetch(url)
@@ -103,25 +104,26 @@ function fetchApi () {
 }
 
 /**
- * function to shuffle an array containing different json objects of data. 
- * Sorting the array with random numbers which can be positive or negative
- * Compares two items and sorts their index depending on the result being positive negative or 0.
+ * Shuffle array containing different json objects of data. 
+ * @param {json} Array of multiple objects
  */
 function shuffleData (json) {
     return json.sort(() => Math.random() - 0.5);   
 }
 
 /**
- * function to start game with first question and resetting question count and score at 0
+ * Start game with first question and resetting question count and score at 0
+ * @callback <pushCurrentQuestion>
  */
-
 function restart(){
-    
   questionCount = 0;
   score = 0;
   pushCurrentQuestion(shuffleData(countryData));
 }
 
+/**
+ * Stop game to reset questionCount when user go back to mode container
+ */
 function stopGame(){
     if(homeContainer.style.display = "block"){
        questionCount = 0;
@@ -130,17 +132,19 @@ function stopGame(){
 }
 
 /**
- * function to mix an array of items by using a pseudo-random number in the range of array length
+ * Mix array of items by using a pseudo-random number in the range of array length
+ * @param {array} Array of items
  */
 function mixItems (arrayItems) {
     return Math.floor(Math.random() * arrayItems.length); /*  */
 }
 
 /**
- * function to push question inside an empty array by slicing the first 4 elements of any array
- * function looks first if game has already reached the maximum number of questions and if it does, hide this container and show game-over container
- * function empties the currentQuestion array from previous question's data
- * function increments questionCount and changes display of questionCount and score
+ * Push question inside an empty array by slicing the first 4 elements of CountryData array
+ * @callback <showGameOver>
+ * @method [<push>]
+ * @method [<slice>]
+ * @callback <selectingCountrytoMatch>
  */
 function pushCurrentQuestion() {
     if(questionCount >= maxQuestions) {
@@ -163,18 +167,22 @@ function pushCurrentQuestion() {
 }
 
 /**
- * function to select randomly country to match from the current question array
- * integrating mixItems function to get random number from 4 items
- * calling functions to play game with current question to display flag, display countries name and verify match
+ * Select randomly country to match from the current question array
+ * @method [<splice>] remove matched country from the CountryData array
+ * @callback <displayingFlag>
+ * @callback <displayingCountriesName>
+ * @callback <verifyMatchFlag>
+ * @callback <displayingCountryName>
+ * @callback <displayingFlags>
+ * @callback <verifyMatchCountry>
  */
 function selectingCountrytoMatch() {
     MatchCountry = currentQuestion[0];
     countryData.splice(0, 1);
-    console.log(countryData)
 
     if(matchFlagContainer.style.display = "block") {
         displayingFlag()
-        displayingCountriesName()
+        isplayingCountriesName()
         verifyMatchFlag();
     }
     
@@ -183,9 +191,6 @@ function selectingCountrytoMatch() {
         displayingFlags()
         verifyMatchCountry();
     }
-
-    console.log(currentQuestion)
-    console.log(MatchCountry);
 }
 
 /*
@@ -194,14 +199,14 @@ function selectingCountrytoMatch() {
 =================================
 */
 /**
- * function to display flag from the MatchCountry variable under Match by flag mode
+ * Display flag from the MatchCountry variable under Match by flag mode
  */
 function displayingFlag() {
     flag.src = MatchCountry.flag;
 }
 
 /**
- * function to assign a country name from the current question array to a random answer item
+ * Assign a country name from the current question array to a random answer item
  */
 function displayingCountriesName() {
     mixItems(countryAnswers)
@@ -212,9 +217,9 @@ function displayingCountriesName() {
 }
 
 /**
- * function to verify match after clicking on each answer item
- * event listener integrated within a forEach to loop through the answer items
- * displaying different alert depending of the match
+ * Verify match after clicking on each answer item
+ * @listens click
+ * Displays different alert depending of the match
  */
 function verifyMatchFlag() {
     countryAnswers.forEach(answer => { 
@@ -244,14 +249,14 @@ function verifyMatchFlag() {
 =================================
 */
 /**
- * function to display country name from the MatchCountry variable under the match by country mode
+ * Display country name from the MatchCountry variable under the match by country mode
  */
 function displayingCountryName() {
     countryName.innerHTML = MatchCountry.name;
 }
 
 /**
- * function to assign a flag from the current question array to a random answer item
+ * Assign a flag from the current question array to a random answer item
  */
 function displayingFlags() {
     mixItems(flagChoices)
@@ -261,10 +266,11 @@ function displayingFlags() {
     flagChoices[3].innerHTML = `<img src="${currentQuestion[1].flag}" alt="${currentQuestion[1].name}" width=200 height=120>`;
 }
 
-function flagURL(){
-    
-}
-
+/**
+ * Verify match after clicking on each answer item
+ * @listens click
+ * Displays different alert depending of the match
+ */
 function verifyMatchCountry() {
     flagChoices.forEach(answer => { 
         answer.addEventListener("click", e => {
@@ -288,8 +294,9 @@ function verifyMatchCountry() {
     }
 
 /**
- * Function to create a default alert object which can be used to fire customised alerts called when match verified
+ * Create a default alert object which can be used to fire customised alerts called when match verified
  * @param match {boolean}
+ * @param {string} Name of country to match
  */
 function whichAlert(match, country) {
     const defaultAlert = {
@@ -311,7 +318,7 @@ function whichAlert(match, country) {
 }
 
 /**
- * function to add content on game-over container depending of score
+ * Add content on game-over container depending of score
  */
 function showGameOver(){
     finalScore.innerText = score;
