@@ -182,7 +182,7 @@ function selectingCountrytoMatch() {
 
     if(matchFlagContainer.style.display = "block") {
         displayingFlag()
-        isplayingCountriesName()
+        displayingCountriesName()
         verifyMatchFlag();
     }
     
