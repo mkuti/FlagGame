@@ -112,7 +112,6 @@ body {
 
 .center-box {
     border: none;
-    margin: 0!important;
     font-size: 1rem;
     font-weight: 400;
     line-height: 2rem;
@@ -124,6 +123,8 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 1rem 0 1rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .box-p {
@@ -198,11 +199,11 @@ ul {
         line-height: 3rem;
 }
     .box-banner {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
 }
-.main-container {
-    margin-top: 10rem;
-}
+    .main-container {
+        margin-top: 10rem;
+    }
 }
 
 @media (min-width: 768px) {

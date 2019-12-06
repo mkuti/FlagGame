@@ -43,6 +43,8 @@ const maxQuestions = 20;
 =================================
 */
 
+
+
 startFlag.addEventListener("click", function(){
     homeContainer.classList.add("d-none");
     matchFlagBanner.parentElement.classList.add("d-none");
@@ -142,8 +144,6 @@ function mixItems (arrayItems) {
 /**
  * Push question inside an empty array by slicing the first 4 elements of CountryData array
  * @callback <showGameOver>
- * @method [<push>]
- * @method [<slice>]
  * @callback <selectingCountrytoMatch>
  */
 function pushCurrentQuestion() {
@@ -168,7 +168,6 @@ function pushCurrentQuestion() {
 
 /**
  * Select randomly country to match from the current question array
- * @method [<splice>] remove matched country from the CountryData array
  * @callback <displayingFlag>
  * @callback <displayingCountriesName>
  * @callback <verifyMatchFlag>

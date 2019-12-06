@@ -1,191 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="description" content="Match the Flag">
-    <meta name="keywords" content="game, flag, match, geography, country, map, travel">
-    <meta name="author" content="MKuti">
-    <!-- favicon -->
-    <link rel="shortcut icon" type="image" href="assets/favicon/favicon-32x32.png">
-    <!-- style links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.css"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<meta name="description" content="Match the Flag">
+	<meta name="keywords" content="game, flag, match, geography, country, map, travel">
+	<meta name="author" content="MKuti">
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image" href="assets/favicon/favicon-32x32.png">
+	<!-- style links -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.css">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
-<!-- link to my css file comes after to make sure it render over bootstrap style -->
-    <link rel="stylesheet" href="assets/css/style.css">
+	<!-- link to my css file comes after to make sure it render over bootstrap style -->
+	<link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Match the Flag</title>
+	<title>Match the Flag</title>
 
 </head>
 
 <body class="bg-lightgreen green">
-<!-- navbar and logo -->
-    <nav class="flex-container">
-        <a href="index.html" id="logo">
-            <img src="assets/images/logo.png" alt="logo">
+	<!-- navbar and logo -->
+	<nav class="flex-container">
+		<a href="index.html" id="logo">
+			<img src="assets/images/logo.png" alt="logo">
         </a>
-<!-- two buttons of banner to be displayed only on game-container, will get js to remove d-none class when game-container is shown -->
-        <div class="row bg-green" id="banner">
-        <!-- with js, will add col-6 class on each hidden button once they are shown -->
-            <div class="d-none text-right">
-                <a class="headers text-uppercase text-decoration-none banner-btn" id="reset">Restart</a>
-            </div>
-            <div class="col-12">
-                <h2 class="headers text-center text-uppercase" id="attention">Explore the world!</h1>
-            </div>
-            <div class="d-none">
-                <a class="headers text-uppercase text-decoration-none banner-btn" id="mode">Modes</a>
-            </div>
-        </div>
-    </nav>
+			<!-- two buttons of banner to be displayed only on game-container, will get js to remove d-none class when game-container is shown -->
+			<div class="row bg-green" id="banner">
+				<!-- with js, will add col-6 class on the div parent of each hidden button once they are shown -->
+				<div class="d-none text-right">
+					<a class="headers text-uppercase text-decoration-none banner-btn" id="reset">Restart</a>
+				</div>
+				<div class="col-12">
+					<h2 class="headers text-center text-uppercase" id="attention">Explore the world!</h1>
+				</div>
+				<div class="d-none">
+					<a class="headers text-uppercase text-decoration-none banner-btn" id="mode">Modes</a>
+				</div>
+			</div>
+	</nav>
 
-<!-- home container for instructions. Js will hide this container when other containers are displayed-->
-    <section class="container main-container" id="home-container">
-        <div class="row text-center justify-content-center bg-lightgreen green center-box">
-            <div class="col-12">
-                <div class="row box-banner bg-green">
-                <!-- tried to add a div to move col-12 instead of h2 but text is not cene-->
-                    <h2 class="col-12 text-uppercase headers">Match the Flag!</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h4 class="box-p headers">Have fun and learn!</h4>
-                        <h4 class="box-p headers">Instructions:</h4>
-                        <p class="box-p">Choose a mode</p>
-                        <ul class="text-center">
-                            <li>1. By Flag: Find the country of the flag displayed</li>
-                            <li>2. By Country: Find the flag associated to the country displayed</li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="row justify-content-center mt-3 mb-3">
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button" id="flag-button">By Flag</a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button" id="country-button">By Country</a>
-                </div>
+	<!-- home container for instructions. Js will hide this container when other containers are displayed-->
+	<section class="container main-container text-center justify-content-center bg-lightgreen green center-box"
+		id="home-container">
+		<div class="row box-banner bg-green">
+			<div class="col-12 text-uppercase headers">
+			    <h2>Match the Flag!</h2>
             </div>
-        </div>
-    </section>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<h4 class="box-p headers">Have fun and learn!</h4>
+				<h4 class="box-p headers">Instructions:</h4>
+				<p class="box-p">Choose a mode</p>
+				<ul class="text-center">
+					<li>1. By Flag: Find the country of the flag displayed</li>
+					<li>2. By Country: Find the flag associated to the country displayed</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-3 mb-3">
+        <!--tried to nest anchor inside a div where col-12 class is an attribute but elements are not set as per the grid-->
+			<a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button" id="flag-button">By
+				Flag</a>
+			<a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button"
+				id="country-button">By Country</a>
+		</div>
+	</section>
 
-<!-- Flag game container which is initially hidden and JS will show it when flag-button is clicked from home-container-->
-    <section class="container main-container d-none" id="flag-container"> 
-        <div class="row text-center justify-content-center bg-lightgreen green center-box">
-            <div class="col-12">
-                <div class="row box-banner bg-green">
-                    <h2 class="text-uppercase headers text-center">Match the Flag!</h2>
-                </div>
-                <div class="row">
-                    <div class="col-6 info-item">
-                        <h3>Question</h3> 
-                        <h3 id="question-count"></h3>
-                    </div>
-                    <div class="col-6 info-item">
-                        <h3>Score</h3> 
-                        <h3 id="score-count"></h3>
-                    </div>
-                </div>
-                <div class="row mt-3 mb-3 justify-content-center">
-                <!--add a row here to make the flag stand within the col 12 in the center of the other row-->
-                    <div class="row"> 
-                        <div class="col-12" id="flag">
-                            <img src="" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center mt-3 mb-3">
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item"></a> 
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item"></a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item"></a>
-                        <a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item"></a>
-                </div>
+	<!-- Flag game container which is initially hidden and JS will show it when flag-button is clicked from home-container-->
+	<section class="container main-container text-center justify-content-center bg-lightgreen green center-box d-none"
+		id="flag-container">
+		<div class="row box-banner bg-green">
+			<div class="col-12 text-uppercase headers">
+			    <h2>Match the Flag!</h2>
             </div>
-        </div>
-    </section>
+		</div>
+		<div class="row">
+			<div class="col-6 info-item">
+				<h3>Question</h3>
+				<h3 id="question-count"></h3>
+			</div>
+			<div class="col-6 info-item">
+				<h3>Score</h3>
+				<h3 id="score-count"></h3>
+			</div>
+		</div>
+		<div class="row mt-3 mb-3 justify-content-center">
+			<!--add a row here to make the flag stand within the col 12 in the center of the other row-->
+			<div class="row">
+				<div class="col-12" id="flag">
+					<img src="" alt="">
+                </div>
+				</div>
+			</div>
 
-<!-- Country game container which is initially hidden and JS will show it when country-button is clicked from home-container-->
-    <section class="container main-container d-none" id="country-container"> 
-        <div class="row text-center justify-content-center bg-lightgreen green center-box">
-            <div class="col-12">
-                <div class="row box-banner bg-green">
-                    <h2 class="col-12 text-uppercase headers">Match the Flag!</h2>
-                </div>
-                <div class="row game-info">
-                    <div class="col-6 info-item">
-                        <h3>Question</h3> 
-                        <h3 id="question2-count"></h3>
-                    </div>
-                    <div class="col-6 info-item">
-                        <h3>Score</h3> 
-                        <h3 id="score2-count"></h3>
-                    </div>
-                </div>
-                <div class="row mt-3 mb-3 justify-content-center">
-                        <div class="col-12">
-                            <h1 id="country-name"></h1>
-                        </div>
-                    </div>
+			<div class="row justify-content-center mt-3 mb-3">
+            <!--tried to nest anchor inside a div where col-12 class is an attribute but elements are not set as per the grid-->
+				<a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item"></a>
+				<a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item"></a>
+				<a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item"></a>
+				<a class="col-12 col-sm-6 col-md-4 bg-green text-uppercase text-decoration-none button answer-item"></a>
+			</div>
+	</section>
 
-                <div class="row justify-content-center mt-3 mb-3">
-                        <a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item"></a>
-                        <a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item"></a> 
-                        <a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item"></a> 
-                        <a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item"></a> 
-                </div>
+	<!-- Country game container which is initially hidden and JS will show it when country-button is clicked from home-container-->
+	<section class="container main-container text-center justify-content-center bg-lightgreen green center-box d-none"
+		id="country-container">
+		<div class="row box-banner bg-green">
+			<div class="col-12 text-uppercase headers">
+			    <h2>Match the Flag!</h2>
             </div>
-        </div>
-    </section>
+		</div>
+		<div class="row game-info">
+			<div class="col-6 info-item">
+				<h3>Question</h3>
+				<h3 id="question2-count"></h3>
+			</div>
+			<div class="col-6 info-item">
+				<h3>Score</h3>
+				<h3 id="score2-count"></h3>
+			</div>
+		</div>
+		<div class="row mt-3 mb-3 justify-content-center">
+			<div class="col-12">
+				<h1 id="country-name"></h1>
+			</div>
+		</div>
 
-    <section class="container main-container d-none" id="game-over"> 
-        <div class="row text-center justify-content-center bg-lightgreen green center-box">
-            <div class="col-12">
-                <div class="row box-banner bg-green">
-                    <h2 class="col-12 text-uppercase headers">Your final score</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12 info-item">
-                        <h3>Score</h3> 
-                        <h3 id="final-score"></h3>
-                    </div>
-                </div>
-                <div class="row mt-3 mb-3 justify-content-center">
-                    <div class="col-12" id="scoreComment"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<div class="row justify-content-center mt-3 mb-3">
+        <!--tried to nest anchor inside a div where col-12 class is an attribute but elements are not set as per the grid-->
+			<a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item"></a>
+			<a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item"></a>
+			<a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item"></a>
+			<a class="col-12 col-sm-6 col-md-4 text-uppercase text-decoration-none button choice-item"></a>
+		</div>
+	</section>
 
-    <footer>
-        <div class="container-fluid bg-green">
-            <div class="row justify-content-center footer-row text-center">
-                <div class="col-12 col-lg-4 footer-contact d-sm-flex">
-                    <h5>Copyright: Marie-Pia Kuti</h5>
-                </div>
-                
-                <div class="col-12 col-lg-1 footer-contact d-sm-flex">
-                    <a class="socialmedia" href="https://github.com/mkuti" target="_blank">
-                    <i class="fab fa-github"></i>
-                    <span class="sr-only">GitHub</span>
-                    </a>
-                </div>
-                <div class="col-12 col-lg-1 footer-contact d-sm-flex">
-                    <a class="socialmedia" href="https://www.linkedin.com/in/marie-pia-kuti-33573035/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                    <span class="sr-only">Linkedin</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+	<section class="container main-container d-none" id="game-over">
+		<div class="row text-center justify-content-center bg-lightgreen green center-box">
+			<div class="col-12">
+				<div class="row box-banner bg-green">
+					<h2 class="col-12 text-uppercase headers">Your final score</h2>
+				</div>
+				<div class="row">
+					<div class="col-12 info-item">
+						<h3>Score</h3>
+						<h3 id="final-score"></h3>
+					</div>
+				</div>
+				<div class="row mt-3 mb-3 justify-content-center">
+					<div class="col-12" id="scoreComment"></div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
+	<footer>
+		<div class="container-fluid bg-green">
+			<div class="row justify-content-center footer-row text-center">
+				<div class="col-12 col-lg-4 footer-contact d-sm-flex">
+					<h5>Copyright: Marie-Pia Kuti</h5>
+				</div>
+
+				<div class="col-12 col-lg-1 footer-contact d-sm-flex">
+					<a class="socialmedia" href="https://github.com/mkuti" target="_blank">
+						<i class="fa fa-github"></i>
+						<span class="sr-only">GitHub</span>
+					</a>
+				</div>
+				<div class="col-12 col-lg-1 footer-contact d-sm-flex">
+					<a class="socialmedia" href="https://www.linkedin.com/in/marie-pia-kuti-33573035/" target="_blank">
+						<i class="fa fa-linkedin-in"></i>
+						<span class="sr-only">Linkedin</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="assets/js/main.js"></script>
 </body>
 
 </html>
