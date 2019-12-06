@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="" target="_blank"><img src="assets/images/logo.png" alt=""/></a>
+  <a href="https://mkuti.github.io/FlagGame_milestone_2/index.html" target="_blank"><img src="assets/images/logo.png" width=100 height=100 alt="logo"/></a>
 </h1>
 
 <div align="center">
@@ -7,8 +7,6 @@
 # MATCH THE FLAG
 </div>
 <div align="center">
-
-[Website is deployed via GitHub pages here](https://mkuti.github.io/FlagGame_milestone_2/)
 </div>
 
 For the second milestone project, I decided to make an interactive and educational game, so I could use Javascript functional programming which I have just learnt.
