@@ -108,10 +108,10 @@ __...__
 
 I used Balsamiq tool for the wireframes and attached them to the directory in assets. I spent a considerable amount of time doing wireframes in details as I had no clue of design before and wanted to have a clear idea of how the website looked like.
 
-- [Home](wireframes/Wireframe desktop version, welcome page.png)
-- [Desktop game page](wireframes/wireframe mobile version, welcome page copy.png)
-- [Mobile Home page](wireframes/wireframe mobile version, welcome page.pngwireframes/wireframe mobile version, welcome page copy.png)
-- [Mobile game page](wireframes/wireframe mobile version, welcome page copy.png)
+- [Welcome page on desktop](https://raw.githubusercontent.com/mkuti/FlagGame_milestone_2/master/wireframes/Desktop-welcome-page.png)
+- [Desktop game page](https://raw.githubusercontent.com/mkuti/FlagGame_milestone_2/master/wireframes/Desktop-choose-country.png)
+- [Mobile Home page](https://raw.githubusercontent.com/mkuti/FlagGame_milestone_2/master/wireframes/Mobile-welcome-page.png)
+- [Mobile game page](https://raw.githubusercontent.com/mkuti/FlagGame_milestone_2/master/wireframes/Mobile-choose-country.png)
 
 As always when implementing coding, these wireframes templates do not exactly reflect the final version of the website itself but they were very useful for me to have an approximate design in my head.
 The color theme changed completely after implementing design in the code. I removed lots of features due to lack of time and expertise, such as the map in the background which was supposed to be for one extreme game mode.
