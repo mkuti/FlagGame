@@ -257,7 +257,7 @@ __Issue__:
 
 # Technologies Used
 - This website used HTML, CSS and Javascript programming languages.
-- [GitPod](gitpod.io) - I used __AWS Cloud9__ as my IDE for the development of this website.
+- [GitPod](gitpod.io) - I used __GitPod__ as my IDE for the development of this website.
 - [BootstrapCDN](https://www.bootstrapcdn.com/) - The website is using __Bootstrap4__ as the basic structure and grid of the website and to increase the responsiveness of the website.
 - [FontAwesome](https://kit.fontawesome.com/f7e192f540.js) - The website is using __Font Awesome__ to display many icons on all pages
 - [Google Fonts](https://fonts.google.com/)- The website uses __3 different Google fonts__ to style the content text and headings - Url imported in CSS
@@ -271,18 +271,16 @@ __Issue__:
 - [Favicon converter](https://favicon.io/favicon-converter/) - I used Favicon converter to convert the logo into a favicon which I was able to insert in the asset folder and I tested it to be working
 
 # Media and Content origin
-I used the following API for the project which contains a json object of 250 countries with among other data, contains the name of the country, its alphacode, and its flag: https://restcountries.eu/
+I used the following API for the project which contains a json object of 250 countries with many specific data, such as name, region, population...:[https://restcountries.eu/](https://restcountries.eu/)
+For the purpose of the game, I used mostly three datas: the name of the country, its alphacode, and its flag url. 
 
 #### Other Resources:
-* https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg - Previous logo image
-* https://www.pinterest.com/pin/271060471299685564/ - New logo image
-* http://nationfacts.net/
-* https://www.worldatlas.com/
-* https://12go.asia/en/cambodia/interesting-facts
-* https://southbaybeachclub.com/20-fun-facts-about-the-cayman-islands/
+* Previous logo image: [https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg](https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg) 
+* New and current logo image: [https://www.pinterest.com/pin/271060471299685564/](https://www.pinterest.com/pin/271060471299685564/)
+* For the Json data I started to create, I used two main websites: [http://nationfacts.net/](http://nationfacts.net/) and [https://www.worldatlas.com/](https://www.worldatlas.com/).
 
 # Deployment
-I have been using the Integrated development environment (IDE) [GitPod]() to develop this milestone project.
+I have been using the Integrated development environment (IDE) [GitPod](gitpod.io) to develop this milestone project.
 As I used it for the first time and Code Institute changed the preferred IDE for the whole course, I was lucky to avail of the full template prepared by Code Institute at the time.
 
 I went to Code Institute [full template repository](https://github.com/Code-Institute-Org/gitpod-full-template), cloned it and created my own repository with the template ready. From there, I opened GitPod which started a workspace.
@@ -310,7 +308,7 @@ When I submitted this Milestone project, I confirmed that the Development Branch
 3. In the Clone with HTTPs section, click to copy the clone URL for the repository
 4. Using favorite IDE, open Terminal
 5. Change the current working directory to the desired file location
-6. Type git clone, and then paste the URL you copied in Step 2 when git clone: https://github.com/YOUR-USERNAME/YOUR-REPOSITORY 
+6. Type git clone, and then paste the URL you copied in Step 2 when git clone: [https://github.com/YOUR-USERNAME/YOUR-REPOSITORY ](https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
 7. Press Enter > Your local clone will be created.
 
 ### Credits
