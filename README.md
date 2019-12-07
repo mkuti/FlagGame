@@ -117,15 +117,17 @@ This helped me to plan ahead and also to work through specific sprints to implem
 * A game with a clear structure where I dont need to think to find how to play
 * A game where the instructions and questions are easy to understand
 * A game with a simple design so I can focus on the game itself and easily see the colors of the flags
-* A game with no bright colors so my eyes are restarted
+* A game with no bright colors so my eyes are rested
+* To see what is supposed to be the match if I fail
 * To see my scores at the end of each game so I can try to improve
 * To continue being challenged by more than one mode
 
-### As a user aged between 6 and 10 years old, I a expecting:
+### As a user aged between 6 and 10 years old, I am expecting:
 * Have fun while learning
 * Not too much reading so it is more fun than educative
 * When I have to read, big enough text so reading is part of the fun
 * Buttons big enough to click easily
+* A game where I can learn and get better at it
 
 ### As a parent of child player, I am expecting:
 * Content of the game to be appropriate to my child
@@ -214,8 +216,6 @@ The final logo is an image of hands intermixed with some flags displayed on thei
 It represents exactly the idea of the game, that playing to match a flag is discovering the world, understanding better other cultures and be Earth citizens all the same time.
 
 [Back to Top](#table-of-contents) 
-
-
 
 # Testing
 

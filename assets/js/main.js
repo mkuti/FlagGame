@@ -10,9 +10,9 @@ const matchFlagContainer = document.getElementById("flag-container");
 const matchCountryContainer = document.getElementById("country-container");
 const gameOver = document.getElementById("game-over");
 const reset = document.getElementById("reset");
-const reset2 = reset.cloneNode(true);
+const overResetButton = reset.cloneNode(true);
 const mode = document.getElementById("mode");
-const mode2 = mode.cloneNode(true);
+const overModeButton = mode.cloneNode(true);
 const overReset = document.getElementById("over-reset");
 const overMode = document.getElementById("over-mode");
 const matchFlagBanner = document.getElementById("attention");
@@ -24,13 +24,12 @@ const countryAnswers = Array.from(document.getElementsByClassName("answer-item")
 const countryName = document.getElementById("country-name");
 const flagChoices = Array.from(document.getElementsByClassName("choice-item"));
 const questionInfo = document.getElementById("question-count");
-const questionInfo2 = document.getElementById("question2-count");
+const countryQuestionInfo = document.getElementById("Countryquestion-count");
 const scoreInfo = document.getElementById("score-count");
-const scoreInfo2 = document.getElementById("score2-count");
+const countryScoreInfo = document.getElementById("Countryscore-count");
 const finalScore = document.getElementById("final-score");
 const scoreComment = document.getElementById("scoreComment");
 
-console.log(reset)
 // Variables for the question
 let countryData;
 let currentQuestion = []; //array of 4 first countries sliced from shuffled data for each question
@@ -47,44 +46,47 @@ const maxQuestions = 20;
 =================================
 */
 
-
-
-startFlag.addEventListener("click", function(){
-    homeContainer.classList.add("d-none");
-    matchFlagBanner.parentElement.classList.add("d-none");
-    matchFlagContainer.classList.remove("d-none");
+$(".game-btn").click(function(){
+    homeContainer.classList.add("d-none")
+    matchFlagBanner.parentElement.classList.add("d-none")
     reset.parentElement.classList.remove("d-none");
     reset.parentElement.classList.add("col-6");
     mode.parentElement.classList.remove("d-none");
     mode.parentElement.classList.add("col-6");
-    fetchApi();
+    if(this.id === "flag-button"){
+        matchFlagContainer.classList.remove("d-none");
+        fetchApi();
+    } else if(this.id === "country-button"){
+        matchCountryContainer.classList.remove("d-none");
+        fetchApi();
+    } else if(this.id === "mode"){
+        homeContainer.classList.remove("d-none");
+        reset.parentElement.classList.add("d-none");
+        mode.parentElement.classList.add("d-none");
+        matchFlagBanner.parentElement.classList.remove("d-none");
+        matchFlagContainer.classList.add("d-none");
+        matchCountryContainer.classList.add("d-none");
+        gameOver.classList.add("d-none");
+        stopGame()
+    } 
 })
 
-startCountry.addEventListener("click", function(){
-    homeContainer.classList.add("d-none");
-    matchFlagBanner.parentElement.classList.add("d-none");
-    matchCountryContainer.classList.remove("d-none");
-    reset.parentElement.classList.remove("d-none");
-    reset.parentElement.classList.add("col-6");
-    mode.parentElement.classList.remove("d-none");
-    mode.parentElement.classList.add("col-6");
-    fetchApi();
-})
+
 
 mode.addEventListener("click", function(){
-    homeContainer.classList.remove("d-none");
-    reset.parentElement.classList.add("d-none");
-    mode.parentElement.classList.add("d-none");
-    matchFlagBanner.parentElement.classList.remove("d-none");
-    matchFlagContainer.classList.add("d-none");
-    matchCountryContainer.classList.add("d-none");
-    gameOver.classList.add("d-none");
-    stopGame()
+    
+    
 })
+
 
 reset.addEventListener("click", function(){
     gameOver.classList.add("d-none");
     restart();  
+})
+
+overResetButton.addEventListener("click", function(){
+    gameOver.classList.add("d-none");
+    restart();
 })
 
 /*
@@ -102,8 +104,7 @@ function fetchApi () {
     .then(response => response.json())
     .then(data => {
         countryData = shuffleData(data); /*defining array variable to the fetched data*/
-        console.log(countryData)
-    pushCurrentQuestion();
+        pushCurrentQuestion();
       })
     
     .catch(err => console.log(err))
@@ -159,18 +160,20 @@ function pushCurrentQuestion() {
         mode.parentElement.classList.add("d-none");
         mode.removeAttribute('id');;
         gameOver.classList.remove("d-none");
-        let overResetButton = overReset.appendChild(reset2);
-        let overtModeButton = overMode.appendChild(mode2);
+        overReset = overReset.appendChild(overResetButton);
+        overtMode = overMode.appendChild(overResetButton);
         overResetButton.setAttribute('id', 'reset');
-        overtModeButton.setAttribute('id', 'mode');;
+        overResetButton.classList.add("bg-green");
+        overModeButton.setAttribute('id', 'mode');
+        overModeButton.classList.add("bg-green");
         showGameOver();
     }
 
     questionCount++;
     questionInfo.innerText = `${questionCount}/${maxQuestions}`;
-    questionInfo2.innerText = `${questionCount}/${maxQuestions}`;
+    countryQuestionInfo.innerText = `${questionCount}/${maxQuestions}`;
     scoreInfo.innerText = score;
-    scoreInfo2.innerText = score;
+    countryScoreInfo.innerText = score;
     currentQuestion = []; 
     currentQuestion.push(...countryData.slice(0,4));
     
@@ -189,7 +192,6 @@ function pushCurrentQuestion() {
 function selectingCountrytoMatch() {
     MatchCountry = currentQuestion[mixItems(currentQuestion)];
     countryData = countryData.filter(country => country.name !== MatchCountry.name);
-    console.log(countryData)
     
     if(matchFlagContainer.style.display = "block") {
         displayingFlag()
@@ -238,7 +240,6 @@ function verifyMatchFlag() {
             let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); 
             if(match){ 
                 Swal.fire(whichAlert(true, MatchCountry.name)).then((result) => {
-                    console.log(result.dismiss)
                     if (result.dismiss) {
                         score++;
                         pushCurrentQuestion(shuffleData(countryData));
