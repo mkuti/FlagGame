@@ -256,18 +256,19 @@ __Issue__:
 [Back to Top](#table-of-contents) 
 
 # Technologies Used
-- This website used HTML, CSS and Javascript programming languages.
 - [GitPod](gitpod.io) - I used __GitPod__ as my IDE for the development of this website.
+- __HTML__ language is used to create the structure of the website and game.
+- __CSS__ language is used to add styling on the structure of the website.
 - [BootstrapCDN](https://www.bootstrapcdn.com/) - The website is using __Bootstrap4__ as the basic structure and grid of the website and to increase the responsiveness of the website.
-- [FontAwesome](https://kit.fontawesome.com/f7e192f540.js) - The website is using __Font Awesome__ to display many icons on all pages
-- [Google Fonts](https://fonts.google.com/)- The website uses __3 different Google fonts__ to style the content text and headings - Url imported in CSS
-- [Youtube](https://www.youtube.com/embed/7QMdT02TVnQ) - The website used __YouTube__ to host the video for the "Qigong page".
 - [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) - The website uses __jQuery__ and __Popper.js__ to bring in Javascript which makes the navbar responsive
+- __Javascript__ functioning language is used to fetch external data and add interactivity on the website so the game functions based on user's actions
+- [jQuery](https://jquery.com/) - I used jQuery to avoid repeating same actions on the DOM when buttons were clicked
+- [FontAwesome](https://kit.fontawesome.com/f7e192f540.js) - The website is using __Font Awesome__ to display the social media icons in my footer
+- [Google Fonts](https://fonts.google.com/)- The website uses __1 Google font__- Url imported in CSS
 - [AutoPrefixer](https://autoprefixer.github.io/) - I have used __AutoPrefixer__ to make sure the css code worked on all browsers
-- [Pexels](https://www.pexels.com) - Website imported images from __Pexels__ for the full background image and all banners image
-- [Tiny.jpg](https://tinyjpg.com) - I have used __Tinyjpg__ to compress all images of the website to increas the website loading on browser
+- [Tiny.jpg](https://tinyjpg.com) - I have used __Tinyjpg__ to compress logo image of the website to increase the website loading on browser
 - [ColorSpace](https://mycolor.space) - I have used __ColorSpace__ to find matching colors for the website
-- [Balsamic](https://balsamiq.cloud) - I have used __Balsamic__ to build the wireframes which I then exported to the IDE
+- [Balsamiq](https://balsamiq.cloud) - I have used __Balsamic__ to build the wireframes which I then exported to the IDE
 - [Favicon converter](https://favicon.io/favicon-converter/) - I used Favicon converter to convert the logo into a favicon which I was able to insert in the asset folder and I tested it to be working
 
 # Media and Content origin
