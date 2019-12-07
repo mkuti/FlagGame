@@ -9,12 +9,17 @@
 <div align="center">
 </div>
 
-## Table of Contents:
+## Table of Contents
 
 * [Why building a flag game?](#why-building-a-flag-game)
 * [How the game work?](#how-the-game-work)
 * [UX](#ux)
-    * [Strategy: Why and what](#why-and-what)
+    * [Strategy: Why and what?](#why-and-what)
+        * [1. Primary target audience](#1-primary-target-audience)
+        * [2. Who is the project for?](#2-who-is-the-project-for)
+        * [3. What is culturally appropriate?](#3-what-is-culturally-appropriate)
+        * [4. What content would be relevant?](#4-what-content-is-relevant)
+        * [5. Why is this so special?](#5-why-is-this-so-special)
     * [Scope: User Stories](#user-stories)
     * [Structure: Features](#features)
         * [1.Main existing Features](#1-main-existing-features)
@@ -30,7 +35,7 @@
 * [Credits](#credits)
     * [Special Thanks & Acknowledgements](#special-thanks--acknowledgements)
 
-# Why building a flag game
+## Why building a flag game?
 For the second milestone project, I decided to make an interactive and educational game, so I could use Javascript functional programming which I have just learnt.
 
 I like games as I believe anything can be learnt while having fun. Although I have not been playing a lot of online games or game apps myself, I am now a mum and often look for interesting, educative and well designed numeric games for my children.
@@ -49,20 +54,22 @@ More details about the design and structure of the game:
 1. common mode, by flag (easy level): display a flag and match it to a country among 4 options
 2. reversed mode, by country (easy level): display a country and match it to a flag among 4 options
 
+[Back to Top](#table-of-contents) 
 
 # UX
 ## Why and what
 ### 1. Primary target audience
 For anyone from 6years old interested by geography or want to learn for specific purpose
-- *Strategy* > make the game interactive, fun and educative with a very simple design --- catchy and compelling
-Minimal content and large images with minimal number of steps to start playing, match the flag, get results and continue or stop
+- *Strategy*
+    - Make the game interactive, fun and educative with a very simple design --- catchy and compelling
+    - Minimal content and large images with minimal number of steps to start playing, match the flag, get results and continue or stop
 
-### 2. What is the project for
+### 2. Who is the project for
 As shown in my intro, game is for anyone looking to test their knowledge of geography and flags.
 The objective is also to trigger anyone else to learn more about other countries and cultures via an unknown flag
 1.
 - *strategy* 
-    - to make the game easy enough for anyone to build their knowledge of flags and countries while playing. 
+    - To make the game easy enough for anyone to build their knowledge of flags and countries while playing. 
     - Dont want to make anyone give up after one trial and dont want knowledgeables players to get bored
     - Have an easy mode with 2 attempts for each flag where player is allowed to fail before trying another flag.
     - 20 random flags in one game
@@ -73,22 +80,20 @@ In the future, to build difficult mode/level, also called "map mode" or "extreme
 ### 3. What is culturally appropriate
 Appropriate for 6years old minimum and user-friendly for their age and dextirity
 - *strategy* 
-    -  make sure random fact are relevant for kids and do not contain inappropriate content
-
-> each button is not too small
-
-> font size big enough for a child of 6years old who is learning to read
+    - Make sure random fact are relevant for kids and do not contain inappropriate content
+    - Each button is not too small
+    - Font size big enough for a child of 6years old who is learning to read
 
 ### 4. What content would be relevant
 Flags and countries of the world (not fake, not regions or small ethnies) - appropriate random fact for kids
 - *strategy* 
-> study the flag API and see if only real countries flag are in there, also maybe see if possible to remove the most known flags to make the game already up from basic level (ex: US, UK, France...)
-
-> study random fact API and see if all content is appropriate - if needed I will make up one API myself with random fact more relevant to kids
+    - Study the flag API and see if only real countries flag are in there, also maybe see if possible to remove the most known flags to make the game already up from basic level (ex: US, UK, France...)
+    - Study random fact API and see if all content is appropriate - if needed I will make up one API myself with random fact more relevant to kids
 
 ### 5. Why is this so special
 Hard to find simple games which are also educational for kids and adults on desktop or browser (not app). Most online games have poor or too complex design with a lot of content
-- *strategy* > catchy and compelling website, with brief but effective content.
+- *strategy* 
+    - Catchy and compelling website, with brief but effective content.
 
 During my research in planning and designing the website, I asked a few questions to some friends who could be potential clients and also the practitioner himself. From those questions and my own research of other websites and practice, came the user stories below.
 Before the user stories, I wanted to add here a few questions asked and their answers.
@@ -98,26 +103,29 @@ Before the user stories, I wanted to add here a few questions asked and their an
 2. How can a game be interesting enough so I want to keep playing?
 	* With different modes and levels, where I can see my score so I am motivated to improve it. A game where I dont get bored and I can learn from it.
 
+[Back to Top](#table-of-contents) 
+
 ## User Stories
 
 During the scope plane and while establishing the user stories for each page and making wireframes, the following features were decided.
-
 This helped me to plan ahead and also to work through specific sprints to implement one feature at a time, answering one user story at a time...
+### General player
+1. As a player, when I land on a website, I am expecting a title with a logo or a photo, so I know where I am:
+2. As a general website user, when I go to any website, I usually expect a navigation bar to be at the top of the page with few menus items to navigate easily to other pages:
+3. As someone closed to nature, I expect a full image showing nature when I arrive on the website, so I know this is related to me:
+4. As a person looking to heal or live better, I expect to see a question related to me and my state, which can be a call for action to know more:
+5. As a potential client, when I arrive on this website, I expect to see testimonials from other clients who already had therapy sessions or lessons with this practitioner:
+6. As generally unaware of alternative therapies, when I land on this website, I expect to have a quick intro about what is the website about:
+7. As someone interested by Qigong and want to find more, I want to find a quick link to get more information in the navbar:
+8. As someone looking to receive Amatsu therapy session, I want to find a quick link to get more information and book a session in the navbar:
+9. As a usual website user, I expect a contact call for action button so I can go further and reach out to the practitioner:
+10. As a usual website user, when I visit any website, I expect a footer with social media links to have more way to reach out to practitioner:
 
-__For the Home page__
+### Child player
 
+### Parent of child player
 
-__...__
-
-
-__...__
-1. As someone interested
-
-__...__
-
-
-__...__
-
+[Back to Top](#table-of-contents) 
 
 ## Features
 ### 1. Main existing Features:
@@ -128,6 +136,7 @@ __...__
 * Matching mode (medium level): display 3 very similar flags and 3 countries and ask player to match flag with correct country (ex: Ireland, India, Ivory Coast flags or Indonesia and Poland)
 * Map mode (difficult level): display Google Map in background, flag displayed, player has to click on map to show correct matching country
 
+[Back to Top](#table-of-contents) 
 
 ## Wireframes
 
@@ -142,6 +151,8 @@ I spent a considerable amount of time doing wireframes in details as I had no cl
 As always when implementing coding, these wireframes templates do not exactly reflect the final version of the website itself but they were very useful for me to have an approximate design in my head.
 The color theme changed completely after implementing design in the code. I removed lots of features due to lack of time and expertise, such as the map in the background which was supposed to be for one extreme game mode.
 
+[Back to Top](#table-of-contents) 
+
 ## Design
 ### 1. Color scheme
 As I am not good at putting colors together and with design generally, I always try to create wireframes that include colors. It helps me to imagine the design before I start coding. 
@@ -150,6 +161,7 @@ The game had a dark red and blue thematic when I designed it on the wireframes t
 During a meeting with my mentor, he advised that the color theme was  maybe too dark which did not go too well with the colorful flags. (commit e04e2a6)
 ### 2. Font
 
+[Back to Top](#table-of-contents) 
 
 # Technologies Used
 - This website used HTML and CSS programming languages.
@@ -200,7 +212,7 @@ Found the perfect color theme that would attract players to stay on the page wit
 __Issue__: 
 
 
-
+[Back to Top](#table-of-contents) 
 
 # Media and Content origin
 API I can use for the project:
@@ -242,7 +254,7 @@ __HOW TO RUN CODE LOCALLY__
 6. Type git clone, and then paste the URL you copied in Step 2 when git clone: https://github.com/YOUR-USERNAME/YOUR-REPOSITORY 
 7. Press Enter > Your local clone will be created.
 
-### Work based on other code.
+### Credits
 
 *
 
@@ -254,3 +266,5 @@ __Thank you all!__
 
 ##### Disclaimer:
 The content of the website is for educational purposes only.
+
+[Back to Top](#table-of-contents) 
