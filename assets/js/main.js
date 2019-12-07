@@ -303,16 +303,16 @@ function whichAlert(match, country) {
         position:'center',
         allowEscapeKey: false,
         allowOutsideClick: false,
-        showConfirmButton: false,
-        timer: 2000
-        
+        showConfirmButton: false,        
     };
     if(match) {
         defaultAlert.text = "Yaaayy doing amazing! Keep going...";
         defaultAlert.icon = "success";
+        defaultAlert.timer= 2000;
     } else {
         defaultAlert.text = `Ooooops...it is ${country}.`;
         defaultAlert.icon = "error";
+        defaultAlert.timer= 3000;
     }
     return defaultAlert;
 }
