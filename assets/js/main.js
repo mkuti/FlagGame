@@ -10,7 +10,11 @@ const matchFlagContainer = document.getElementById("flag-container");
 const matchCountryContainer = document.getElementById("country-container");
 const gameOver = document.getElementById("game-over");
 const reset = document.getElementById("reset");
+const reset2 = reset.cloneNode(true);
 const mode = document.getElementById("mode");
+const mode2 = mode.cloneNode(true);
+const overReset = document.getElementById("over-reset");
+const overMode = document.getElementById("over-mode");
 const matchFlagBanner = document.getElementById("attention");
 const startFlag = document.getElementById("flag-button");
 const startCountry = document.getElementById("country-button");
@@ -26,7 +30,7 @@ const scoreInfo2 = document.getElementById("score2-count");
 const finalScore = document.getElementById("final-score");
 const scoreComment = document.getElementById("scoreComment");
 
-console.log(countryAnswers)
+console.log(reset)
 // Variables for the question
 let countryData;
 let currentQuestion = []; //array of 4 first countries sliced from shuffled data for each question
@@ -150,9 +154,16 @@ function pushCurrentQuestion() {
     if(questionCount >= maxQuestions) {
         matchFlagContainer.classList.add("d-none");
         matchCountryContainer.classList.add("d-none");
-        reset.parentElement.
+        reset.parentElement.classList.add("d-none");
+        reset.removeAttribute('id');
+        mode.parentElement.classList.add("d-none");
+        mode.removeAttribute('id');;
         gameOver.classList.remove("d-none");
-        showGameOver()
+        let overResetButton = overReset.appendChild(reset2);
+        let overtModeButton = overMode.appendChild(mode2);
+        overResetButton.setAttribute('id', 'reset');
+        overtModeButton.setAttribute('id', 'mode');;
+        showGameOver();
     }
 
     questionCount++;
