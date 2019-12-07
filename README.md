@@ -22,7 +22,7 @@
         * [5. Why is this so special?](#5-why-is-this-so-special)
     * [Scope: User Stories](#user-stories)
     * [Structure: Features](#features)
-        * [1.Main existing Features](#1-main-existing-features)
+        * [1.Existing Features](#1-existing-features)
         * [2.Features Left to Implement](#2-features-left-to-implement)
     * [Skeleton: Wireframes](#wireframes)
     * [Surface: Design](#design)
@@ -141,11 +141,35 @@ This helped me to plan ahead and also to work through specific sprints to implem
 [Back to Top](#table-of-contents) 
 
 ## Features
-### 1. Main existing Features:
-* Feature 1 -
+### 1. Existing Features:
+* Feature 1 - Logo on the top left linking to home container at any moment which would reload the whole page and act also as quitting any ongoing game
+* Feature 2 - Catching phrase for the user displayed on the home container in the top fixed banner
+* Feature 3 - Home container displaying the instructions where user can click the mode they want to play. Loading or reloading the page would always display this container first.
+* Feature 4 - Two buttons displayed below the instructions on the home container used to choose mode to play. Game wont start until a mode is chosen
+* Feature 5 - Each above button triggers a separate hidden container to show while the home container becomes hidden
+* Feature 6 - A flag container to play the mode where a flag is displayed and the user needs to choose between 4 country names
+* Feature 7 - A country container to play the mode where a country name is displayed and the user needs to choose between 4 flags
+* Feature 8 - Once one of the above container is displayed, 2 buttons appears in the nav banner replacing catching phrase
+* Feature 9 - Restart button to restart a game in the current mode chosen
+* Feature 10 - Modes button to take user back to home container to choose another mode
+* Feature 11 - on each game container, 4 clickable answers to choose from. One display the country names, the other display the flags
+* Feature 12 - Question count displayed on top of the game container throughout any game played and showing which question is displayed out of the maximum 20
+* Feature 13 - Score count displayed on top of the game container and incremented throughout any game played. Score increments depending of the verified match javascript functional
+* Feature 14 - Sweet Alert fires after a match is verified. Alert disappear after a timer of 2sec, set alert so user cannot click outside, escape the pop up or click ok.
+* Feature 15 - An encouraging message with a success icon is displayed if match is correct. 
+* Feature 16 - A failed message with a cross as icon is displayed if match is incorrect. 
+    - On the flag game, the name of the country associated with flag is displayed on the alert to help user to improve for a future game
+    - On the country game, the name of the country associated with each answer item, is displayed on the alert when clicked and match incorrect
+* Feature 17 - A game over container will be shown after the maximum questions have been played
+* Feature 18 - A different message will appear depending of the score:
+    - Up to and including 10: "Got there!...definitely can do better! Dare to try again and improve this score?"
+    - Between 11 and 14: "WOW very impressive! With more practice, you can beat this great score!"
+    - Between 15 and 19: "Bravooooo you are super smart! Reach the 20/20 or wait for the extreme mode to be built...?"
+    - 20: "Amazing you beat the game! Now I really have to build the extreme mode asap..."
+* Feature 20 - Buttons to restart a game in same mode or choose a different mode displayed below the message of game over container
 
 ### 2. Features Left to Implement:
-*
+* Original idea was to show a unique fact of each country once matched but realised that no api existed already which means I would need to build a local json file with a unique fact for 250 countries -- Unfortunately, did not have time to do this but will in the future
 * Matching mode (medium level): display 3 very similar flags and 3 countries and ask player to match flag with correct country (ex: Ireland, India, Ivory Coast flags or Indonesia and Poland)
 * Map mode (difficult level): display Google Map in background, flag displayed, player has to click on map to show correct matching country
 
@@ -171,26 +195,27 @@ The color theme changed completely after implementing design in the code. I remo
 As I am not good at putting colors together and with design generally, I always try to create wireframes that include colors. It helps me to imagine the design before I start coding. 
 When coding, I am focused on writing the code without getting too distracted by the design.
 The game had a dark red and blue thematic when I designed it on the wireframes to avoid too much brightness on the screen while playing. I did not have any explanation about the color red itself.
-During a meeting with my mentor, he advised that the color theme was  maybe too dark which did not go too well with the colorful flags. (commit e04e2a6)
+During a meeting with my mentor, he advised that the color theme was maybe too dark which did not go too well with the colorful flags. (commit e04e2a6).
+I then tried to make it a little brighter color, replaced red by a green as I find it easier on the eyes, and is my favourite color as representing the nature, so can be a very blending background to colorful flags. (commit d112cad)
+I then showed the game to a friend as like me, she did not like the white background as too bright and not eyes friendly. 
+I then changed the body background-colour to match the light-green which then removed the center box and I ended up setting the border to none.
+The color is not too bright for the eyes, does not disturb the colors of any flags displayed, giving a sense of warm and calming atmosphere to the game.
+
 ### 2. Font
+I chose the font [Kalam](https://fonts.googleapis.com/css?family=Kalam:300,400,700'), with the idea of finding a font that is catchy enough without again disturbing the user while he plays. 
+As the game was built also for kids learning to read, the font should be pretty standard without any different twists. Kalam has this interesting way of being young and modern while also having the standard curves of letters.
+Chose to have most button and words written in uppercase so again kids could read them faster and dont get bothered by the element of reading.
+
+### 2. Logo
+I wanted to have a logo containing flags, showing their colors, their uniqueness. Because the original idea was to incorporate a map in the game, I originally found an image of a map of the world with a flag on each country.
+But because the background of that image was white, it did not fit with the rest of the color scheme and I chose another image.
+I found the other image on Pinterest and downloaded as well as took a screenshot. (https://www.pinterest.com/pin/271060471299685564/). I then used [TinyJPG](https://tinyjpg.com/) to compress and reduce the size of the image before uploading it to GitPod for the game.
+The final logo is an image of hands intermixed with some flags displayed on their palms and with the planet Earth displayed as background in a dark mode. 
+It represents exactly the idea of the game, that playing to match a flag is discovering the world, understanding better other cultures and be Earth citizens all the same time.
 
 [Back to Top](#table-of-contents) 
 
-# Technologies Used
-- This website used HTML and CSS programming languages.
-- One feature also needed JS language which was provided by Simen Dehlin (mentor) via Slack
-- [AWS Cloud9](https://www.awseducate.com/student/s/awssite) - I used __AWS Cloud9__ as my IDE for the development of this website.
-- [BootstrapCDN](https://www.bootstrapcdn.com/) - The website is using __Bootstrap4__ as the basic structure and grid of the website and to increase the responsiveness of the website.
-- [FontAwesome](https://kit.fontawesome.com/f7e192f540.js) - The website is using __Font Awesome__ to display many icons on all pages
-- [Google Fonts](https://fonts.google.com/)- The website uses __3 different Google fonts__ to style the content text and headings - Url imported in CSS
-- [Youtube](https://www.youtube.com/embed/7QMdT02TVnQ) - The website used __YouTube__ to host the video for the "Qigong page".
-- [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) - The website uses __jQuery__ and __Popper.js__ to bring in Javascript which makes the navbar responsive
-- [AutoPrefixer](https://autoprefixer.github.io/) - I have used __AutoPrefixer__ to make sure the css code worked on all browsers
-- [Pexels](https://www.pexels.com) - Website imported images from __Pexels__ for the full background image and all banners image
-- [Tiny.jpg](https://tinyjpg.com) - I have used __Tinyjpg__ to compress all images of the website to increas the website loading on browser
-- [ColorSpace](https://mycolor.space) - I have used __ColorSpace__ to find matching colors for the website
-- [Balsamic](https://balsamiq.cloud) - I have used __Balsamic__ to build the wireframes which I then exported to the IDE
-- [Favicon converter](https://favicon.io/favicon-converter/) - I used Favicon converter to convert the logo into a favicon which I was able to insert in the asset folder and I tested it to be working
+
 
 # Testing
 
@@ -227,24 +252,34 @@ __Issue__:
 
 [Back to Top](#table-of-contents) 
 
+# Technologies Used
+- This website used HTML, CSS and Javascript programming languages.
+- [GitPod](gitpod.io) - I used __AWS Cloud9__ as my IDE for the development of this website.
+- [BootstrapCDN](https://www.bootstrapcdn.com/) - The website is using __Bootstrap4__ as the basic structure and grid of the website and to increase the responsiveness of the website.
+- [FontAwesome](https://kit.fontawesome.com/f7e192f540.js) - The website is using __Font Awesome__ to display many icons on all pages
+- [Google Fonts](https://fonts.google.com/)- The website uses __3 different Google fonts__ to style the content text and headings - Url imported in CSS
+- [Youtube](https://www.youtube.com/embed/7QMdT02TVnQ) - The website used __YouTube__ to host the video for the "Qigong page".
+- [jQuery](https://jquery.com/) and [Popper.js](https://popper.js.org/) - The website uses __jQuery__ and __Popper.js__ to bring in Javascript which makes the navbar responsive
+- [AutoPrefixer](https://autoprefixer.github.io/) - I have used __AutoPrefixer__ to make sure the css code worked on all browsers
+- [Pexels](https://www.pexels.com) - Website imported images from __Pexels__ for the full background image and all banners image
+- [Tiny.jpg](https://tinyjpg.com) - I have used __Tinyjpg__ to compress all images of the website to increas the website loading on browser
+- [ColorSpace](https://mycolor.space) - I have used __ColorSpace__ to find matching colors for the website
+- [Balsamic](https://balsamiq.cloud) - I have used __Balsamic__ to build the wireframes which I then exported to the IDE
+- [Favicon converter](https://favicon.io/favicon-converter/) - I used Favicon converter to convert the logo into a favicon which I was able to insert in the asset folder and I tested it to be working
+
 # Media and Content origin
-API I can use for the project:
-https://restcountries.eu/
-https://www.countryflags.io/
-Google map JavaScript API
+I used the following API for the project which contains a json object of 250 countries with among other data, contains the name of the country, its alphacode, and its flag: https://restcountries.eu/
 
-
-Resources:
-https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg
-https://stackoverflow.com/questions/3186635/disable-double-left-click-on-google-map
-http://nationfacts.net/
-https://www.worldatlas.com/
-https://12go.asia/en/cambodia/interesting-facts
-https://southbaybeachclub.com/20-fun-facts-about-the-cayman-islands/
-*
+#### Other Resources:
+* https://upload.wikimedia.org/wikipedia/commons/8/87/Flag-map_of_the_world.svg - Previous logo image
+* https://www.pinterest.com/pin/271060471299685564/ - New logo image
+* http://nationfacts.net/
+* https://www.worldatlas.com/
+* https://12go.asia/en/cambodia/interesting-facts
+* https://southbaybeachclub.com/20-fun-facts-about-the-cayman-islands/
 
 # Deployment
-I have been using the Integrated development environment (IDE) [AWS Cloud9]() to develop this milestone project.
+I have been using the Integrated development environment (IDE) [GitPod]() to develop this milestone project.
 After creating a new GitHub repository, I linked it on the terminal of my IDE. I could then commit any update of my code and push it to the remote repository so it could be regularly backed up and accessed by others.
 
 To deploy the website from the GitHub repository to its published GitHub page, I followed the steps as below:
