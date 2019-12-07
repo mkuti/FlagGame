@@ -34,7 +34,7 @@ let MatchCountry;
 // Variables for the game set up
 let score = 0;
 let questionCount = 0;
-const maxQuestions = 2;
+const maxQuestions = 20;
 
 /*
 =================================
@@ -43,7 +43,6 @@ const maxQuestions = 2;
 */
 
 $(".game-btn").click(function(){
-    console.log(this.id)
     homeContainer.classList.add("d-none")
     matchFlagBanner.parentElement.classList.add("d-none")
     reset.parentElement.classList.remove("d-none");
@@ -270,7 +269,6 @@ function verifyMatchCountry() {
             let match = clickedAnswer.src.slice(30, 33) == MatchCountry.alpha3Code.toLowerCase(); 
             if(match){ 
                 Swal.fire(whichAlert(true, MatchCountry.name)).then((result) => {
-                    console.log(result.dismiss)
                     if (result.dismiss) {
                         score++;
                         pushCurrentQuestion(shuffleData(countryData));
