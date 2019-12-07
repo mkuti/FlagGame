@@ -172,12 +172,11 @@ ul {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     vertical-align: middle;
     display: table-cell;
     color: rgb(9, 97, 31);
-    background: rgb(177, 206, 184);
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
