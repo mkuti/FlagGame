@@ -245,44 +245,150 @@ Through my own testing and with views of others, I have fixed a lot of design fl
 I used Google Chrome as my primary browser and constantly tested it on my mobile phone also using the same browser. 
 I also tested the game on Safari via an iMac with a very big screen and an iPod touch with probably the smallest screen regularly and never found any specific issue. 
 
-## General testing and learning experiences for the coding itself:
+## General testing and learning experiences for the code itself:
 
-### 1. Responsiveness
-Before I went to Javascript, I made sure all the elements were already properly responsive, without any extra margins anywhere and no flaws in the styling.
-Each element of each page was tested to ensure its features worked as expected and was specifically responsive on mobile and small devices. For this, I used the device selector through the dev tools and selected each device to test each element. I also made sure to increase and decrease screen size of the browser directly to see the breakpoints and correct if needed. Whenever an error was noticed, I used the dev tools to apply or change certain styles and if successful, copied it to my IDE.
+### 1. 
+* __Goal__: Before I went to Javascript, to make sure all the elements were already properly responsive, without any extra margins anywhere and no flaws in the styling.
+* __Implementation__: Each element was tested to ensure its features worked as expected and was specifically responsive on mobile and small devices. 
+For this, I used the device selector through the dev tools and selected each device to test each element. 
+
+I also made sure to increase and decrease screen size of the browser directly to see the breakpoints and correct if needed. 
+Whenever an error was noticed, I used the dev tools to apply or change certain styles and if successful, copied it to my IDE.
+
 I tried to use my own customised html and css at the beginning to get the grips of it, before applying the Bootstrap framework.
-The navbar is fully responsive and was made without any bootstrap classes.
+
 Whenever an element was added via Javascript, tested the element’s responsiveness on all screen sizes before moving to the next task.
 For each task and when I was completely happy with it, I committed and pushed to GitHub
 
-### 2. Displaying the flag and country name randomly in the DOM:
-After fetching an api providing datas about 250 countries, the objective was to select a random country to match, display its flag and its name among 3 other country names.
-At first, I got as far as selecting a random country and displaying its flag on the DOM which I was happy about. But then I could not display randomly 4 country names.
-After discussing this with my mentor, he advised me to pull an array of 4 countries for each displayed question and from the array, to assign 1 country flag and the names to answer.
-Again, followed his advice, managed to display the flag and the names of the 4 countries randomly but then could not verify the match as the data was separated into two different arrays. 
-I asked feedback on Slack to know how could I randomise the way the country names are displayed on the buttons and at the same time, keep same array once they are pushed to the DOM. Someone suggested to just push manually each country with a chosen index (commit 4b93ed1)
-I realised through all this and as advised by my mentor and other alumni on Slack that I was over complicating the functions and each task to achieve which made the code complex and did not help me to understand.
+* __Result__: The navbar is fully responsive and was made without any bootstrap classes.
 
-### 3. Create unique responsibility functions to make the code more readable:
-I kept building a task on top of another within the same function until I reach a point of not being able to read my code, not knowing what to do next and how to ask questions from others.
-As advised by mentor and other alumni student, I separated each task, even the smallest, in a unique function with a very clear name. The name should also tells the task of the function without even reading the comments.
+### 2. :
+* __Goal__: Displaying the flag and country name randomly in the DOM for each question.
+* __Implementation__: 
+    - Fetching an api providing datas about 250 countries
 
-### 4. Make the code DRY:
-Also as advised by my mentor, I tried to re-use the same function in different places instead of re-writing the same code. For example, function mixItems (arrayItems) {return Math.floor(Math.random() * arrayItems.length);}
+    - Selecting a random country and displaying its flag on the DOM which I was happy about.
 
-The Math.Floor was written twice for mixing the answer items on the DOM before displaying the country names and for mixing the country array before selecting the country to match. (commit 4932f4f)
+* __Issue and new implementation__: I could not display randomly 4 country names and I felt very stuck
+    - After discussing this with my mentor, he advised me to shuffle the original array, push 4 countries into an empty array for each displayed question and from the array, to assign 1 country flag and the names to answer.
 
-### 5. Remove global variables when possible and pass in arguments in each function instead
-Once I finish making a separate function for each task to perform, I had numerous global variables as I was not sure of how to bring data from one function to another.
-My mentor explained very well the concept and I was able to change certain functions, include parameters and call arguments.
-The best example is  
+    - After understanding the principle and multiple struggles with my messy code, I managed to display the flag and the names of the 4 countries randomly.  
+* __Issue and new implementation__:
+    - Could not verify the match as the data was now separated into two different arrays and it was impossible to click on the correct country.
+    - Asked feedback on Slack to know how could I randomise the way the country names are displayed on the buttons and at the same time, keep same array once they are pushed to the DOM. 
+    - Someone suggested to just push manually each country with a chosen index (commit 4b93ed1) which I did and it was then successful
+* __Result__:
+    - Game was functioning which means I could then build more functionality to it from there
+    - I realised through all this and as advised by my mentor and other alumni on Slack that I was over complicating the functions and each task to achieve which made the code complex and did not help me to understand.
 
-## Bugs found and solved
+### 3. :
+* __Goal__: Create unique responsibility functions to make the code more readable
+* __Issue__: Building a task on top of another within the same function until I reach a point of not being able to read my code, not knowing what to do next and how to ask questions from others.
+* __Implementation__: 
+    - As advised by mentor and other alumni student, I separated each task, even the smallest, in a unique function with a very clear name. 
+    - The name should also tells the task of the function without even reading the comments.
+* __Result__: Very clear code self-explaining its actions
+
+### 4. 
+* __Goal__: Make the code DRY
+* __Issue__: Re-writing same methods and functions to create interactivity and manipulate the DOM. 
+    - `Math.Floor` method was written twice for mixing the answer items on the DOM before displaying the country names and for mixing the country array before selecting the country to match. (commit 4932f4f)
+* __Implementation__: Create one unique function with a single responsability to call back for different data instead of re-writing the same code. 
+
+`function mixItems (arrayItems) {return Math.floor(Math.random() * arrayItems.length);}`
+
+* __Result__: Code shortened and faster to read and understand
+
+### 5. 
+* __Goal__: Remove global variables when possible and pass in arguments in each function instead
+* __Issue__: Once I finish making a separate function for each task to perform, I had numerous global variables as I was not sure of how to bring data from one function to another.
+* __Implementation__: My mentor explained very well the concept of passing arguments into a function and I was able to change certain functions, include parameters and pass arguments.
+    - The best example was to call the `shuffleData function` inside the fetchData function using the data just fetched as the following:
+
+`function fetchApi() {return fetch(url).then(response => response.json()).then(data => {countryData = shuffleData(data);pushCurrentQuestion();}).catch(err => console.log(err))}`
+* __Result__: Less variables and cleaner javascript code
+
+## Issues found and solved
 
 ### 1. Empty current question array before pulling next question
-When I finish to build all functions to display question and verify its match after clicking, I tested it in the browser and realised the original countries were still displayed and the currentQuestion array length was increasing. 
-After multiple testings, searching, I realised, I only need to empty the array after a match was verified and before another question was pulled.
+* __Issue__: The countries used for the first question were still displayed for the next question. 
+* __Fix__: 
+    - Tried to debut in Chrome DevTools and using console.log. Realised the currentQuestion array length was increasing which means the functions pulled more countries but the original ones were still there.
+    - Added a single line in my currentQuestion function to empty the array after a match was verified and before another question was pulled.
+* __Verdict__: Since the currentQuestion array was empty, new questions were displayed for the user
 
+### 2. Event listener matches correct data
+* __Issue__: After setting an alert to show when match was correct or not, I tested and found out that next question data was pushed into array before previous match was verified which leaded to fail match every time.
+* __Fix__: 
+    - First added a `setTimeOut` function to ask DOM to wait for the first match to be verified before pullCurrentQuestion function was friend
+    - Used documentation of Sweet Alert to use a conditional statement inside the alert and wait for user to click before next question was pulled
+    `if (result.dismiss){pushCurrentQuestion(shuffleData(countryData))};`
+* __Verdict__: User dont have to do anything and next question will show correct data before being verified accurately
+
+### 3. Keep data of countries in a global variable so it can be called when next question is pulled
+* __Issue__: After removing global variable and trying to pass in arguments from function to function, data of countries was undefined so next question was not pulled after first one was matched.
+* __Fix__: 
+    - After multiple searches, various attempts at adding parameters and arguments but unable to find solution, consulted mentor who advised that sometimes, we need global variables so data can be called anywhere in the file. See commit [159c5ef](https://github.com/mkuti/FlagGame_milestone_2/commit/159c5ef542a3a999c8a202bd8ddf3ac9f6e9f50b).
+    - Reverted CountryData as a global variable so I could call it from match function
+* __Verdict__: Next question was displayed correctly as no longer considered as undefined
+
+### 4. Making sure correct container and buttons are hidden or showing when clicked
+* __Issue__: Different containers showing at the same time after the game was over or when "reset" or "mode" buttons were clicked
+* __Fix__: Manipulated the DOM to add or remove "d-none" bootstrap class on each container or button. See commit [d48e440](https://github.com/mkuti/FlagGame_milestone_2/commit/d48e440b329cda97ff71d13c2cfead46179a8f91)
+* __Verdict__: One container showing at each specific time and restart and mode button hidden when home container is displayed, and showing when other containers are displayed
+
+### 5. Changed col sizes of banner so absent items are removed from the total size of row
+* __Issue__: 
+    - Since different elements of the banner were displayed or not depending of the container being shown on the page, I originally included them in the grid of the banner.
+    - When one only or two buttons were showing, it was out of place, not centered
+* __Fix__: Set attention text of banner for home container as "col-12" and used Javascript to add "col-6" to the two buttons when other containers were displayed.
+* __Verdict__: Banner was responsive on all screens and depending of the container shown during the game
+
+### 6. Making sure the game stopped when mode button was clicked
+* __Issue__: When clicking mode button and restarting the game or choosing one mode, question count would show 2/20
+* __Fix__: Added stopGame function to reset questionCount and score if mode button was selected
+* __Verdict__: Game stops and restart fully if user wants to change mode or go back to home button
+
+### 7. Next question triggered only after timer expires
+* __Issue__: After I set timer to be the trigger for the next question, a confirm button was still displayed and when clicked, would close alert but current question still displayed
+* __Fix__: Removed the confirm button completely and made sure user could not escape the alert or click outside
+* __Verdict__: User just have to wait for timer to expire before next question is displayed
+
+### 8. Name of incorrect country displayed on alert when incorrect country flag is clicked
+* __Issue__: For country mode, the name of the country being displayed was showing on alert when match had failed. This was not changed after 2nd mode was added
+* __Fix__: Changed alert to show clickedanswer name on 2nd mode instead of matchCountry name
+* __Verdict__: User can improve later as he knows the name of the country associated with the flag clicked
+
+### 9. Making sure the country to match is not displayed again during the same game
+* __Issue__: Same country showing again within the next game
+* __Fix__: 
+    - Changed function of selecting country match to remove it from original array by re-defining an array filtered without the matched country of each question
+    - calling fetchapi function inside restart() so we get the full original array for each game
+* __Verdict__: CountryData array goes from 250 countries to 230 at the end of the game. All displayed countries have been removed
+
+### 10. Buttons clicked dont stay active on mobile screens
+* __Issue__: On mobile devices, each time a button was clicked, it stayed active for the next question, unless you clicked outside the button
+* __Fix__: Replaced hover effect by input:active so it does not stay active after being clicked
+* __Verdict__: This removed the hover effect with background color but much better UX effect when playing the game on small devices
+
+### 10. Buttons clicked dont stay active on mobile screens
+* __Issue__: On mobile devices, each time a button was clicked, it stayed active for the next question, unless you clicked outside the button
+* __Fix__: Replaced hover effect by input:active so it does not stay active after being clicked
+* __Verdict__: This removed the hover effect with background color but much better UX effect when playing the game on small devices
+
+### 11. Timer of alert staying long enough when a failed match occurs so user can read country name
+* __Issue__: When my son of 6years old played, he did not have time to read country name on alert
+* __Fix__: 
+    - Increased time only for failed alerts
+    - Increased size of text and changed country name to uppercase to increase readability
+* __Verdict__: My son played again and he was able to read most country names
+
+### 12. Restart button shows directly under final score statement on game over containter
+* __Issue__: Asked feedback about game on Slack and was advised that for UX purpose, restart button should show directly under final score statement
+* __Fix__: 
+    - Set restart and mode buttons to none inside the banner
+    - Added mode button under statement and used Javascript to display home container when it's clicked
+* __Verdict__: UX improved
 
 [Back to Top](#table-of-contents) 
 
@@ -301,6 +407,7 @@ After multiple testings, searching, I realised, I only need to empty the array a
 - [ColorSpace](https://mycolor.space) - I have used __ColorSpace__ to find matching colors for the website
 - [Balsamiq](https://balsamiq.cloud) - I have used __Balsamic__ to build the wireframes which I then exported to the IDE
 - [Favicon converter](https://favicon.io/favicon-converter/) - I used Favicon converter to convert the logo into a favicon which I was able to insert in the asset folder and I tested it to be working
+- [Sweetalert2](https://sweetalert2.github.io/) - 
 
 # Media and Content origin
 I used the following API for the project which contains a json object of 250 countries with many specific data, such as name, region, population...:[https://restcountries.eu/](https://restcountries.eu/)
