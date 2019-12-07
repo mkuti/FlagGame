@@ -150,7 +150,7 @@ function pushCurrentQuestion() {
     if(questionCount >= maxQuestions) {
         matchFlagContainer.classList.add("d-none");
         matchCountryContainer.classList.add("d-none");
-        reset.classList.add("d-none");
+        reset.parentElement.
         gameOver.classList.remove("d-none");
         showGameOver()
     }
@@ -300,17 +300,18 @@ function verifyMatchCountry() {
  */
 function whichAlert(match, country) {
     const defaultAlert = {
+
         position:'center',
         allowEscapeKey: false,
         allowOutsideClick: false,
         showConfirmButton: false,        
     };
     if(match) {
-        defaultAlert.text = "Yaaayy doing amazing! Keep going...";
+        defaultAlert.title = "Yaaayy doing amazing! Keep going...";
         defaultAlert.icon = "success";
         defaultAlert.timer= 2000;
     } else {
-        defaultAlert.text = `Ooooops...it is ${country}.`;
+        defaultAlert.title = `Ooooops...it is ${country.toUpperCase()}.`;
         defaultAlert.icon = "error";
         defaultAlert.timer= 3000;
     }
