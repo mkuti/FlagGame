@@ -10,11 +10,7 @@ const matchFlagContainer = document.getElementById("flag-container");
 const matchCountryContainer = document.getElementById("country-container");
 const gameOver = document.getElementById("game-over");
 const reset = document.getElementById("reset");
-const overResetButton = reset.cloneNode(true);
 const mode = document.getElementById("mode");
-const overModeButton = mode.cloneNode(true);
-const overReset = document.getElementById("over-reset");
-const overMode = document.getElementById("over-mode");
 const matchFlagBanner = document.getElementById("attention");
 const startFlag = document.getElementById("flag-button");
 const startCountry = document.getElementById("country-button");
@@ -38,7 +34,7 @@ let MatchCountry;
 // Variables for the game set up
 let score = 0;
 let questionCount = 0;
-const maxQuestions = 20;
+const maxQuestions = 2;
 
 /*
 =================================
@@ -47,6 +43,7 @@ const maxQuestions = 20;
 */
 
 $(".game-btn").click(function(){
+    console.log(this.id)
     homeContainer.classList.add("d-none")
     matchFlagBanner.parentElement.classList.add("d-none")
     reset.parentElement.classList.remove("d-none");
@@ -59,7 +56,7 @@ $(".game-btn").click(function(){
     } else if(this.id === "country-button"){
         matchCountryContainer.classList.remove("d-none");
         fetchApi();
-    } else if(this.id === "mode"){
+    } else if(this.id === "mode" || this.id === "start-again"){
         homeContainer.classList.remove("d-none");
         reset.parentElement.classList.add("d-none");
         mode.parentElement.classList.add("d-none");
@@ -71,23 +68,15 @@ $(".game-btn").click(function(){
     } 
 })
 
-
-
-mode.addEventListener("click", function(){
-    
-    
-})
-
-
 reset.addEventListener("click", function(){
     gameOver.classList.add("d-none");
     restart();  
 })
 
-overResetButton.addEventListener("click", function(){
+/*overResetButton.addEventListener("click", function(){
     gameOver.classList.add("d-none");
     restart();
-})
+})*/
 
 /*
 =================================
@@ -156,16 +145,8 @@ function pushCurrentQuestion() {
         matchFlagContainer.classList.add("d-none");
         matchCountryContainer.classList.add("d-none");
         reset.parentElement.classList.add("d-none");
-        reset.removeAttribute('id');
         mode.parentElement.classList.add("d-none");
-        mode.removeAttribute('id');;
         gameOver.classList.remove("d-none");
-        overReset = overReset.appendChild(overResetButton);
-        overtMode = overMode.appendChild(overResetButton);
-        overResetButton.setAttribute('id', 'reset');
-        overResetButton.classList.add("bg-green");
-        overModeButton.setAttribute('id', 'mode');
-        overModeButton.classList.add("bg-green");
         showGameOver();
     }
 
@@ -247,7 +228,6 @@ function verifyMatchFlag() {
                 });  
                         } else Swal.fire(whichAlert(false, MatchCountry.name)).then((result) => {
                     if (result.dismiss) {
-                        console.log(countryData)
                         pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  ;
