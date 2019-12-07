@@ -208,7 +208,7 @@ I chose the font [Kalam](https://fonts.googleapis.com/css?family=Kalam:300,400,7
 As the game was built also for kids learning to read, the font should be pretty standard without any different twists. Kalam has this interesting way of being young and modern while also having the standard curves of letters.
 Chose to have most button and words written in uppercase so again kids could read them faster and dont get bothered by the element of reading.
 
-### 2. Logo
+### 3. Logo
 I wanted to have a logo containing flags, showing their colors, their uniqueness. Because the original idea was to incorporate a map in the game, I originally found an image of a map of the world with a flag on each country.
 But because the background of that image was white, it did not fit with the rest of the color scheme and I chose another image.
 I found the other image on Pinterest and downloaded as well as took a screenshot. (https://www.pinterest.com/pin/271060471299685564/). I then used [TinyJPG](https://tinyjpg.com/) to compress and reduce the size of the image before uploading it to GitPod for the game.
@@ -245,12 +245,43 @@ Through my own testing and with views of others, I have fixed a lot of design fl
 I used Google Chrome as my primary browser and constantly tested it on my mobile phone also using the same browser. 
 I also tested the game on Safari via an iMac with a very big screen and an iPod touch with probably the smallest screen regularly and never found any specific issue. 
 
-## Specific testing scenarios:
+## General testing and learning experiences for the coding itself:
 
-### Color theme of the page
-__Goal__: 
-Found the perfect color theme that would attract players to stay on the page without creating too much distractions in the background of colorful flags
-__Issue__: 
+### 1. Responsiveness
+Before I went to Javascript, I made sure all the elements were already properly responsive, without any extra margins anywhere and no flaws in the styling.
+Each element of each page was tested to ensure its features worked as expected and was specifically responsive on mobile and small devices. For this, I used the device selector through the dev tools and selected each device to test each element. I also made sure to increase and decrease screen size of the browser directly to see the breakpoints and correct if needed. Whenever an error was noticed, I used the dev tools to apply or change certain styles and if successful, copied it to my IDE.
+I tried to use my own customised html and css at the beginning to get the grips of it, before applying the Bootstrap framework.
+The navbar is fully responsive and was made without any bootstrap classes.
+Whenever an element was added via Javascript, tested the element’s responsiveness on all screen sizes before moving to the next task.
+For each task and when I was completely happy with it, I committed and pushed to GitHub
+
+### 2. Displaying the flag and country name randomly in the DOM:
+After fetching an api providing datas about 250 countries, the objective was to select a random country to match, display its flag and its name among 3 other country names.
+At first, I got as far as selecting a random country and displaying its flag on the DOM which I was happy about. But then I could not display randomly 4 country names.
+After discussing this with my mentor, he advised me to pull an array of 4 countries for each displayed question and from the array, to assign 1 country flag and the names to answer.
+Again, followed his advice, managed to display the flag and the names of the 4 countries randomly but then could not verify the match as the data was separated into two different arrays. 
+I asked feedback on Slack to know how could I randomise the way the country names are displayed on the buttons and at the same time, keep same array once they are pushed to the DOM. Someone suggested to just push manually each country with a chosen index (commit 4b93ed1)
+I realised through all this and as advised by my mentor and other alumni on Slack that I was over complicating the functions and each task to achieve which made the code complex and did not help me to understand.
+
+### 3. Create unique responsibility functions to make the code more readable:
+I kept building a task on top of another within the same function until I reach a point of not being able to read my code, not knowing what to do next and how to ask questions from others.
+As advised by mentor and other alumni student, I separated each task, even the smallest, in a unique function with a very clear name. The name should also tells the task of the function without even reading the comments.
+
+### 4. Make the code DRY:
+Also as advised by my mentor, I tried to re-use the same function in different places instead of re-writing the same code. For example, function mixItems (arrayItems) {return Math.floor(Math.random() * arrayItems.length);}
+
+The Math.Floor was written twice for mixing the answer items on the DOM before displaying the country names and for mixing the country array before selecting the country to match. (commit 4932f4f)
+
+### 5. Remove global variables when possible and pass in arguments in each function instead
+Once I finish making a separate function for each task to perform, I had numerous global variables as I was not sure of how to bring data from one function to another.
+My mentor explained very well the concept and I was able to change certain functions, include parameters and call arguments.
+The best example is  
+
+## Bugs found and solved
+
+### 1. Empty current question array before pulling next question
+When I finish to build all functions to display question and verify its match after clicking, I tested it in the browser and realised the original countries were still displayed and the currentQuestion array length was increasing. 
+After multiple testings, searching, I realised, I only need to empty the array after a match was verified and before another question was pulled.
 
 
 [Back to Top](#table-of-contents) 
@@ -273,6 +304,7 @@ __Issue__:
 
 # Media and Content origin
 I used the following API for the project which contains a json object of 250 countries with many specific data, such as name, region, population...:[https://restcountries.eu/](https://restcountries.eu/)
+
 For the purpose of the game, I used mostly three datas: the name of the country, its alphacode, and its flag url. 
 
 #### Other Resources:
