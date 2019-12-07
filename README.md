@@ -99,7 +99,7 @@ During my research in planning and designing the website, I asked a few question
 Before the user stories, I wanted to add here a few questions asked and their answers.
 
 1. What does the User expect?
-	* I expect a simple game which is easy enough to get into it, with catchy colors and very minimal content. After a few games, I want to find a difficult level where I can continue to be challenged
+	* I expect a simple game which is easy enough to get into it, with pastel colors and very minimal content. After a few games, I want to find a difficult level where I can continue to be challenged
 2. How can a game be interesting enough so I want to keep playing?
 	* With different modes and levels, where I can see my score so I am motivated to improve it. A game where I dont get bored and I can learn from it.
 
@@ -109,21 +109,34 @@ Before the user stories, I wanted to add here a few questions asked and their an
 
 During the scope plane and while establishing the user stories for each page and making wireframes, the following features were decided.
 This helped me to plan ahead and also to work through specific sprints to implement one feature at a time, answering one user story at a time...
-### General player
-1. As a player, when I land on a website, I am expecting a title with a logo or a photo, so I know where I am:
-2. As a general website user, when I go to any website, I usually expect a navigation bar to be at the top of the page with few menus items to navigate easily to other pages:
-3. As someone closed to nature, I expect a full image showing nature when I arrive on the website, so I know this is related to me:
-4. As a person looking to heal or live better, I expect to see a question related to me and my state, which can be a call for action to know more:
-5. As a potential client, when I arrive on this website, I expect to see testimonials from other clients who already had therapy sessions or lessons with this practitioner:
-6. As generally unaware of alternative therapies, when I land on this website, I expect to have a quick intro about what is the website about:
-7. As someone interested by Qigong and want to find more, I want to find a quick link to get more information in the navbar:
-8. As someone looking to receive Amatsu therapy session, I want to find a quick link to get more information and book a session in the navbar:
-9. As a usual website user, I expect a contact call for action button so I can go further and reach out to the practitioner:
-10. As a usual website user, when I visit any website, I expect a footer with social media links to have more way to reach out to practitioner:
+### As a general user, I am expecting:
+* A game to learn about world flags and countries
+* Something fun to challenge my geography knowledge
+* A game where I can also learn extra information about places and cultures
+* A quick and mobile friendly game to play anywhere from a phone
+* A game with a clear structure where I dont need to think to find how to play
+* A game where the instructions and questions are easy to understand
+* A game with a simple design so I can focus on the game itself and easily see the colors of the flags
+* A game with no bright colors so my eyes are restarted
+* To see my scores at the end of each game so I can try to improve
+* To continue being challenged by more than one mode
 
-### Child player
+### As a user aged between 6 and 10 years old, I a expecting:
+* Have fun while learning
+* Not too much reading so it is more fun than educative
+* When I have to read, big enough text so reading is part of the fun
+* Buttons big enough to click easily
 
-### Parent of child player
+### As a parent of child player, I am expecting:
+* Content of the game to be appropriate to my child
+* Game to be easy enough so my child continues to play and learn
+* Score shown with a short of encouragement
+* Gift of learning about other cultures so my child grows aware of the world
+
+### As a developer, I want:
+* To build a game fun and interesting enough for lots of users
+* To display my acquired knowledge of Javascript in my portfolio
+* To have fun coding Javascript while building a fun game
 
 [Back to Top](#table-of-contents) 
 
