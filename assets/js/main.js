@@ -64,18 +64,10 @@ $(".game-btn").click(function(){
         matchCountryContainer.classList.add("d-none");
         gameOver.classList.add("d-none");
         stopGame()
-    } 
+    } else {
+        restart(); 
+    }
 })
-
-reset.addEventListener("click", function(){
-    gameOver.classList.add("d-none");
-    restart();  
-})
-
-/*overResetButton.addEventListener("click", function(){
-    gameOver.classList.add("d-none");
-    restart();
-})*/
 
 /*
 =================================
