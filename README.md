@@ -129,7 +129,7 @@ This helped me to plan ahead and also to work through specific sprints to implem
 * Buttons big enough to click easily
 * A game where I can learn and get better at it
 
-### As a parent of child player, I am expecting:
+### As a parent of child user, I am expecting:
 * Content of the game to be appropriate to my child
 * Game to be easy enough so my child continues to play and learn
 * Score shown with a short of encouragement
@@ -219,8 +219,6 @@ It represents exactly the idea of the game, that playing to match a flag is disc
 
 # Testing
 
-
-
 ## Final and official testing:
   * [W3 MarkUp validation](https://validator.w3.org)
   * [W3 CSS validation](https://jigsaw.w3.org/css-validator/)
@@ -230,11 +228,16 @@ Example of an error in the MarkUp corrected:
 - *The frameborder attribute on the iframe element is obsolete. Use CSS instead.* I then removed frameborder from HTML and added border: none in CSS
 
 ## General testing:
-As I did not have a lot of time and I was not really expert in Jasmine or any automating testing, I decided to do all the testing manually via the browser and Chrome Developer tools
+As I did not have a lot of time and I was not really expert in Jasmine or any automating testing, I decided to do all the testing manually via the browser and Chrome Developer tools.
 My strategy is very simple: as soon as I write a line of code, I open the page in my browser to test it, make sure it works until I am fully happy with what I see and how it functions. 
-For each feature I was working on, I tried to preview it in Chrome Dev tools to understand quickly which HTML or CSS would cause a certain effect and correct it as soon as possible. 
-This allowed me to fully comprehend the languages and push to GitHub only after I made the whole feature was working well.
-Once I was quite happy with the main features, I started to share the url with friends and family to get their first views and reactions on the design and the functionality of the game.
+
+For each feature I was working on, I tried to preview it in Chrome Dev tools to understand quickly which HTML element, CSS styling or Bootstrap class would cause a certain effect and correct it as soon as possible. 
+This also allowed me to fully comprehend the languages, to work by small tasks and push to GitHub only after I made the whole feature was working well.
+
+Once I was quite happy with the design and the site responsiveness, I moved to Javascript and performed the same manual tests as above. 
+
+After the main functionality of the game was in place, I started to share the url with friends and family to get their first views and reactions on the design and the functionality of the game.
+
 Through my own testing and with views of others, I have fixed a lot of design flaws and numerous bugs in my Javascript code. Thanks to that, I can present a website which is almost perfect :)
 
 
@@ -280,25 +283,33 @@ I used the following API for the project which contains a json object of 250 cou
 
 # Deployment
 I have been using the Integrated development environment (IDE) [GitPod]() to develop this milestone project.
-After creating a new GitHub repository, I linked it on the terminal of my IDE. I could then commit any update of my code and push it to the remote repository so it could be regularly backed up and accessed by others.
+As I used it for the first time and Code Institute changed the preferred IDE for the whole course, I was lucky to avail of the full template prepared by Code Institute at the time.
 
-To deploy the website from the GitHub repository to its published GitHub page, I followed the steps as below:
+I went to Code Institute [full template repository](https://github.com/Code-Institute-Org/gitpod-full-template), cloned it and created my own repository with the template ready. From there, I opened GitPod which started a workspace.
 
-__Enabling GitHub Pages to publish site from master as a publishing source__
-1. Navigate to GitHub Pages site's repository
-2. Under repository name, clicked Settings
-3. Used "Select source drop-down menu" to select master as my GitHub Pages publishing source
-4. Clicked save
+From that point, I could add, commit any update of my code and push it to the remote repository so it could be regularly backed up and accessed by others.
+
+## Enabling GitHub Pages to publish site from master as a publishing source
+
+* Opened up GitHub in the browser.
+* Signed in using username and password.
+* Selected my repositories.
+* Navigated to [FlagGame repository](https://github.com/mkuti/FlagGame_milestone_2).
+* In the top navigation clicked 'settings'.
+* Scrolled down to the GitHub Pages area.
+* Selected 'Master Branch' from the 'Source' dropdown menu.
+* Clicked to confirm my selection.
+* Your site is published [https://mkuti.github.io/FlagGame_milestone_2/](https://mkuti.github.io/FlagGame_milestone_2/)
 
 When I submitted this Milestone project, I confirmed that the Development Branch and Master Branch are identical.
 
-__HOW TO RUN CODE LOCALLY__
+## How to run code locally
 
 1. On GitHub, navigate to the main page of the repository
 2. Under the repository name, click Clone or download
 3. In the Clone with HTTPs section, click to copy the clone URL for the repository
-4. Open Terminal
-5. Change the current working directory to the location where you want the cloned directory to be made
+4. Using favorite IDE, open Terminal
+5. Change the current working directory to the desired file location
 6. Type git clone, and then paste the URL you copied in Step 2 when git clone: https://github.com/YOUR-USERNAME/YOUR-REPOSITORY 
 7. Press Enter > Your local clone will be created.
 
