@@ -407,7 +407,8 @@ For each task and when I was completely happy with it, I committed and pushed to
 - [ColorSpace](https://mycolor.space) - I have used __ColorSpace__ to find matching colors for the website
 - [Balsamiq](https://balsamiq.cloud) - I have used __Balsamic__ to build the wireframes which I then exported to the IDE
 - [Favicon converter](https://favicon.io/favicon-converter/) - I used Favicon converter to convert the logo into a favicon which I was able to insert in the asset folder and I tested it to be working
-- [Sweetalert2](https://sweetalert2.github.io/) - 
+- [Sweetalert2](https://sweetalert2.github.io/)
+* [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB)
 
 # Media and Content origin
 I used the following API for the project which contains a json object of 250 countries with many specific data, such as name, region, population...:[https://restcountries.eu/](https://restcountries.eu/)
@@ -453,13 +454,18 @@ When I submitted this Milestone project, I confirmed that the Development Branch
 
 ### Credits
 
-*
+* To my mentor, [Simen Daehlin](https://github.com/Eventyret), for provided me the method to shuffle the array data.
 
 # Special thanks
 
--
+1. To my mentor, [Simen Daehlin](https://github.com/Eventyret), for amazing mentoring throughout the building of this project, pointing me to the right direction, explaining Javascript logic, for assisting during my project reviews with
+great critique and potential solutions.
 
-__Thank you all!__
+2. To all in the #peer-code-review channel of Slack who were kind enough to provide their feedback and find bugs or provide solution.
+    
+3. To Anaelle Denikine who have tested extensively the game while improving her score :) and who found a lot of bugs which I was able to fix thankfully
+
+4. To my son who also tested the game and helped me to find a few bugs which I managed to fix so he can enjoy the game more
 
 ##### Disclaimer:
 The content of the website is for educational purposes only.
