@@ -49,7 +49,7 @@ body {
     cursor: pointer;
 }
 
-/* trick to replace hover effect by input:active so it does not stay active after being clicked */
+/* trick to replace hover effect by input:active so it does not stay active after being clicked https://stackoverflow.com/questions/29016648/submit-button-stays-hover-color-after-clicked*/
 .button input:active {
     background-color:rgb(177, 206, 184);
     color: rgb(9, 97, 31)!important;
@@ -176,7 +176,6 @@ ul {
     text-align: center;
     vertical-align: middle;
     display: table-cell;
-    color: rgb(9, 97, 31);
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;

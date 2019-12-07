@@ -35,7 +35,7 @@
 * [Credits](#credits)
     * [Special Thanks & Acknowledgements](#special-thanks--acknowledgements)
 
-## Why building a flag game?
+# Why building a flag game?
 For the second milestone project, I decided to make an interactive and educational game, so I could use Javascript functional programming which I have just learnt.
 
 I like games as I believe anything can be learnt while having fun. Although I have not been playing a lot of online games or game apps myself, I am now a mum and often look for interesting, educative and well designed numeric games for my children.
@@ -44,7 +44,7 @@ My oldest son loves the planet, its continents, countries, and its flags, while 
 I, myself, am passionate about discovering other cultures, learning and understanding languages and travelling generally in various countries while getting to know its people.
 I remember as a child, one of the online game I played over and over again was a plane flying over the world map. The plane had a label behind with a country name written. The game was to click on the country on the map shown by the plane.
 
-# How the game work
+# How the game work?
 So I decided on making a game where the player would have to recognise a flag and match it to a country while random information would be showing about the country as a learning gift to the user.
 For this, I would need to use two main APIs, one to display the flag and one to display random facts about the country once the match is successful.
 
@@ -57,14 +57,14 @@ More details about the design and structure of the game:
 [Back to Top](#table-of-contents) 
 
 # UX
-## Why and what
+## Why and what?
 ### 1. Primary target audience
 For anyone from 6years old interested by geography or want to learn for specific purpose
 - *Strategy*
     - Make the game interactive, fun and educative with a very simple design --- catchy and compelling
     - Minimal content and large images with minimal number of steps to start playing, match the flag, get results and continue or stop
 
-### 2. Who is the project for
+### 2. Who is the project for?
 As shown in my intro, game is for anyone looking to test their knowledge of geography and flags.
 The objective is also to trigger anyone else to learn more about other countries and cultures via an unknown flag
 1.
@@ -77,20 +77,20 @@ The objective is also to trigger anyone else to learn more about other countries
 
 In the future, to build difficult mode/level, also called "map mode" or "extreme (so good players are not bored): display Google Map in background, flag displayed, player has to click on map to show correct matching country
 
-### 3. What is culturally appropriate
+### 3. What is culturally appropriate?
 Appropriate for 6years old minimum and user-friendly for their age and dextirity
 - *strategy* 
     - Make sure random fact are relevant for kids and do not contain inappropriate content
     - Each button is not too small
     - Font size big enough for a child of 6years old who is learning to read
 
-### 4. What content would be relevant
+### 4. What content would be relevant?
 Flags and countries of the world (not fake, not regions or small ethnies) - appropriate random fact for kids
 - *strategy* 
     - Study the flag API and see if only real countries flag are in there, also maybe see if possible to remove the most known flags to make the game already up from basic level (ex: US, UK, France...)
     - Study random fact API and see if all content is appropriate - if needed I will make up one API myself with random fact more relevant to kids
 
-### 5. Why is this so special
+### 5. Why is this so special?
 Hard to find simple games which are also educational for kids and adults on desktop or browser (not app). Most online games have poor or too complex design with a lot of content
 - *strategy* 
     - Catchy and compelling website, with brief but effective content.
