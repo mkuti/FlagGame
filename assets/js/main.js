@@ -84,6 +84,7 @@ function fetchApi () {
     .then(response => response.json())
     .then(data => {
         countryData = shuffleData(data); /*defining array variable to the fetched data*/
+        console.log(countryData)
         pushCurrentQuestion();
       })
     
@@ -163,7 +164,7 @@ function pushCurrentQuestion() {
  */
 function selectingCountrytoMatch() {
     MatchCountry = currentQuestion[mixItems(currentQuestion)];
-    countryData = countryData.filter(country => country.name !== MatchCountry.name);
+    countryData = countryData.filter(country => country.name.common !== MatchCountry.name);
     
     if(matchFlagContainer.style.display = "block") {
         displayingFlag()
@@ -187,17 +188,17 @@ function selectingCountrytoMatch() {
  * Display flag from the MatchCountry variable under Match by flag mode
  */
 function displayingFlag() {
-    flag.src = MatchCountry.flag;
+    flag.src = MatchCountry.flags.png;
 }
 
 /**
  * Assign a country name from the current question array to a random answer item
  */
 function displayingCountriesName() {
-    countryAnswers[0].innerText = currentQuestion[3].name;
-    countryAnswers[1].innerText = currentQuestion[2].name;
-    countryAnswers[2].innerText = currentQuestion[0].name;
-    countryAnswers[3].innerText = currentQuestion[1].name;
+    countryAnswers[0].innerText = currentQuestion[3].name.common;
+    countryAnswers[1].innerText = currentQuestion[2].name.common;
+    countryAnswers[2].innerText = currentQuestion[0].name.common;
+    countryAnswers[3].innerText = currentQuestion[1].name.common;
 }
 
 /**
@@ -209,15 +210,15 @@ function verifyMatchFlag() {
     countryAnswers.forEach(answer => { 
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
-            let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.toLowerCase(); 
+            let match = clickedAnswer.innerText.toLowerCase() == MatchCountry.name.common.toLowerCase(); 
             if(match){ 
-                Swal.fire(whichAlert(true, MatchCountry.name)).then((result) => {
+                Swal.fire(whichAlert(true, MatchCountry.name.common)).then((result) => {
                     if (result.dismiss) {
                         score++;
                         pushCurrentQuestion(shuffleData(countryData));
                     }
                 });  
-                        } else Swal.fire(whichAlert(false, MatchCountry.name)).then((result) => {
+                        } else Swal.fire(whichAlert(false, MatchCountry.name.common)).then((result) => {
                     if (result.dismiss) {
                         pushCurrentQuestion(shuffleData(countryData));
                     }
@@ -235,7 +236,7 @@ function verifyMatchFlag() {
  * Display country name from the MatchCountry variable under the match by country mode
  */
 function displayingCountryName() {
-    countryName.innerHTML = MatchCountry.name;
+    countryName.innerHTML = MatchCountry.name.common;
 }
 
 /**
@@ -243,10 +244,10 @@ function displayingCountryName() {
  */
 function displayingFlags() {
     mixItems(flagChoices)
-    flagChoices[0].innerHTML = `<img src="${currentQuestion[3].flag}" alt="${currentQuestion[3].name}" width=200 height=120>`;
-    flagChoices[1].innerHTML = `<img src="${currentQuestion[2].flag}" alt="${currentQuestion[2].name}" width=200 height=120>`;
-    flagChoices[2].innerHTML = `<img src="${currentQuestion[0].flag}" alt="${currentQuestion[0].name}" width=200 height=120>`;
-    flagChoices[3].innerHTML = `<img src="${currentQuestion[1].flag}" alt="${currentQuestion[1].name}" width=200 height=120>`;
+    flagChoices[0].innerHTML = `<img src="${currentQuestion[3].flags.png}" alt="${currentQuestion[3].name.common}" width=200 height=120>`;
+    flagChoices[1].innerHTML = `<img src="${currentQuestion[2].flags.png}" alt="${currentQuestion[2].name.common}" width=200 height=120>`;
+    flagChoices[2].innerHTML = `<img src="${currentQuestion[0].flags.png}" alt="${currentQuestion[0].name.common}" width=200 height=120>`;
+    flagChoices[3].innerHTML = `<img src="${currentQuestion[1].flags.png}" alt="${currentQuestion[1].name.common}" width=200 height=120>`;
 }
 
 /**
@@ -260,7 +261,7 @@ function verifyMatchCountry() {
             let clickedAnswer = e.target;
             let match = clickedAnswer.src.slice(30, 33) == MatchCountry.alpha3Code.toLowerCase(); 
             if(match){ 
-                Swal.fire(whichAlert(true, MatchCountry.name)).then((result) => {
+                Swal.fire(whichAlert(true, MatchCountry.name.common)).then((result) => {
                     if (result.dismiss) {
                         score++;
                         pushCurrentQuestion(shuffleData(countryData));
