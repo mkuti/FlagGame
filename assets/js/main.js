@@ -258,7 +258,7 @@ function verifyMatchCountry() {
     flagChoices.forEach(answer => { 
         answer.addEventListener("click", e => {
             let clickedAnswer = e.target;
-            let match = clickedAnswer.src.slice(30, 33) == MatchCountry.cca3.toLowerCase(); 
+            let match = clickedAnswer.src.slice(25, 27) == MatchCountry.cca2.toLowerCase(); 
             if(match){ 
                 Swal.fire(whichAlert(true, MatchCountry.name.common)).then((result) => {
                     if (result.dismiss) {
