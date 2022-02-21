@@ -4,7 +4,7 @@
 =================================
 */
 // Constant variables associated with the DOM
-const url = 'https://restcountries.eu/rest/v2/all';
+const url = 'https://restcountries.com/v3.1/all';
 const homeContainer = document.getElementById("home-container");
 const matchFlagContainer = document.getElementById("flag-container");
 const matchCountryContainer = document.getElementById("country-container");
