@@ -84,7 +84,6 @@ function fetchApi () {
     .then(response => response.json())
     .then(data => {
         countryData = shuffleData(data); /*defining array variable to the fetched data*/
-        console.log(countryData)
         pushCurrentQuestion();
       })
     
